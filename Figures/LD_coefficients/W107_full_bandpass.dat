@@ -1,0 +1,18 @@
+######################################################################################################################
+# 
+# Limb Darkening Calculations v.1.0. 
+# 
+# Limb-darkening coefficients for linear (a), quadratic (u1,u2), three parameter (b1,b2,b3) 
+# non-linear (c1,c2,c3,c4), logarithmic (l1,l2), exponential (e1,e2) and square-root laws (s1,s2).
+# 
+# Author:       Nestor Espinoza (nespino@astro.puc.cl) 
+# 
+# Contributors: Benjamin Rackham (brackham@email.arizona.com) 
+#               Andres Jordan    (ajordan@astro.puc.cl) 
+#               Ashley Villar    (vvillar@cfa.harvard.edu) 
+# 
+# DISCLAIMER: If you make use of this code for your research, please consider citing Espinoza & Jordan (2015)
+# 
+#---------------------------------------------------------------------------------------------------------------------------------------------
+# Name	LD fit	RF	T_eff	log(g)	[M/H]	vturb	a       	u1      	u2      	b1      	b2      	b3      	c1      	 c2      	c3      	c4      	l1      	l2      	e1      	e2              	s1      	s2      
+1.1	1.7	0.403555463688	0.285235890369	0.20171703376	1.34045511566	-1.13143672583	0.33631481316	0.478145066052	0.361935652037	-0.259700441994	0.0506610350986	0.55428694666	0.247120919874	0.320809961507	-0.0219963535968	-0.0548327316401	0.745061465801

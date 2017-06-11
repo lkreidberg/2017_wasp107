@@ -1,0 +1,44 @@
+#parameter			value
+nvisit				1
+norb				5
+GRISM				G141
+FILTER				F130N
+exp_time 			103.
+path				/Users/laurakreidberg/Desktop/Summer_2016/data/WASP107_HST14915
+nexp				94
+###
+direct_image_diagnostics	True
+direct_image_output		True
+di_rmin				50
+di_rmax				100
+di_cmin 			30
+di_cmax				60
+###			
+sig_cut				7.
+nsmooth				7
+diagnostics			False
+output				True
+opt_extract			True
+correct_wave_shift	 	True
+plot_trace			False
+plot_spectrum 			False
+one_di_per_visit		False
+rmin				0
+rmax				250
+cmin				0
+cmax				250
+offset				0
+rdnoise				22.0
+window				40
+###				
+BEAMA_i				15
+BEAMA_f				196
+flat				WFC3.IR.G141.flat.2.fits
+###		
+lc_type			  	transit
+skip_orbs_phase_curve		0_
+skip_orbs_eclipse		0_
+skip_orbs_transit		0_
+###
+ld_file				LD_coefficients/W107_22bins.dat
+fix_ld				True
