@@ -52,6 +52,7 @@ for i, f in enumerate(files):
 ax3 = plt.subplot(122)
 #ax4 = ax3.twinx()
 
+rms = []
 ax3.text(2.6, 0.08,' rms\n(ppm)', fontsize=10)
 #ax3.text(-3.5, 1,'$\lambda$ ($\mu$m)', fontsize=10)
 for i, f in enumerate(files):
@@ -65,7 +66,8 @@ for i, f in enumerate(files):
 	plt.axhline(offset, color ='0.5')
 	ax3.plot(model.phase*per*24., model.resid/data.flux*1e2 + offset, marker='.', ms = 8, linestyle = 'None', markeredgecolor='k', markeredgewidth=0.5)
 #	ax3.text(-3.5, offset-1, '{0:0.2f}'.format(data.wavelength), fontsize=10)
-	ax3.text(2.8, offset - .1, '{0:d}'.format(int(model.rms)), fontsize=10)
+	ax3.text(2.8, offset - .11, '{0:d}'.format(int(model.rms)), fontsize=10)
+	rms.append(model.rms)
 	#ax4.plot(model.phase*per*24., np.ones_like(model.phase)*data.wavelength, linewidth=0.)
 	ax3.set_xlim(-3.2, 3.4)
 	ax3.set_ylim(-4.5, .35)
@@ -73,5 +75,9 @@ for i, f in enumerate(files):
 	ax3.set_ylabel("Residuals ($\\times10^{-2}$, offset)")
 #	ax4.set_ylabel("Wavelength ($\mu$m)")
 
+
+print "mean, median rms:", np.mean(np.array(rms)), np.median(np.array(rms))
+
 plt.tight_layout()
+plt.savefig("lc.png")
 plt.show()
