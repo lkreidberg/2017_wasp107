@@ -269,15 +269,63 @@ The scan rate was FIXME arcseconds per second, resulting in a spectrum approxima
 \section{Data Reduction}
 
 \section{Analysis}
-Light Curve Fits
+
+\subsection{White Light Curve Fit}
+We created a band-integrated ``white" light curve.  Typical morphology for instrument systematics, with the largest ramp 
+
+The first orbit showed larger, We fit this light curve with an analytic model of the form $F(t) = S(t)\times T(t)$, where $S$ is a systematics model and $T$ is a transit model.
+
+
+
+
+For the transit model, we used the \texttt{batman} package \citep{kreidberg15b}. We fixed the 
+
+In our initial fit, we noticed a what looked like a star spot crossing event in orbit 3. We masked this, and lo! there is the spot
+
+we fit white lc without orbit 3, used model that had extra ramp in orbit 1, fixed LD on PHOENIX model
+
+Transit
+
+\begin{equation}
+x
+\end{equation}
+
 Star Spots?
+
+\subsection{Spectroscopic Light Curve Fits}
+We explored 
+
+Confirmation from KBS
+
+\section{Atmospheric Retrieval}
+We use the CHIMERA chemically-consistent transmission retrieval tool described in \cite{kreidberg15} determine the basic atmospheric properties.   Briefly, the transmission spectrum solves the transmission geometry problem using the equations in \cite{brown11, tinetti12}.  We parametrize atmospheric composition with metallicity and carbon-to-oxygen ratio (C/O) under the assumption of thermochemical equilibrium using the NASA CEA routine \citep{gordon96} to compute the molecular abundances for H$_2$, He, H$_2$O, CH$_4$, CO, CO$_2$, NH$_3$, H$_2$S, Na, K, HCN, C$_2$H$_2$, TiO, VO, and FeH.    We have subsequently upgraded the transmission model to use correlated-K opacities \citep{lacis91, molliere15, amundsen16} for the aforementioned gases generated from the pre-tabulated line-by-line cross section database ($dv/v~10^6$) described in \cite{freedman14}. The transmission forward model is coupled with the powerful PyMultiNest tool \citep{buchner16} to solve the parameter estimation and model selection problems.  
+
+The nominal model set-up requires a temperature-pressure profile (parameterized via the \citealt{guillot10} relations), the atmospheric metallicity and carbon-to-oxygen ratio for molecular composition determination, disquilibrium properties crudely parameterized with nitrogen species and carbon species quench pressures \citep{morley17}, and aerosol properties.  We experiment with three atmospheric scenarios within this setup (Table XX):  Scenarios with and without methane, and with/without patchy cloud cover (as described and implemented in \citealt{line16}.  In all three scenarios we fix the T-P profile "shape" but scale the irradiation temperature, which incorporates unknown variables like the albedo and heat transport efficiency.  T-P profile shape information is not readily retrievable, nor does it strongly influence information derived from WFC3 transmission spectra \citep[e.g.][]{kreidberg15}. We also switch off the quench pressure parameters as they are unlikely to strongly influence the equilibrium abundance profiles of the spectrally prominent, nearly constant-with-altitude abundance, species like CH$_4$, H$_2$O, and NH$_3$ over this temperature range \citep[e.g.][]{line11, moses13}.  Aerosols are simply parameterized with a ``gray cloud top pressure" with the option for cloud patchiness. We do not consider ``sloped hazes" at this time as they are unlikely to influence the results.
 
 \section{Discussion} \label{sec:discuss}
 
-Comparative planetology with HAT-P-11b, HAT-P-26b
+\subsection{Methane}
+
+\subsection{Comparative planetology with HAT-P-11b, HAT-P-26b}
+
+\subsection{Constraints on Condensate Properties}
+To model WASP-107b's spectrum with self-consistent aerosols, we use the methods described in \citep{fortney08, morley15}. We include models from solar to $50\times$ solar metallicity and solar C/O ratio. We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS, see \citealt{morley12}), varying the cloud sedimentation efficiency from 0.1 to 3. None of the cloudy models are sufficiently low amplitude to match the observed muted signal. We also model an ad hoc photochemical 'soot' layer near the top of the atmosphere, scaling results from previous photochemical models for GJ 436b \citep{line11, morley17}. With a sufficiently thick photochemical haze with particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
+
+
+
+\subsection{Atmospheric Metallicity Predictions from Interior Structure Modeling}
+
+
+\section{Future Plans}
+Combine data from Spitzer/HST
+JWST GTO
+
 
 \acknowledgments
 Fei Dai
+Jessica Spake
+
+L.R.K. acknowledges support from the Harvard Society of Fellows and the Harvard Astronomy Department Institute for Theory and Computation.
 
 \vspace{5mm}
 \facilities{HST(WFC3)}
