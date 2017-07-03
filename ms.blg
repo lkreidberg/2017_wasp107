@@ -7,9 +7,9 @@ I couldn't open style file apj.bst
  :              }
 I'm skipping whatever remains of this command
 I found no style file---while reading file ms.aux
-You've used 21 entries,
+You've used 25 entries,
             0 wiz_defined-function locations,
-            110 strings with 762 characters,
+            115 strings with 790 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0

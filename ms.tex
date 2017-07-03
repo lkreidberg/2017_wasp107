@@ -273,27 +273,22 @@ We reduced the data with the custom pipeline described in FIXME, which we summar
 The data analysis had two parts: the band-integrated ``white" light curve fit and the spectroscopic light curve fits.
 
 \subsection{White Light Curve Fit}
-To create the raw white light curve, we summed each spectrum over the FIXME pixels in the spectral trace.  The morphology of the white light curve is typical for WFC3 observations \cite{zhou17}: the flux increases increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice. 
+To create the raw white light curve, we summed each spectrum over the FIXME pixels in the spectral trace.  The morphology of the white light curve is typical for WFC3 observations \cite{zhou17}: the flux increases increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice.  We fit the light curve with the analytic model of the form $F(t) = S(t)\times T(t)$, where $S$ is a systematics model and $T$ is a transit model. We used the same systematics model as FIXME, equation FIXME.  To model the transit, we used the \texttt{batman} package \citep{kreidberg15b}.  The transit model parameters are the orbital period $p$, time of FIXME $t_c$, transit depth $r_p/r_s$, ratio of semi-major axis to stellar radius $a/r_s$, orbital inclination $i$, and the quadratic stellar limb darkening parameters $u_1$ and $u_2$.
 
-We fit the light curve with the analytic model of the form $F(t) = S(t)\times T(t)$, where $S$ is a systematics model and $T$ is a transit model. We used the same systematics model as FIXME, equation FIXME.  To model the transit, we used the \texttt{batman} package \citep{kreidberg15b}.  In our initial fit, we noticed an increase in flux during orbit three. We also found . We gave the data in orbit three no weight in the fit, and found that the 
+In our initial fit, we allowed all the transit parameters to vary freely. We noticed two odd results: first, there was a slight increase in flux during orbit three, and second, the transit parameters were inconsistent with the precise analysis of the Kepler light curve from \cite{dai17}.  We conjectured that the anomalies could be due to a star-spot crossing in orbit three. WASP-107 is an active star and star spot crossings have been observed before FIXME. To test this idea, we gave the data in orbit three no weight in the fit. In this case, the transit parameters agree well with those of \cite{dai17} and the spot-crossing feature is more pronounced (see Figure FIXME). The amplitude of the spot crossing feature is FIXME ppm, consistent with a spot of FIXME size and temperature (cf dai17 FIXME). We also found that the fitted limb darkening parameters were conistent with predictions from a PHOENIX model of FIXME properties, calculated with the FIXME package.  FIXME: we tested interpolating models, didn't matter. 
 
-In our final fit, we fixed the transit parameters on the values from \cite{dai17}.  
-
-
-fixed LD on PHOENIX model
-
+In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the values from \cite{dai17}.  We also fixed the limb darkening parameters on the PHOENIX model prediction. The root-mean-square residuals were FIXME ppm (not including orbit three), compared to the expected shot noise of FIXME ppm. The achieved rms is close to the best value obtained for WFC3 data (FIXME), and we attribute the slight excess noise to either additional star spot crossings or loss of flux from the edge of the detector \citep[as has been seen for other bright targets;][]{FIXME}. We used the Markov chain Monte Carlo algorithm to estimate parameter uncertainties (as implemented in the the \texttt{emcee} package; FIXME). We scaled the per-point uncertainties by a factor of FIXME to achieve a reduced $\chi_2$ value of unity. The transit time was FIXME and the planet/star radius was FIXME.
 
 \subsection{Spectroscopic Light Curve Fits}
-We explored two different methods for fitting the spectroscopic light curves.
+We binned the spectrum into 20 spectrophotometric channels from FIXME to FIXME $\mu$m.  We explored two different methods for fitting these spectroscopic light curves.  First we used the \texttt{divide-white} technique, which assumes that the light curve systematics are nearly constant as a function of wavelength \citep{stevenson??, kreidberg14a}. For this approach, we fit a transit model times the systematics vector from the white light curve fit ($F(t)/T(t)$), rescaled by a factor $C_\lambda + V_\lambda t$. As for the white light curve, we fixed some of the transit parameters on the estimates from \cite{dai17} and fixed the limb darkening on the PHOENIX model. The remaining free parameters are $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  As a test, we fit for a linear limb darkening parameter and found the results were consistent with the PHOENIX model predictions. An advantage of this approach is that it automatically removes the star spot crossing, enabling us to use orbit three with no additional correction. We expect that this model introduces a small chromatic effect due to the changing spot crossing feature amplitude with wavelength, but this effect is below the level of noise in our data FIXME. The fits reach the photon noise and have a median reduced $\chi_2$ value of FIXME.  There are two channels with slightly higher
+
+As a test, we also fit the spectroscopic light curves with the same analytic model we used for the white light curve. The results were nearly identical to those obtained with the \texttt{divide-white} technique, except offset by a constant value of FIXME ppm. We attribute the offset to the uncorrected star-spot crossing in orbit three. Although the spot is not detectable in the spectroscopic light curves due to their higher photon noise, it may still affect the fit. report the values from the 
+
+explored different binning
 
 \subsection{Independent Analysis}
 We also performed an independent data reduction and fit using K. Stevenson's pipeline.
 
-\begin{equation}
-x
-\end{equation}
-
-Star Spots?
 
 Confirmation from KBS
 
