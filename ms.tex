@@ -138,7 +138,7 @@
 
 \begin{document}
 
-\title{WASP-107b Atmosphere}
+\title{Water, High-Altitude Condensates, and No Methane in the Atmosphere of the Warm Neptune WASP-107b}
 
 %% LaTeX will automatically break titles if they run longer than
 %% one line. However, you may use \\ to force a line break if
@@ -199,10 +199,18 @@ Cambridge, MA 02138, USA}
 Cambridge, MA 02138}
 \nocollaboration
 
-%\author{Kevin Stevenson}
-%\affiliation{Space Telescope Science Institute}
-%\affiliation{AAS Journals Associate Editor-in-Chief}
-%\nocollaboration
+\author{Michael Line}
+\affiliation{Arizona State University}
+\nocollaboration
+
+\author{Caroline Morley}
+\affiliation{Harvard-Smithsonian Center for Astrophysics}
+\affiliation{Sagan Fellow}
+\nocollaboration
+
+\author{Kevin Stevenson}
+\affiliation{Space Telescope Science Institute}
+\nocollaboration
 
 
 %% Note that the \and command from previous versions of AASTeX is now
@@ -255,45 +263,37 @@ WASP-107b is baller.
 \section{Introduction} \label{sec:intro}
 
 \section{Observations}
-We observed a single transit of WASP-107b with HST's Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five HST orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period (about 45 minutes), we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool\footnote{https://github.com/spacetelescope/PandExoi\_HST}. 
-
-As is standard for observations of bright targets, we used the spatial scanning observing mode, which smears the spectrum in the spatial direction over the course of an exposure. 
-
-This mode enables longer exposures than staring mode , 
-
-improves the duty cycle of the observations  The observations had an exposure time of 
-
-The scan rate was FIXME arcseconds per second, resulting in a spectrum approximately FIXME pixels in height.  
+We observed a single transit of WASP-107b with HST's Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five HST orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period (about 45 minutes), we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool\footnote{https://github.com/spacetelescope/PandExo\_HST}.  As is standard for observations of bright targets, we used the spatial scanning observing mode, which smears the spectrum in the spatial direction over the course of an exposure. The scan rate was FIXME arcseconds/sec.
 
 
 \section{Data Reduction}
+We reduced the data with the custom pipeline described in FIXME, which we summarize briefly here. For each exposure, we extracted the spectrum from each up-the-ramp sample (or ``stripe") separately using the optimal extraction algorithm of \citep{horne86}. The stripe spectra were then summed to create the final spectrum. For each stripe, the extraction box was 80 pixels high and centered on the stripe's midpoint in the spatial direction. To correct the change in dispersion solution over the length of the spatial scan, we interpolated each row to the wavelength scale of the row corresponding to the spectral trace. We also corrected for slight drift in the spectral direction (FIXME pixels) by interpolating each the first exposure.  To subtract the background, we took the median of sky pixels that were uncontaminated by the target spectrum (rows $5-250$, columns $5-15$). The typical background counts were low: 40 photoelectrons/pixel, in comparison to $3\times10^4$ photoelectrons/pixel in the stellar spectrum.
 
 \section{Analysis}
+The data analysis had two parts: the band-integrated ``white" light curve fit and the spectroscopic light curve fits.
 
 \subsection{White Light Curve Fit}
-We created a band-integrated ``white" light curve.  Typical morphology for instrument systematics, with the largest ramp 
+To create the raw white light curve, we summed each spectrum over the FIXME pixels in the spectral trace.  The morphology of the white light curve is typical for WFC3 observations \cite{zhou17}: the flux increases increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice. 
 
-The first orbit showed larger, We fit this light curve with an analytic model of the form $F(t) = S(t)\times T(t)$, where $S$ is a systematics model and $T$ is a transit model.
+We fit the light curve with the analytic model of the form $F(t) = S(t)\times T(t)$, where $S$ is a systematics model and $T$ is a transit model. We used the same systematics model as FIXME, equation FIXME.  To model the transit, we used the \texttt{batman} package \citep{kreidberg15b}.  In our initial fit, we noticed an increase in flux during orbit three. We also found . We gave the data in orbit three no weight in the fit, and found that the 
+
+In our final fit, we fixed the transit parameters on the values from \cite{dai17}.  
 
 
+fixed LD on PHOENIX model
 
 
-For the transit model, we used the \texttt{batman} package \citep{kreidberg15b}. We fixed the 
+\subsection{Spectroscopic Light Curve Fits}
+We explored two different methods for fitting the spectroscopic light curves.
 
-In our initial fit, we noticed a what looked like a star spot crossing event in orbit 3. We masked this, and lo! there is the spot
-
-we fit white lc without orbit 3, used model that had extra ramp in orbit 1, fixed LD on PHOENIX model
-
-Transit
+\subsection{Independent Analysis}
+We also performed an independent data reduction and fit using K. Stevenson's pipeline.
 
 \begin{equation}
 x
 \end{equation}
 
 Star Spots?
-
-\subsection{Spectroscopic Light Curve Fits}
-We explored 
 
 Confirmation from KBS
 
@@ -309,7 +309,9 @@ The nominal model set-up requires a temperature-pressure profile (parameterized 
 \subsection{Comparative planetology with HAT-P-11b, HAT-P-26b}
 
 \subsection{Constraints on Condensate Properties}
-To model WASP-107b's spectrum with self-consistent aerosols, we use the methods described in \citep{fortney08, morley15}. We include models from solar to $50\times$ solar metallicity and solar C/O ratio. We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS, see \citealt{morley12}), varying the cloud sedimentation efficiency from 0.1 to 3. None of the cloudy models are sufficiently low amplitude to match the observed muted signal. We also model an ad hoc photochemical 'soot' layer near the top of the atmosphere, scaling results from previous photochemical models for GJ 436b \citep{line11, morley17}. With a sufficiently thick photochemical haze with particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
+The amplitude of WASP-107b's spectral features is about half that expected for an atmosphere free of condensates. In our retrieval analysis, we explored two simple parameterizations to model condensates: a gray opacity source and a sloped haze.  The retrieved cloud-top pressure is FIXME at $1\,\sigma$ confidence.
+
+We also considered physically motivated, self-consistent cloud and haze models based on .  To model WASP-107b's spectrum with self-consistent aerosols, we use the methods described in \citep{fortney08, morley15}. We include models from solar to $50\times$ solar metallicity and solar C/O ratio. We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS, see \citealt{morley12}), varying the cloud sedimentation efficiency from 0.1 to 3. None of the cloudy models are sufficiently low amplitude to match the observed muted signal. We also model an ad hoc photochemical 'soot' layer near the top of the atmosphere, scaling results from previous photochemical models for GJ 436b \citep{line11, morley17}. With a sufficiently thick photochemical haze with particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
 
 
 
@@ -377,10 +379,8 @@ L.R.K. acknowledges support from the Harvard Society of Fellows and the Harvard 
 %% delimit the year from the author name used in the citation.
 %% See the natbib documentation for more details and options.
 
-\begin{thebibliography}{}
-
-
-\end{thebibliography}
+\bibliographystyle{apj}
+\bibliography{ms.bib}
 
 %% This command is needed to show the entire author+affilation list when
 %% the collaboration and author truncation commands are used.  It has to
