@@ -1,0 +1,94 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+
+\bibitem[{{Amundsen} {et~al.}(2016){Amundsen}, {Mayne}, {Baraffe}, {Manners},
+  {Tremblin}, {Drummond}, {Smith}, {Acreman}, \& {Homeier}}]{amundsen16}
+{Amundsen}, D.~S., {Mayne}, N.~J., {Baraffe}, I., {et~al.} 2016, \aap, 595, A36
+
+\bibitem[{{Brown}(2001)}]{brown01}
+{Brown}, T.~M. 2001, \apj, 553, 1006
+
+\bibitem[{{Buchner}(2016)}]{buchner16}
+{Buchner}, J. 2016, {PyMultiNest: Python interface for MultiNest}, Astrophysics
+  Source Code Library, , , ascl:1606.005
+
+\bibitem[{{Dai} \& {Winn}(2017)}]{dai17}
+{Dai}, F., \& {Winn}, J.~N. 2017, \aj, 153, 205
+
+\bibitem[{{Fortney} {et~al.}(2008){Fortney}, {Lodders}, {Marley}, \&
+  {Freedman}}]{fortney08}
+{Fortney}, J.~J., {Lodders}, K., {Marley}, M.~S., \& {Freedman}, R.~S. 2008,
+  \apj, 678, 1419
+
+\bibitem[{{Freedman} {et~al.}(2014){Freedman}, {Lustig-Yaeger}, {Fortney},
+  {Lupu}, {Marley}, \& {Lodders}}]{freedman14}
+{Freedman}, R.~S., {Lustig-Yaeger}, J., {Fortney}, J.~J., {et~al.} 2014, \apjs,
+  214, 25
+
+\bibitem[{{Guillot}(2010)}]{guillot10}
+{Guillot}, T. 2010, \aap, 520, A27
+
+\bibitem[{{Kreidberg}(2015)}]{kreidberg15a}
+{Kreidberg}, L. 2015, \pasp, 127, 1161
+
+\bibitem[{{Kreidberg} {et~al.}(2014){Kreidberg}, {Bean}, {D{\'e}sert},
+  {Benneke}, {Deming}, {Stevenson}, {Seager}, {Berta-Thompson}, {Seifahrt}, \&
+  {Homeier}}]{kreidberg14a}
+{Kreidberg}, L., {Bean}, J.~L., {D{\'e}sert}, J.-M., {et~al.} 2014, \nat, 505,
+  69
+
+\bibitem[{{Kreidberg} {et~al.}(2015){Kreidberg}, {Line}, {Bean}, {Stevenson},
+  {D{\'e}sert}, {Madhusudhan}, {Fortney}, {Barstow}, {Henry}, {Williamson}, \&
+  {Showman}}]{kreidberg15b}
+{Kreidberg}, L., {Line}, M.~R., {Bean}, J.~L., {et~al.} 2015, \apj, 814, 66
+
+\bibitem[{{Lacis} \& {Oinas}(1991)}]{lacis91}
+{Lacis}, A.~A., \& {Oinas}, V. 1991, \jgr, 96, 9027
+
+\bibitem[{{Line} {et~al.}(2011){Line}, {Vasisht}, {Chen}, {Angerhausen}, \&
+  {Yung}}]{line11}
+{Line}, M.~R., {Vasisht}, G., {Chen}, P., {Angerhausen}, D., \& {Yung}, Y.~L.
+  2011, \apj, 738, 32
+
+\bibitem[{{Line} {et~al.}(2016){Line}, {Stevenson}, {Bean}, {Desert},
+  {Fortney}, {Kreidberg}, {Madhusudhan}, {Showman}, \& {Diamond-Lowe}}]{line16}
+{Line}, M.~R., {Stevenson}, K.~B., {Bean}, J., {et~al.} 2016, \aj, 152, 203
+
+\bibitem[{{Molli{\`e}re} {et~al.}(2015){Molli{\`e}re}, {van Boekel},
+  {Dullemond}, {Henning}, \& {Mordasini}}]{molliere15}
+{Molli{\`e}re}, P., {van Boekel}, R., {Dullemond}, C., {Henning}, T., \&
+  {Mordasini}, C. 2015, \apj, 813, 47
+
+\bibitem[{{Morley} {et~al.}(2012){Morley}, {Fortney}, {Marley}, {Visscher},
+  {Saumon}, \& {Leggett}}]{morley12}
+{Morley}, C.~V., {Fortney}, J.~J., {Marley}, M.~S., {et~al.} 2012, \apj, 756,
+  172
+
+\bibitem[{{Morley} {et~al.}(2015){Morley}, {Fortney}, {Marley}, {Zahnle},
+  {Line}, {Kempton}, {Lewis}, \& {Cahoy}}]{morley15}
+---. 2015, \apj, 815, 110
+
+\bibitem[{{Morley} {et~al.}(2017){Morley}, {Knutson}, {Line}, {Fortney},
+  {Thorngren}, {Marley}, {Teal}, \& {Lupu}}]{morley17}
+{Morley}, C.~V., {Knutson}, H., {Line}, M., {et~al.} 2017, \aj, 153, 86
+
+\bibitem[{{Moses} {et~al.}(2013){Moses}, {Madhusudhan}, {Visscher}, \&
+  {Freedman}}]{moses13}
+{Moses}, J.~I., {Madhusudhan}, N., {Visscher}, C., \& {Freedman}, R.~S. 2013,
+  \apj, 763, 25
+
+\bibitem[{{Mo{\v c}nik} {et~al.}(2017){Mo{\v c}nik}, {Hellier}, {Anderson},
+  {Clark}, \& {Southworth}}]{mocnik17}
+{Mo{\v c}nik}, T., {Hellier}, C., {Anderson}, D.~R., {Clark}, B.~J.~M., \&
+  {Southworth}, J. 2017, \mnras, 469, 1622
+
+\bibitem[{{Tinetti} {et~al.}(2012){Tinetti}, {Tennyson}, {Griffith}, \&
+  {Waldmann}}]{tinetti12}
+{Tinetti}, G., {Tennyson}, J., {Griffith}, C.~A., \& {Waldmann}, I. 2012,
+  Philosophical Transactions of the Royal Society of London Series A, 370, 2749
+
+\bibitem[{{Zhou} {et~al.}(2017){Zhou}, {Apai}, {Lew}, \& {Schneider}}]{zhou17}
+{Zhou}, Y., {Apai}, D., {Lew}, B.~W.~P., \& {Schneider}, G. 2017, \aj, 153, 243
+
+\end{thebibliography}
