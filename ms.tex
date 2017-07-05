@@ -24,6 +24,7 @@
 %%
 %% using aastex version 6.1
 \documentclass[twocolumn]{aastex61}
+\usepackage{natbib}
 
 %% The default is a single spaced, 10 point font, single spaced article.
 %% There are 5 other style options available via an optional argument. They
@@ -120,7 +121,7 @@
 %%
 %% If you wish, you may supply running head information, although
 %% this information may be modified by the editorial offices.
-\shorttitle{\aastex\ Atmosphere of WASP-107b}
+\shorttitle{\aastex\ Atmosphere of WASP-107\lowercase{b}}
 \shortauthors{Kreidberg et al.}
 %%
 %% You can add a light gray and diagonal water-mark to the first page 
@@ -138,7 +139,7 @@
 
 \begin{document}
 
-\title{Water, High-Altitude Condensates, and No Methane in the Atmosphere of the Warm Neptune WASP-107b}
+\title{Water, High-Altitude Condensates, and No Methane in the Atmosphere of the Warm Neptune WASP-107\lowercase{b}}
 
 %% LaTeX will automatically break titles if they run longer than
 %% one line. However, you may use \\ to force a line break if
@@ -263,25 +264,35 @@ WASP-107b is baller.
 \section{Introduction} \label{sec:intro}
 
 \section{Observations}
-We observed a single transit of WASP-107b with HST's Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five HST orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period (about 45 minutes), we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool\footnote{https://github.com/spacetelescope/PandExo\_HST}.  As is standard for observations of bright targets, we used the spatial scanning observing mode, which smears the spectrum in the spatial direction over the course of an exposure. The scan rate was FIXME arcseconds/sec.
+We observed a single transit of WASP-107b with HST's Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five HST orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period (about 45 minutes), we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool\footnote{https://github.com/spacetelescope/PandExo\_HST}.  As is standard for observations of bright targets, we used the spatial scanning observing mode, which smears the spectrum in the spatial direction over the course of an exposure. The scan rate was 0.12 arcseconds/sec.
 
 
 \section{Data Reduction}
-We reduced the data with the custom pipeline described in FIXME, which we summarize briefly here. For each exposure, we extracted the spectrum from each up-the-ramp sample (or ``stripe") separately using the optimal extraction algorithm of \citep{horne86}. The stripe spectra were then summed to create the final spectrum. For each stripe, the extraction box was 80 pixels high and centered on the stripe's midpoint in the spatial direction. To correct the change in dispersion solution over the length of the spatial scan, we interpolated each row to the wavelength scale of the row corresponding to the spectral trace. We also corrected for slight drift in the spectral direction (FIXME pixels) by interpolating each the first exposure.  To subtract the background, we took the median of sky pixels that were uncontaminated by the target spectrum (rows $5-250$, columns $5-15$). The typical background counts were low: 40 photoelectrons/pixel, in comparison to $3\times10^4$ photoelectrons/pixel in the stellar spectrum.
+We reduced the data with the custom pipeline described in \cite{kreidberg14a}, which we summarize briefly here. For each exposure, we extracted the spectrum from each up-the-ramp sample (or ``stripe") separately using the optimal extraction algorithm of \citep{horne86}. The stripe spectra were then summed to create the final spectrum. For each stripe, the extraction box was 80 pixels high and centered on the stripe's midpoint in the spatial direction. To correct the change in dispersion solution over the length of the spatial scan, we interpolated each row to the wavelength scale of the row corresponding to the spectral trace. We also corrected for slight drift in the spectral direction ($<0.1$ pixels) by interpolating each the first exposure.  To subtract the background, we took the median of sky pixels that were uncontaminated by the target spectrum (rows $5-250$, columns $5-15$). The typical background counts were low: 40 photoelectrons/pixel, in comparison to $3\times10^4$ photoelectrons/pixel in the stellar spectrum.
+%dispersion solution: 46 Angstroms/pixel. max drift: 3 angstroms (from diagnostics.txt)
 
 \section{Analysis}
 The data analysis had two parts: the band-integrated ``white" light curve fit and the spectroscopic light curve fits.
 
 \subsection{White Light Curve Fit}
-To create the raw white light curve, we summed each spectrum over the FIXME pixels in the spectral trace.  The white light curve has systematic trends that are typical for WFC3 observations \cite{zhou17}: the flux increases increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice.  We fit the light curve with the analytic model of the form $F_\mathrm{white}(t) = S_\mathrm{white}(t)\times T_\mathrm{white}(t)$, where $S$ is a systematics model and $T$ is a transit model. We used the same systematics model as FIXME, equation FIXME.  To model the transit, we used the \texttt{batman} package \citep{kreidberg15b}.  The transit model parameters are the orbital period $p$, time of FIXME $t_c$, transit depth $r_p/r_s$, ratio of semi-major axis to stellar radius $a/r_s$, orbital inclination $i$, and the quadratic stellar limb darkening parameters $u_1$ and $u_2$.
+To create the raw white light curve, we summed each spectrum over the 181 pixels in the spectral trace.  The white light curve has systematic trends that are typical for WFC3 observations \cite{zhou17}: the flux increases increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice.  We fit the light curve with the analytic model of the form $F_\mathrm{white}(t) = S_\mathrm{white}(t)\times T_\mathrm{white}(t)$, where $S_\mathrm{white}$ is a systematics model and $T_\mathrm{white}$ is a transit model. We used the same systematics model as \cite{kreidberg15b}, Equation 1.  To model the transit, we used the \texttt{batman} package \citep{kreidberg15b}.  The transit model parameters are the orbital period $p$, time of inferior conjunction $t_0$, transit depth $r_p/r_s$, ratio of semi-major axis to stellar radius $a/r_s$, orbital inclination $i$, and the quadratic stellar limb darkening parameters $u_1$ and $u_2$.
+
+\begin{figure*}
+\includegraphics[width = \textwidth]{Figures/lc.pdf}
+\caption{FIXME}
+\label{fig:lc}
+\end{figure*}
 
 \subsubsection{Star Spot Crossing}
-In our initial fit, we allowed all the transit parameters to vary freely. We noticed two odd results: first, there was a slight increase in flux during orbit three, and second, the transit parameters were inconsistent with the precise analysis of the Kepler light curve from \cite{dai17}.  We conjectured that the anomalies could be due to a star-spot crossing event in orbit three, as WASP-107 is an active star and spot crossings have been observed before FIXME. To test this idea, we gave the data in orbit three no weight in the fit. For this case, the transit parameters agree well with those of \cite{dai17} and the spot-crossing feature is more pronounced (see Figure FIXME). The amplitude of the feature is FIXME ppm, consistent with a spot of FIXME size and temperature (cf dai17 FIXME).  We conclude that the feature is indeed due to a spot crossing.
+In our initial analysis, we noticed a bump in the light curve during orbit three that could not be fit with our model. We attribute this feature to a star spot crossing event, as WASP-107 is an active star and spot crossings have been observed before \citep{dai17, mocnik17}. In our subsequent analysis, we gave the data in orbit three no weight in the fit. The amplitude of the spot crossing feature is FIXME ppm, consistent with a spot of FIXME size and temperature.
+
+%In our initial fit, we allowed all the transit parameters to vary freely. We noticed two odd results: first, there was a slight increase in flux during orbit three, and second, the transit parameters were inconsistent with the analysis of the precise Kepler data from \cite{dai17}.  We conjectured that the anomalies could be due to a star-spot crossing event in orbit three, as WASP-107 is an active star and spot crossings have been observed before FIXME. To test this idea, we gave the data in orbit three no weight in the fit. For this case, the transit parameters agree well with those of \cite{dai17} and the spot-crossing feature is more pronounced (see Figure FIXME). The amplitude of the feature is FIXME ppm, consistent with a spot of FIXME size and temperature (cf dai17 FIXME).  We conclude that the feature is indeed due to a spot crossing.
 
 \subsubsection{Final Fit}
-In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the values from \cite{dai17}.  We also fixed the limb darkening parameters on predictions from a PHOENIX model for a star of FIXME properties, calculated with the FIXME package.  The model values are consistent with what we obtain from fitting for the limb darkening coefficients as free parameters. The remaining free parameters were $t_c$, $r_p/r_s$, and the systematics parameters for the visit-long and orbit-long trends.
+In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the precise estimates from the Kepler light curve \cite{dai17}.  We also fixed the limb darkening parameters on predictions from a PHOENIX model for a star of FIXME properties, calculated with the FIXME package.  The remaining free parameters were $t_0$, $r_p/r_s$, and the systematics parameters for the visit-long and orbit-long trends.
+%The model values are consistent with what we obtain from fitting for the limb darkening coefficients as free parameters. 
 
-For the best fit light curve, the root-mean-square residuals were FIXME ppm (not including orbit three), compared to the expected shot noise of FIXME ppm. The achieved rms is close to the best value obtained for WFC3 data (FIXME), and we attribute the slight excess noise to either additional star spot crossings or loss of flux from the edge of the detector \citep[as has been seen for other bright targets;][]{FIXME}. We used the Markov chain Monte Carlo algorithm to estimate parameter uncertainties (as implemented in the the \texttt{emcee} package; FIXME). We scaled the per-point uncertainties by a factor of FIXME to achieve a reduced $\chi_2$ value of unity. The transit time was FIXME and the planet/star radius was FIXME.
+For the best fit light curve, the root-mean-square residuals were FIXME ppm (not including orbit three), somewhat larger than the expected shot noise of FIXME ppm. The achieved rms is close to the best value obtained for WFC3 data (FIXME), and we attribute the slight excess noise to either additional star spot crossings or loss of flux from the edge of the detector \citep[as has been seen for other bright targets;][]{FIXME}. We used the Markov chain Monte Carlo algorithm to estimate parameter uncertainties (as implemented in the the \texttt{emcee} package; FIXME). We scaled the per-point uncertainties by a factor of FIXME to achieve a reduced $\chi_2$ value of unity. The transit time was FIXME and the planet/star radius was FIXME.
 
 \subsection{Spectroscopic Light Curve Fits}
 We binned the spectrum into 20 spectrophotometric channels from FIXME to FIXME $\mu$m, shown in Figure FIXME. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics are nearly constant as a function of wavelength \citep{stevenson??, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  An advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. There is a small chromatic effect due to the changing amplitude of the spot crossing feature with wavelength, but this effect is below the level of noise in our data FIXME.  As for the white light curve, we fixed some of the transit parameters on the estimates from \cite{dai17} and fixed the limb darkening on the PHOENIX model. The fit has just three free parameters: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  
@@ -337,10 +348,10 @@ L.R.K. acknowledges support from the Harvard Society of Fellows and the Harvard 
 %% the manusscript. Authors should list each code and include either a
 %% citation or url to the code inside ()s when available.
 
-\software{astropy \citep{2013A&A...558A..33A},  
-          Cloudy \citep{2013RMxAA..49..137F}, 
-          SExtractor \citep{1996A&AS..117..393B}
-          }
+%\software{astropy \citep{2013A&A...558A..33A},  
+%          Cloudy \citep{2013RMxAA..49..137F}, 
+%          SExtractor \citep{1996A&AS..117..393B}
+%          }
 
 %% Appendix material should be preceded with a single \appendix command.
 %% There should be a \section command for each appendix. Mark appendix

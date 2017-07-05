@@ -83,12 +83,10 @@ ax4 = plt.subplot(gs[1,1])
 #ax4 = ax3.twinx()
 
 rms = []
-sns.set_palette(sns.diverging_palette(220, 20, n=20))
+#sns.set_palette(sns.diverging_palette(220, 20, n=20))
+c = sns.diverging_palette(220, 20, n=20)
 ax4.text(2.8, 800,' rms', fontsize=10)
-#ax3.text(-3.5, 1,'$\lambda$ ($\mu$m)', fontsize=10)
 for i, f in enumerate(files):
-	sns.set_palette(sns.diverging_palette(220, 20, n=20))
-	#plt.plot(model.phase*per*24., np.ones_like(model.resid), color='0.5') 
 	p = pickle.load(open(f, 'rb'))
 	data, model = p[0], p[1]
 	ind = model.phase > 0.5
@@ -96,22 +94,20 @@ for i, f in enumerate(files):
 	
 	offset = -0.0022*float(i)*1e6
 	plt.axhline(offset, color ='0.5')
-	plt.plot(model.phase*per*24., model.resid/data.flux*1e6 + offset, marker='.', ms = 8, linestyle = 'None', markeredgecolor='k', markeredgewidth=0.5)
-#	ax4.text(-3.5, offset-1, '{0:0.2f}'.format(data.wavelength), fontsize=10)
+	plt.plot(model.phase*per*24., model.resid/data.flux*1e6 + offset, marker='.', ms = 8, linestyle = 'None', markeredgecolor='k', markeredgewidth=0.5, color = c[i])
 	ax4.text(2.8, offset - 1400, '{0:d}'.format(int(model.rms)), fontsize=10)
 	rms.append(model.rms)
 	ax4.plot(model.phase*per*24., np.ones_like(model.phase)*data.wavelength, linewidth=0.)
 	ax4.set_xlim(-3.2, 3.4)
-	#ax4.set_ylim(-4.5, .35)
 	ax4.set_ylim(-45000, 3500)
 	ax4.yaxis.set_major_locator(FixedLocator(np.array([-40000, -30000, -20000, -10000, 0])))
 	plt.gca().set_yticklabels(["0", "1e4", "2e4", "2e4", "3e4"])
 	ax4.set_xlabel("Time from central transit (hours)")
 	ax4.set_ylabel("Residuals (ppm, offset)") 
-	#ax4.set_ylabel("Wavelength ($\mu$m)")
 
 
 print "mean, median rms:", np.mean(np.array(rms)), np.median(np.array(rms))
 
 plt.savefig("lc.png")
+plt.savefig("lc.pdf")
 plt.show()
