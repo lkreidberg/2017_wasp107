@@ -4,51 +4,50 @@ The top-level auxiliary file: ms.aux
 The style file: aasjournal.bst
 Database file #1: msNotes.bib
 Database file #2: ms.bib.bib
-Warning--I didn't find a database entry for "horne86"
 Warning--I didn't find a database entry for "FIXME"
 Warning--I didn't find a database entry for "stevenson??"
 Warning--I didn't find a database entry for "gordon96"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
-You've used 21 entries,
+You've used 22 entries,
             3222 wiz_defined-function locations,
-            821 strings with 9516 characters,
-and the built_in function-call counts, 9903 in all, are:
-= -- 804
-> -- 779
-< -- 6
-+ -- 265
-- -- 294
-* -- 855
-:= -- 1829
-add.period$ -- 21
-call.type$ -- 21
-change.case$ -- 134
-chr.to.int$ -- 21
-cite$ -- 22
-duplicate$ -- 372
-empty$ -- 592
-format.name$ -- 307
-if$ -- 1977
+            827 strings with 9608 characters,
+and the built_in function-call counts, 10226 in all, are:
+= -- 832
+> -- 791
+< -- 7
++ -- 269
+- -- 297
+* -- 875
+:= -- 1889
+add.period$ -- 22
+call.type$ -- 22
+change.case$ -- 138
+chr.to.int$ -- 22
+cite$ -- 23
+duplicate$ -- 388
+empty$ -- 620
+format.name$ -- 311
+if$ -- 2045
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 68
-num.names$ -- 84
-pop$ -- 175
+missing$ -- 21
+newline$ -- 71
+num.names$ -- 88
+pop$ -- 180
 preamble$ -- 1
-purify$ -- 134
+purify$ -- 138
 quote$ -- 0
-skip$ -- 292
+skip$ -- 306
 stack$ -- 0
-substring$ -- 344
+substring$ -- 361
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 189
+type$ -- 198
 warning$ -- 1
-while$ -- 79
+while$ -- 83
 width$ -- 0
-write$ -- 216
-(There were 5 warnings)
+write$ -- 226
+(There were 4 warnings)

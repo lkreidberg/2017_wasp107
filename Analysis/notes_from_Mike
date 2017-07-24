@@ -1,0 +1,41 @@
+Ok, core dump of figures and pickles.
+
+Attached is a summary of the "nominal" model that we should show in the paper.  To remind you, the nominal model assumes chemically consistent along a fixed TP-profile shape but with a variable "irradiation" temperature. The model parameters are this irradiation temperature (Tirr), metallicity ([M/H]), Carbon-to-Oxygen ratio (log(C/O)), log-cloud top pressure (logPc), and radius scale factor (xRp).  
+
+*samples.pic contains the multinest samples so you can plot it up yourself if you want.  
+
+when you "unpickle" it it will be a 26028 x 5 array where 26028 is the number of posterior samples and "5" corresponds to the parameters in the order that you see in the stair-pairs plot.
+
+Also attached are the 1, 2, median spectra from this nominal model with:
+
+pickle = hi_res_wlgrid, hi_res_-2sigma, hi_res_-1sigma, hi_res_median, hi_res_+1sigma, hi_res+2sigma, data_wl_grid, raw_data, data_err, median_binned_model
+
+Highlights summarizing some findings from additional simulations:
+1. Patchy clouds not detected--in fact, the Bayesian evidence got lower due to the increas in prior volume--in other-words, adding the patchy fraction parameter penalized the evidence more than the improvement in fit...of which it did not improve. The posterior (not attached) for the patchy fraction actually piles up to around 1 suggesting that this object is likely "globally" cloudy.
+
+2. Removing CH4 permits allows for larger values of the C/O ratio (see *noCH4* files) suggesting that it is indeed the "lack of ch4" that is driving the low C/O ratio.
+
+3.  I also added in "power law hazes" and found no evidence of any "slopey" hazes. The slope of said haze is unconstrained on the interval 0 -6 where the value indicates the wavelength power law index (e.g., "4" = rayligh, "0"=grey).   A single opaque grey cloud is all that is needed (e.g., the bayesian evidence differences is negligible).
+
+4. Global cloud is detected at 3 sigma. While this is not high, the solutions that are required without the cloud (clear atmosphere) are either ultra high metallicity (>300x) or very cold temperatures (Tirr < 400K).  That is, if I had a more "restrictive" prior that excluded those regions of phase space, the detection significance would go up for the cloud. Also, note that the "nominal" posterior does not encompass any cloud free solutiosn. The cloud is well constrained between ~1 - 0.1 mbar.  
+
+A couple of noteworthy comments:
+
+There is no combination of solar metallicity or solar C/O that exist in the fits....because the lack of methane rules these out.
+
+The best fit chi-square/data is 1.2 with:
+                               Tirr                       [M/H]               log(C/O)          logPc  (bar)     xRp       
+xbest=np.array([ 584.39379426,    1.76414599,   -1.94858279,   -3.64923272,   0.93052472])
+
+If the metallicity is "forced" to be solar, then the resulting best fit C/O=0.46 which produces a worse fit of chi-square/data = 1.65
+
+xbest_forced_solar_[M/H] = =np.array([  7.51429216e+02,   5.67905623e-02,  -3.44035337e-01,-3.16025248e+00,   8.74867024e-01])
+
+If you'd like you can plot those "best fit" vectors on-top of the pairs plots and show representative spectra (best fit*)
+ 
+
+I'm running just a few more checks. The first is to turn on quenching. There are a couple of places where maybe at some of the higher metallicities that CH4 could "quench" to a lower value as CH4 profile becomes more wiggley.. This "quenching" would allow for higher C/O ratios, though I doubt it will have much affect. 
+
+I am also going to run one "free" retrieval to actually grab the CH4 (and NH3) upper limit values.
+
+Anyway, let me know if you would like/need anything else.

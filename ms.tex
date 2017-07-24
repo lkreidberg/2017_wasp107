@@ -138,7 +138,7 @@
 
 \begin{document}
 
-\title{Water, High-Altitude Condensates, and No Methane in the Atmosphere of the Warm Neptune WASP-107\lowercase{b}}
+\title{Water, High-Altitude Condensates, and Methane Depletion in the Atmosphere of the Warm Neptune WASP-107\lowercase{b}}
 
 %% LaTeX will automatically break titles if they run longer than
 %% one line. However, you may use \\ to force a line break if
@@ -314,6 +314,23 @@ The nominal model set-up requires a temperature-pressure profile (parameterized 
 
 \section{Discussion} \label{sec:discuss}
 
+
+We note that some directly imaged self-luminous planets in this
+temperature regime are also unexpectedly depleted in methane (e.g.,
+Skemer et al. 2014), when compared to similar temperature brown
+dwarfs.   The leading hypothesis of this depletion (Zahnle & Marley
+2015) is due to the CH4-CO quench point occurring in the CO stability
+field due to the low gravity of self-luminous planets when compared to
+brown dwarfs.  In order this mechanism to work for neptune massed
+planet, the internal temperature would have to be near ~500K to get
+the deep temperatures high enough to thermochemically deplete methane
+at the quench point. Given the age of the star, it is unlikely that
+such high internal temperatures are still due to heat of formation. It
+is possible that tidal heating could increase the internal temperature
+(Agundez et al. 2014; Morley et al. 2017) but that would require a
+negligible eccentricity, of which is currently uncertain for WASP107b.
+
+
 \subsection{Methane}
 
 \subsection{Comparative planetology with HAT-P-11b, HAT-P-26b}
@@ -326,6 +343,7 @@ We also considered physically motivated, self-consistent cloud and haze models b
 
 
 \subsection{Atmospheric Metallicity Predictions from Interior Structure Modeling}
+ We determine the bulk metallicity of WASP-107 b using the structure evolution modeling of Thorngren et al. (2016).  These consider a thermally inert heavy-element core with a convective envelope of additively mixed H/He (Saumon et al. 1995) and heavy-element impurities.  The heavy-elements were a 50-50 rock-ice mix from ANEOS (Thompson 1990).  Planets were evolved in time using the atmospheric models of Fortney (2007).  We explored possible envelope metallicities and core masses using a metropolis-hastings MCMC with M = .12 +/- .03, R = .94 +/- .02, and the age as alternatively .2-1.0 Gyr or 1.0-13.8 Gyr.  Priors were $\propto 1$ in envelope metal mass fraction and core mass.  The MCMC burned in for 1000 steps and then collected 4,000,000 samples, thinned down to 100,000.  The resulting envelope metal mass fractions were converted to metallicities by assuming the mean molecular weight of the metals was about 18 (the value for water), using the approach of Fortney (2013).
 
 
 \section{Future Plans}
