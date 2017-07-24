@@ -14,26 +14,26 @@ d= np.genfromtxt("w107_spectrum_06-22-17.txt")
 plt.errorbar(d[:,0], d[:,1]*100., d[:,2]*100., linestyle = 'none', zorder = 100, marker = 'o', color = 'w', markeredgecolor = 'k', ecolor ='k', markeredgewidth = 1.3)
 
 
-
-
-p = pickle.load(open("best_fit.pic", "rb"))
+p = pickle.load(open("WASP107b_Global_Cloud_limit_Metallicity_spectra.pic", "rb"))
 w = p[0]
-med = p[1]
-plt.fill_between(w, med*99.8, med*100.2, color = "navy", alpha = '0.3')
-plt.plot(w, med*100., color = 'navy', label = "Best fit model")
+
+plt.fill_between(w, p[1], p[5], color = "navy", alpha = '0.2')
+plt.fill_between(w, p[2], p[4], color = "navy", alpha = '0.3')
+plt.plot(w, p[3], color = 'navy', label = "Best fit model")
 
 
-offset = np.median(med)
-plt.plot(w, ((med-offset)*4 + offset)*100., color = '0.5', alpha = 0.5, label = "1X solar, cloud-free", zorder = -20) 
-plt.legend(loc= 'upper right')
+"""d = pickle.load(open("Model_Solar.pic", "rb"))
+x, y = d[0], d[1]*100. - 0.7
+plt.plot(x, y, color = '0.5', alpha = 0.5, label = "1X solar, cloud-free", zorder = -20) 
+plt.legend(loc= 'upper right')"""
 
 plt.ylabel("Transit depth (%)")
 plt.ylim(2.03, 2.1)
 plt.xlabel("Wavelength (microns)")
 
 x2 = plt.gca().twinx()
-scaleheight = 1000./1.e6
-plt.plot(w,med/scaleheight - np.min(med/scaleheight), linewidth=0.)
+scaleheight = 460./1.e6*100.
+plt.plot(w,p[3]/scaleheight - np.min(p[3]/scaleheight), linewidth=0.)
 
 plt.ylabel("Scale heights")
 plt.xlim(1, 1.8)
