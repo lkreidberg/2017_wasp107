@@ -7,10 +7,11 @@ from pylab import *
 import seaborn as sns
 import matplotlib.gridspec as gridspec
 
-sns.set_context("talk")
+sns.set_context("talk", rc={"lines.linewidth":1.5})
 sns.set_style("white")
 sns.set_style("ticks", {"xtick.direction":"in", "ytick.direction":"in"})
-sns.set_palette(sns.diverging_palette(220, 20, n=20))
+#sns.set_palette(sns.diverging_palette(220, 20, n=20))
+sns.set_palette(sns.diverging_palette(40, 20, n=20, s=90))
 
 path =  "lsq_fits"
 files = glob.glob(os.path.join(path, "*.p"))	
@@ -33,6 +34,7 @@ model.phase_hr, model.lc_hr = model.phase_hr[ind], model.lc_hr[ind]
 ax1.plot(model.phase_hr*per*24., model.lc_hr , color = '0.5')
 ax1.plot(model.phase*per*24., model.data_corr, marker='.', color = 'w', ms = 8, linestyle = 'None', markeredgecolor='k', markeredgewidth=0.5)
 ax1.set_xlim(-3.2, 3.4)
+ax1.set_ylim(0.973, 1.005)
 ax1.yaxis.set_major_locator(FixedLocator(np.array([0.98, 0.99, 1.0])))
 ax1.set_yticklabels(["0.98", "0.99", "1.0"])
 
@@ -47,7 +49,7 @@ ax2.fill_between(x, -1000, 1000, color = '0.7', zorder=-10)
 plt.axhline(0., color ='0.5')
 plt.plot(model.phase*per*24., model.resid/data.flux*1e6, marker='.', color = 'w', ms = 8, linestyle = 'None', markeredgecolor='k', markeredgewidth=0.5)
 #ax2.text(1.8, 210., 'rms (ppm):\n' + '{0:d}'.format(int(model.rms*1e6)), fontsize=10)
-ax2.text(1.7, 300., 'rms: 50 ppm', fontsize=10)
+ax2.text(1.7, 300., 'rms: 92 ppm', fontsize=10)
 ax2.plot(model.phase*per*24., np.ones_like(model.phase)*data.wavelength, linewidth=0.)
 ax2.set_ylim(-500, 700)
 ax2.set_xlim(-3.2, 3.4)
@@ -85,7 +87,8 @@ ax4 = plt.subplot(gs[1,1])
 
 rms = []
 #sns.set_palette(sns.diverging_palette(220, 20, n=20))
-c = sns.diverging_palette(220, 20, n=20)
+#c = sns.diverging_palette(220, 20, n=20)
+c = sns.diverging_palette(40, 20, n=20, s=90)
 ax4.text(2.8, 800,' rms', fontsize=10)
 for i, f in enumerate(files):
 	p = pickle.load(open(f, 'rb'))

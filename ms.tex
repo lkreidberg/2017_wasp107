@@ -105,19 +105,19 @@ In our initial analysis, we noticed a bump in the light curve during orbit three
 In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the precise estimates from the Kepler light curve \citep{dai17}.  These values are consistent with our best fit when we allowed them to vary freely (and masked the star spot). We also fixed the limb darkening parameters on predictions from a PHOENIX model for a star with effective temperature 4300 K, calculated with the \texttt{limb-darkening} package from \cite{espinoza15}.  The remaining free parameters were $t_0$, $r_p/r_s$, and the systematics parameters for the visit-long and orbit-long trends.
 %The model values are consistent with what we obtain from fitting for the limb darkening coefficients as free parameters. 
 
-For the best fit white light curve, the root-mean-square (rms) residuals were 93 ppm (excluding the star spot crossing), which is somewhat larger than the expected shot noise of 50 ppm. We attribute the excess noise to loss of flux off the edge of the detector, which can occur if there is variation in the position or length of the spatial scan. There is no evidence for correlated noise in the residuals, so we increased the per-point uncertainties by a factor of 1.7 to achieve a reduced $\chi_2$ value of unity.  We used the Markov chain Monte Carlo algorithm to estimate parameter uncertainties \citep{foremanmackey13}.  The transit time was $t_0 = 2457910.45407\pm6\mathrm{e}{-5}$ and the planet/star radius was $r_p/r_s = 0.14399\pm0.00017$.
+For the best fit white light curve, the root-mean-square (rms) residuals were 93 ppm (excluding the star spot crossing), which is somewhat larger than the expected shot noise of 50 ppm. We attribute the excess noise to loss of flux off the edge of the detector, which can occur if there is variation in the position or length of the spatial scan. There is no evidence for correlated noise in the residuals, so to account for the excess noise we simply increased the per-point uncertainties by a factor of 1.7 to achieve a reduced $\chi_2$ value of unity.  We then used the Markov chain Monte Carlo algorithm to estimate parameter uncertainties \citep{foremanmackey13}.  The transit time was $t_0 = 2457910.45407\pm6\mathrm{e}{-5}$ and the planet/star radius was $r_p/r_s = 0.14399\pm0.00017$.
 
 \subsection{Spectroscopic Light Curve Fits}
-We binned the spectrum into 20 spectrophotometric channels from FIXME to FIXME $\mu$m, shown in Figure FIXME. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics are nearly constant as a function of wavelength \citep{stevenson??, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  An advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. There is a small chromatic effect due to the changing amplitude of the spot crossing feature with wavelength, but this effect is below the level of noise in our data FIXME.  As for the white light curve, we fixed some of the transit parameters on the estimates from \cite{dai17} and fixed the limb darkening on the PHOENIX model. The fit has just three free parameters: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  
+We binned the spectrum into 20 spectrophotometric channels from 1.12 to 1.65 $\mu$m, shown in Figure\,\ref{fig:lc}. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics are nearly constant as a function of wavelength \citep{stevenson??, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  An advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. There is a small chromatic effect due to the changing amplitude of the spot crossing feature with wavelength, but this effect is not detectable in our data.  As for the white light curve, we fixed some of the transit parameters on the estimates from \cite{dai17} and fixed the limb darkening on the PHOENIX model. The fit has just three free parameters: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  
 
-The best fit light curves have a median reduced $\chi_2$ value of FIXME and rms values consistent with the expected photon shot noise.  There are two channels with slightly higher $\chi_2$ values: FIXME and FIXME. We therefore rescale the photometric uncertainties for all spectroscopic channels such that the $\chi_2$ values are unity, to ensure that we do not underestimate the uncertainty on the transit depths. We performed an MCMC fit to the light curves with \texttt{emcee}. The median transit depths and $1\,\sigma$ uncertainties are given in Table FIXME. FIXME: does the  median agree with the best fit? FIXME: convergence?
+The best fit light curves have a median reduced $\chi_2$ value of 1.16.  To ensure that we do not underestimate the uncertainty on the transit depths, we rescale the photometric uncertainties for all spectroscopic channels such that the $\chi_2$ values are unity. We performed an MCMC fit to the light curves with \texttt{emcee}. The median transit depths and $1\,\sigma$ uncertainties are given in Table FIXME. 
 
 We explored several alternative choices for the spectroscopic light curve fits, but found that none of them made a significant difference in the transmission spectrum. We tested fitting the spectroscopic light curves with the same analytic model we used for the white light curve and obtained nearly identical relative transit depths (FIXME sigma), except offset by a constant value of FIXME ppm. We attribute the offset to the uncorrected star-spot crossing feature. Regardless of the cause, the offset does not affect our final analysis, because the planet's 1 bar radius is a free parameter in the atmospheric retrieval (see \S FIXME). We also explored fitting for a linear limb darkening parameter rather than fixing the limb darkening on the PHOENIX model predictions, and found that the `fitted limb darkening coefficients are consistent with the model.  We opted to fix the coefficients in our final analysis because the uncertainties on the transit depths are slightly smaller (about 10\%). We also checked whether the uncertainty in the stellar parameters significantly affects the PHOENIX model predictions, and found that changing the stellar 
 
 \subsubsection{Transit Depths Redder than FIXME $\mu$m}
 The red edge of the transmission spectrum is of interest for our analysis because methane becomes the dominant absorber over water at wavelengths $> 1.6\,\mu$m. Unfortunately, we find that the spectroscopic light curves between FIXME $\mu$m are too poor in quality to accurately measure the transit depth. The residuals show evidence for correlated noise and the reduced $\chi_2$ values increase to FIXME. 
 
-\subsection{Independent Analysis}
+\subsubsection{Independent Analysis}
 We also performed an independent data reduction and fit using K. Stevenson's pipeline.
 
 \begin{figure*}
@@ -125,6 +125,33 @@ We also performed an independent data reduction and fit using K. Stevenson's pip
 \caption{FIXME}
 \label{fig:spectrum}
 \end{figure*}
+
+\begin{deluxetable}{c c c}
+\tablecaption{WASP-107b transmission spectrum \label{transit_depths}}
+\tablehead{\colhead{Wavelength ($\mu$m)}  & \colhead{Transit depth} & \colhead{Uncertainty}}
+\startdata
+1.133 & 0.020641 & 5.9e-05 \\
+1.158 & 0.020733 & 5.5e-05 \\
+1.184 & 0.020505 & 5.6e-05 \\
+1.209 & 0.020498 & 5.4e-05 \\
+1.235 & 0.020455 & 5.9e-05 \\
+1.260 & 0.020492 & 5.0e-05 \\
+1.285 & 0.020620 & 6.2e-05 \\
+1.311 & 0.020739 & 5.0e-05 \\
+1.336 & 0.020660 & 5.7e-05 \\
+1.362 & 0.020858 & 4.8e-05 \\
+1.387 & 0.020794 & 4.8e-05 \\
+1.413 & 0.020888 & 5.2e-05 \\
+1.438 & 0.020821 & 6.2e-05 \\
+1.464 & 0.020691 & 5.1e-05 \\
+1.489 & 0.020682 & 6.9e-05 \\
+1.515 & 0.020679 & 6.7e-05 \\
+1.540 & 0.020509 & 6.0e-05 \\
+1.565 & 0.020480 & 6.4e-05 \\
+1.591 & 0.020500 & 5.6e-05 \\
+1.616 & 0.020514 & 6.5e-05 \\
+\enddata
+\end{deluxetable}
 
 \section{Atmospheric Retrieval}
 We use the CHIMERA chemically-consistent transmission retrieval tool described in \cite{kreidberg15b} to determine the basic atmospheric properties.   Briefly, the transmission spectrum solves the transmission geometry problem using the equations in \cite{brown01, tinetti12}.  We parametrize atmospheric composition with metallicity and carbon-to-oxygen ratio (C/O) under the assumption of thermochemical equilibrium using the NASA CEA routine \citep{gordon96} to compute the molecular abundances for H$_2$, He, H$_2$O, CH$_4$, CO, CO$_2$, NH$_3$, H$_2$S, Na, K, HCN, C$_2$H$_2$, TiO, VO, and FeH.    We have subsequently upgraded the transmission model to use correlated-K opacities \citep{lacis91, molliere15, amundsen16} for the aforementioned gases generated from the pre-tabulated line-by-line cross section database ($dv/v~10^6$) described in \cite{freedman14}. The transmission forward model is coupled with the powerful PyMultiNest tool \citep{buchner16} to solve the parameter estimation and model selection problems.  
