@@ -1,53 +1,53 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ms.aux
 The style file: aasjournal.bst
 Database file #1: msNotes.bib
 Database file #2: ms.bib.bib
-Warning--I didn't find a database entry for "FIXME"
 Warning--I didn't find a database entry for "stevenson??"
 Warning--I didn't find a database entry for "gordon96"
+Warning--I didn't find a database entry for "zahnle15"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
-You've used 22 entries,
+You've used 24 entries,
             3222 wiz_defined-function locations,
-            827 strings with 9608 characters,
-and the built_in function-call counts, 10226 in all, are:
-= -- 832
-> -- 791
-< -- 7
-+ -- 269
-- -- 297
-* -- 875
-:= -- 1889
-add.period$ -- 22
-call.type$ -- 22
-change.case$ -- 138
-chr.to.int$ -- 22
-cite$ -- 23
-duplicate$ -- 388
-empty$ -- 620
-format.name$ -- 311
-if$ -- 2045
+            840 strings with 9943 characters,
+and the built_in function-call counts, 11115 in all, are:
+= -- 910
+> -- 851
+< -- 8
++ -- 289
+- -- 319
+* -- 947
+:= -- 2046
+add.period$ -- 24
+call.type$ -- 24
+change.case$ -- 150
+chr.to.int$ -- 24
+cite$ -- 25
+duplicate$ -- 424
+empty$ -- 677
+format.name$ -- 337
+if$ -- 2228
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 71
-num.names$ -- 88
-pop$ -- 180
+missing$ -- 23
+newline$ -- 77
+num.names$ -- 96
+pop$ -- 197
 preamble$ -- 1
-purify$ -- 138
+purify$ -- 150
 quote$ -- 0
-skip$ -- 306
+skip$ -- 335
 stack$ -- 0
-substring$ -- 361
+substring$ -- 398
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 198
+type$ -- 216
 warning$ -- 1
-while$ -- 83
+while$ -- 91
 width$ -- 0
-write$ -- 226
+write$ -- 246
 (There were 4 warnings)

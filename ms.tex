@@ -1,83 +1,5 @@
-%%
-%% Beginning of file 'sample61.tex'
-%%
-%% Modified 2016 September
-%%
-%% This is a sample manuscript marked up using the
-%% AASTeX v6.1 LaTeX 2e macros.
-%%
-%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls 
-%% (Copyright 2000-2015).  See the classfile for details.
-
-%% AASTeX requires revtex4-1.cls (http://publish.aps.org/revtex4/) and
-%% other external packages (latexsym, graphicx, amssymb, longtable, and epsf).
-%% All of these external packages should already be present in the modern TeX 
-%% distributions.  If not they can also be obtained at www.ctan.org.
-
-%% The first piece of markup in an AASTeX v6.x document is the \documentclass
-%% command. LaTeX will ignore any data that comes before this command. The 
-%% documentclass can take an optional argument to modify the output style.
-%% The command below calls the preprint style  which will produce a tightly 
-%% typeset, one-column, single-spaced document.  It is the default and thus
-%% does not need to be explicitly stated.
-%%
-%%
-%% using aastex version 6.1
 \documentclass[twocolumn]{aastex61}
 
-%% The default is a single spaced, 10 point font, single spaced article.
-%% There are 5 other style options available via an optional argument. They
-%% can be envoked like this:
-%%
-%% \documentclass[argument]{aastex61}
-%% 
-%% where the arguement options are:
-%%
-%%  twocolumn   : two text columns, 10 point font, single spaced article.
-%%                This is the most compact and represent the final published
-%%                derived PDF copy of the accepted manuscript from the publisher
-%%  manuscript  : one text column, 12 point font, double spaced article.
-%%  preprint    : one text column, 12 point font, single spaced article.  
-%%  preprint2   : two text columns, 12 point font, single spaced article.
-%%  modern      : a stylish, single text column, 12 point font, article with
-%% 		  wider left and right margins. This uses the Daniel
-%% 		  Foreman-Mackey and David Hogg design.
-%%
-%% Note that you can submit to the AAS Journals in any of these 6 styles.
-%%
-%% There are other optional arguments one can envoke to allow other stylistic
-%% actions. The available options are:
-%%
-%%  astrosymb    : Loads Astrosymb font and define \astrocommands. 
-%%  tighten      : Makes baselineskip slightly smaller, only works with 
-%%                 the twocolumn substyle.
-%%  times        : uses times font instead of the default
-%%  linenumbers  : turn on lineno package.
-%%  trackchanges : required to see the revision mark up and print its output
-%%  longauthor   : Do not use the more compressed footnote style (default) for 
-%%                 the author/collaboration/affiliations. Instead print all
-%%                 affiliation information after each name. Creates a much
-%%                 long author list but may be desirable for short author papers
-%%
-%% these can be used in any combination, e.g.
-%%
-%% \documentclass[twocolumn,linenumbers,trackchanges]{aastex61}
-
-%% AASTeX v6.* now includes \hyperref support. While we have built in specific
-%% defaults into the classfile you can manually override them with the
-%% \hypersetup command. For example,
-%%
-%%\hypersetup{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}
-%%
-%% will change the color of the internal links to red, the links to the
-%% bibliography to green, the file links to cyan, and the external links to
-%% magenta. Additional information on \hyperref options can be found here:
-%% https://www.tug.org/applications/hyperref/manual.html#x1-40003
-
-%% If you want to create your own macros, you can do so
-%% using \newcommand. Your macros should appear before
-%% the \begin{document} command.
-%%
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
 \newcommand\latex{La\TeX}
@@ -86,111 +8,19 @@
 %\received{July 1, 2016}
 %\revised{September 27, 2016}
 %\accepted{\today}
-%% Command to document which AAS Journal the manuscript was submitted to.
-%% Adds "Submitted to " the arguement.
 \submitjournal{ApJL}
 
-%% Mark up commands to limit the number of authors on the front page.
-%% Note that in AASTeX v6.1 a \collaboration call (see below) counts as
-%% an author in this case.
-%
-%\AuthorCollaborationLimit=3
-%
-%% Will only show Schwarz, Muench and "the AAS Journals Data Scientist 
-%% collaboration" on the front page of this example manuscript.
-%%
-%% Note that all of the author will be shown in the published article.
-%% This feature is meant to be used prior to acceptance to make the
-%% front end of a long author article more manageable. Please do not use
-%% this functionality for manuscripts with less than 20 authors. Conversely,
-%% please do use this when the number of authors exceeds 40.
-%%
-%% Use \allauthors at the manuscript end to show the full author list.
-%% This command should only be used with \AuthorCollaborationLimit is used.
-
-%% The following command can be used to set the latex table counters.  It
-%% is needed in this document because it uses a mix of latex tabular and
-%% AASTeX deluxetables.  In general it should not be needed.
-%\setcounter{table}{1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% The following section outlines numerous optional output that
-%% can be displayed in the front matter or as running meta-data.
-%%
-%% If you wish, you may supply running head information, although
-%% this information may be modified by the editorial offices.
-\shorttitle{\aastex\ Atmosphere of WASP-107\lowercase{b}}
+\shorttitle{Atmosphere Characterization of WASP-107\lowercase{b}}
 \shortauthors{Kreidberg et al.}
-%%
-%% You can add a light gray and diagonal water-mark to the first page 
-%% with this command:
-% \watermark{text}
-%% where "text", e.g. DRAFT, is the text to appear.  If the text is 
-%% long you can control the water-mark size with:
-%  \setwatermarkfontsize{dimension}
-%% where dimension is any recognized LaTeX dimension, e.g. pt, in, etc.
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% This is the end of the preamble.  Indicate the beginning of the
-%% manuscript itself with \begin{document}.
 
 \begin{document}
 
 \title{Water, High-Altitude Condensates, and Methane Depletion in the Atmosphere of the Warm Neptune WASP-107\lowercase{b}}
 
-%% LaTeX will automatically break titles if they run longer than
-%% one line. However, you may use \\ to force a line break if
-%% you desire. In v6.1 you can include a footnote in the title.
-
-%% A significant change from earlier AASTEX versions is in the structure for 
-%% calling author and affilations. The change was necessary to implement 
-%% autoindexing of affilations which prior was a manual process that could 
-%% easily be tedious in large author manuscripts.
-%%
-%% The \author command is the same as before except it now takes an optional
-%% arguement which is the 16 digit ORCID. The syntax is:
-%% \author[xxxx-xxxx-xxxx-xxxx]{Author Name}
-%%
-%% This will hyperlink the author name to the author's ORCID page. Note that
-%% during compilation, LaTeX will do some limited checking of the format of
-%% the ID to make sure it is valid.
-%%
-%% Use \affiliation for affiliation information. The old \affil is now aliased
-%% to \affiliation. AASTeX v6.1 will automatically index these in the header.
-%% When a duplicate is found its index will be the same as its previous entry.
-%%
-%% Note that \altaffilmark and \altaffiltext have been removed and thus 
-%% can not be used to document secondary affiliations. If they are used latex
-%% will issue a specific error message and quit. Please use multiple 
-%% \affiliation calls for to document more than one affiliation.
-%%
-%% The new \altaffiliation can be used to indicate some secondary information
-%% such as fellowships. This command produces a non-numeric footnote that is
-%% set away from the numeric \affiliation footnotes.  NOTE that if an
-%% \altaffiliation command is used it must come BEFORE the \affiliation call,
-%% right after the \author command, in order to place the footnotes in
-%% the proper location.
-%%
-%% Use \email to set provide email addresses. Each \email will appear on its
-%% own line so you can put multiple email address in one \email call. A new
-%% \correspondingauthor command is available in V6.1 to identify the
-%% corresponding author of the manuscript. It is the author's responsibility
-%% to make sure this name is also in the author list.
-%%
-%% While authors can be grouped inside the same \author and \affiliation
-%% commands it is better to have a single author for each. This allows for
-%% one to exploit all the new benefits and should make book-keeping easier.
-%%
-%% If done correctly the peer review system will be able to
-%% automatically put the author and affiliation information from the manuscript
-%% and save the corresponding author the trouble of entering it by hand.
-
 \correspondingauthor{Laura Kreidberg}
 \email{laura.kreidberg@cfa.harvard.edu}
 
-\author{Laura Kreidberg, Michael Line}
+\author{Laura Kreidberg}
 \affiliation{Harvard Society of Fellows\
 78 Mt. Auburn St.\\
 Cambridge, MA 02138, USA}
@@ -204,8 +34,8 @@ Cambridge, MA 02138}
 \nocollaboration
 
 \author{Caroline Morley}
+\altaffiliation{Sagan Fellow}
 \affiliation{Harvard-Smithsonian Center for Astrophysics}
-\affiliation{Sagan Fellow}
 \nocollaboration
 
 \author{Kevin Stevenson}
@@ -213,23 +43,8 @@ Cambridge, MA 02138}
 \nocollaboration
 
 
-%% Note that the \and command from previous versions of AASTeX is now
-%% depreciated in this version as it is no longer necessary. AASTeX 
-%% automatically takes care of all commas and "and"s between authors names.
-
-%% AASTeX 6.1 has the new \collaboration and \nocollaboration commands to
-%% provide the collaboration status of a group of authors. These commands 
-%% can be used either before or after the list of corresponding authors. The
-%% argument for \collaboration is the collaboration identifier. Authors are
-%% encouraged to surround collaboration identifiers with ()s. The 
-%% \nocollaboration command takes no argument and exists to indicate that
-%% the nearby authors are not part of surrounding collaborations.
-
-%% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
-
-WASP-107b is baller.
-
+We report a measurement of the near-infrared transmission spectrum of the warm Neptune exoplanet WASP-107b measured with the Hubble Space Telescope Wide Field Camera 3. We detecta water absorption feature (FIXME confidence). The feature is small amplitude, clouds. We combine an interior structure model of the planet with an atmospheric retrieval . We find an upper limit on the atmospheric metallicity of FIXME solar, a cloud deck . 
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. 
@@ -263,18 +78,18 @@ WASP-107b is baller.
 \section{Introduction} \label{sec:intro}
 
 \section{Observations}
-We observed a single transit of WASP-107b with HST's Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five HST orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period (about 45 minutes), we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool\footnote{https://github.com/spacetelescope/PandExo\_HST}.  As is standard for observations of bright targets, we used the spatial scanning observing mode, which smears the spectrum in the spatial direction over the course of an exposure. The scan rate was 0.12 arcseconds/sec.
+We observed a single transit of WASP-107b with HST's Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five HST orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period (about 45 minutes), we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool\footnote{https://github.com/spacetelescope/PandExo\_HST}.  As is standard for observations of bright targets, we used the spatial scanning observing mode, which slews the telescope in the spatial direction over the course of an exposure. The scan rate was 0.12 arcseconds/sec.
 
 
 \section{Data Reduction}
-We reduced the data with the custom pipeline described in \cite{kreidberg14a}, which we summarize briefly here. For each exposure, we extracted the spectrum from each up-the-ramp sample (or ``stripe") separately using the optimal extraction algorithm of \citep{horne86}. The stripe spectra were then summed to create the final spectrum. For each stripe, the extraction box was 80 pixels high and centered on the stripe's midpoint in the spatial direction. To correct the change in dispersion solution over the length of the spatial scan, we interpolated each row to the wavelength scale of the row corresponding to the spectral trace. We also corrected for slight drift in the spectral direction ($<0.1$ pixels) by interpolating each the first exposure.  To subtract the background, we took the median of sky pixels that were uncontaminated by the target spectrum (rows $5-250$, columns $5-15$). The typical background counts were low: 40 photoelectrons/pixel, in comparison to $3\times10^4$ photoelectrons/pixel in the stellar spectrum.
+We reduced the data with the custom pipeline described in \cite{kreidberg14a}, which we summarize briefly here. For each exposure, we extracted the spectrum from each up-the-ramp sample (or ``stripe") separately using the optimal extraction algorithm of \cite{horne86}. The stripe spectra were then summed to create the final spectrum. For each stripe, the extraction box was 80 pixels high and centered on the stripe's midpoint in the spatial direction. To correct the change in dispersion solution over the length of the spatial scan, we interpolated each row to the wavelength scale of the row corresponding to the spectral trace. We also corrected for slight drift in the spectral direction ($<0.1$ pixels) by interpolating each the first exposure.  To subtract the background, we took the median of sky pixels that were uncontaminated by the target spectrum (rows $5-250$, columns $5-15$). The typical background counts were low: 40 photoelectrons/pixel, in comparison to $3\times10^4$ photoelectrons/pixel in the stellar spectrum.
 %dispersion solution: 46 Angstroms/pixel. max drift: 3 angstroms (from diagnostics.txt)
 
 \section{Analysis}
 The data analysis had two parts: the band-integrated ``white" light curve fit and the spectroscopic light curve fits.
 
 \subsection{White Light Curve Fit}
-To create the raw white light curve, we summed each spectrum over the 181 pixels in the spectral trace.  The white light curve has systematic trends that are typical for WFC3 observations \cite{zhou17}: the flux increases increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice.  We fit the light curve with the analytic model of the form $F_\mathrm{white}(t) = S_\mathrm{white}(t)\times T_\mathrm{white}(t)$, where $S_\mathrm{white}$ is a systematics model and $T_\mathrm{white}$ is a transit model. We used the same systematics model as \cite{kreidberg15b}, Equation 1.  To model the transit, we used the \texttt{batman} package \citep{kreidberg15a}.  The transit model parameters are the orbital period $p$, time of inferior conjunction $t_0$, transit depth $r_p/r_s$, ratio of semi-major axis to stellar radius $a/r_s$, orbital inclination $i$, and the quadratic stellar limb darkening parameters $u_1$ and $u_2$.
+To create the raw white light curve, we summed each spectrum over the 181 pixels in the spectral trace.  The white light curve has systematic trends that are typical for WFC3 observations \citep{zhou17}: the flux increases increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice.  We fit the light curve with the analytic model of the form $F_\mathrm{white}(t) = S_\mathrm{white}(t)\times T_\mathrm{white}(t)$, where $S_\mathrm{white}$ is a systematics model and $T_\mathrm{white}$ is a transit model. We used the same systematics model as \cite{kreidberg15b}, Equation 1.  To model the transit, we used the \texttt{batman} package \citep{kreidberg15a}.  The transit model parameters are the orbital period $p$, time of inferior conjunction $t_0$, transit depth $r_p/r_s$, ratio of semi-major axis to stellar radius $a/r_s$, orbital inclination $i$, and the quadratic stellar limb darkening parameters $u_1$ and $u_2$.
 
 \begin{figure*}
 \includegraphics[width = \textwidth]{Figures/lc.pdf}
@@ -283,15 +98,14 @@ To create the raw white light curve, we summed each spectrum over the 181 pixels
 \end{figure*}
 
 \subsubsection{Star Spot Crossing}
-In our initial analysis, we noticed a bump in the light curve during orbit three that could not be fit with our model. We attribute this feature to a star spot crossing event, as WASP-107 is an active star and spot crossings have been observed before \citep{dai17, mocnik17}. In our subsequent analysis, we gave the data in orbit three no weight in the fit. The amplitude of the spot crossing feature is FIXME ppm, consistent with a spot of FIXME size and temperature.
+In our initial analysis, we noticed a bump in the light curve during orbit three that could not be fit with our model. We attribute this feature to a star spot crossing event, as WASP-107 is an active star and spot crossings have been observed before \citep{dai17, mocnik17}. In our subsequent analysis, we gave the data in orbit three no weight in the fit. The amplitude of the spot crossing feature is 300 ppm. 
 
-%In our initial fit, we allowed all the transit parameters to vary freely. We noticed two odd results: first, there was a slight increase in flux during orbit three, and second, the transit parameters were inconsistent with the analysis of the precise Kepler data from \cite{dai17}.  We conjectured that the anomalies could be due to a star-spot crossing event in orbit three, as WASP-107 is an active star and spot crossings have been observed before FIXME. To test this idea, we gave the data in orbit three no weight in the fit. For this case, the transit parameters agree well with those of \cite{dai17} and the spot-crossing feature is more pronounced (see Figure FIXME). The amplitude of the feature is FIXME ppm, consistent with a spot of FIXME size and temperature (cf dai17 FIXME).  We conclude that the feature is indeed due to a spot crossing.
 
 \subsubsection{Final Fit}
-In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the precise estimates from the Kepler light curve \citep{dai17}.  We also fixed the limb darkening parameters on predictions from a PHOENIX model for a star of FIXME properties, calculated with the FIXME package.  The remaining free parameters were $t_0$, $r_p/r_s$, and the systematics parameters for the visit-long and orbit-long trends.
+In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the precise estimates from the Kepler light curve \citep{dai17}.  These values are consistent with our best fit when we allowed them to vary freely (and masked the star spot). We also fixed the limb darkening parameters on predictions from a PHOENIX model for a star with effective temperature 4300 K, calculated with the \texttt{limb-darkening} package from \cite{espinoza15}.  The remaining free parameters were $t_0$, $r_p/r_s$, and the systematics parameters for the visit-long and orbit-long trends.
 %The model values are consistent with what we obtain from fitting for the limb darkening coefficients as free parameters. 
 
-For the best fit light curve, the root-mean-square residuals were FIXME ppm (not including orbit three), somewhat larger than the expected shot noise of FIXME ppm. The achieved rms is close to the best value obtained for WFC3 data (FIXME), and we attribute the slight excess noise to either additional star spot crossings or loss of flux from the edge of the detector \citep[as has been seen for other bright targets;][]{FIXME}. We used the Markov chain Monte Carlo algorithm to estimate parameter uncertainties (as implemented in the the \texttt{emcee} package; FIXME). We scaled the per-point uncertainties by a factor of FIXME to achieve a reduced $\chi_2$ value of unity. The transit time was FIXME and the planet/star radius was FIXME.
+For the best fit white light curve, the root-mean-square (rms) residuals were 93 ppm (excluding the star spot crossing), which is somewhat larger than the expected shot noise of 50 ppm. We attribute the excess noise to loss of flux off the edge of the detector, which can occur if there is variation in the position or length of the spatial scan. There is no evidence for correlated noise in the residuals, so we increased the per-point uncertainties by a factor of 1.7 to achieve a reduced $\chi_2$ value of unity.  We used the Markov chain Monte Carlo algorithm to estimate parameter uncertainties \citep{foremanmackey13}.  The transit time was $t_0 = 2457910.45407\pm6\mathrm{e}{-5}$ and the planet/star radius was $r_p/r_s = 0.14399\pm0.00017$.
 
 \subsection{Spectroscopic Light Curve Fits}
 We binned the spectrum into 20 spectrophotometric channels from FIXME to FIXME $\mu$m, shown in Figure FIXME. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics are nearly constant as a function of wavelength \citep{stevenson??, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  An advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. There is a small chromatic effect due to the changing amplitude of the spot crossing feature with wavelength, but this effect is below the level of noise in our data FIXME.  As for the white light curve, we fixed some of the transit parameters on the estimates from \cite{dai17} and fixed the limb darkening on the PHOENIX model. The fit has just three free parameters: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  
@@ -306,6 +120,11 @@ The red edge of the transmission spectrum is of interest for our analysis becaus
 \subsection{Independent Analysis}
 We also performed an independent data reduction and fit using K. Stevenson's pipeline.
 
+\begin{figure*}
+\includegraphics[width = \textwidth]{Figures/spectrum.pdf}
+\caption{FIXME}
+\label{fig:spectrum}
+\end{figure*}
 
 \section{Atmospheric Retrieval}
 We use the CHIMERA chemically-consistent transmission retrieval tool described in \cite{kreidberg15b} to determine the basic atmospheric properties.   Briefly, the transmission spectrum solves the transmission geometry problem using the equations in \cite{brown01, tinetti12}.  We parametrize atmospheric composition with metallicity and carbon-to-oxygen ratio (C/O) under the assumption of thermochemical equilibrium using the NASA CEA routine \citep{gordon96} to compute the molecular abundances for H$_2$, He, H$_2$O, CH$_4$, CO, CO$_2$, NH$_3$, H$_2$S, Na, K, HCN, C$_2$H$_2$, TiO, VO, and FeH.    We have subsequently upgraded the transmission model to use correlated-K opacities \citep{lacis91, molliere15, amundsen16} for the aforementioned gases generated from the pre-tabulated line-by-line cross section database ($dv/v~10^6$) described in \cite{freedman14}. The transmission forward model is coupled with the powerful PyMultiNest tool \citep{buchner16} to solve the parameter estimation and model selection problems.  
@@ -315,20 +134,7 @@ The nominal model set-up requires a temperature-pressure profile (parameterized 
 \section{Discussion} \label{sec:discuss}
 
 
-We note that some directly imaged self-luminous planets in this
-temperature regime are also unexpectedly depleted in methane (e.g.,
-Skemer et al. 2014), when compared to similar temperature brown
-dwarfs.   The leading hypothesis of this depletion (Zahnle & Marley
-2015) is due to the CH4-CO quench point occurring in the CO stability
-field due to the low gravity of self-luminous planets when compared to
-brown dwarfs.  In order this mechanism to work for neptune massed
-planet, the internal temperature would have to be near ~500K to get
-the deep temperatures high enough to thermochemically deplete methane
-at the quench point. Given the age of the star, it is unlikely that
-such high internal temperatures are still due to heat of formation. It
-is possible that tidal heating could increase the internal temperature
-(Agundez et al. 2014; Morley et al. 2017) but that would require a
-negligible eccentricity, of which is currently uncertain for WASP107b.
+We note that some directly imaged self-luminous planets in this temperature regime are also unexpectedly depleted in methane (e.g., Skemer et al. 2014), when compared to similar temperature brown dwarfs.   The leading hypothesis of this depletion \citep{zahnle15} is due to the CH4-CO quench point occurring in the CO stability field due to the low gravity of self-luminous planets when compared to brown dwarfs.  In order this mechanism to work for neptune massed planet, the internal temperature would have to be near ~500K to get the deep temperatures high enough to thermochemically deplete methane at the quench point. Given the age of the star, it is unlikely that such high internal temperatures are still due to heat of formation. It is possible that tidal heating could increase the internal temperature (Agundez et al. 2014; Morley et al. 2017) but that would require a negligible eccentricity, of which is currently uncertain for WASP107b.
 
 
 \subsection{Methane}

@@ -56,6 +56,14 @@ alpha = 1.0*sum(ctoo>solarctoo)/len(ctoo)*1.0
 plt.axvline(np.log10(0.54), color = 'y')
 plt.title("CC Z")
 print "CC Z", get_significance(alpha), alpha
+
+print "3 sigma upper limit on metallicity from CC Z case:"
+ind = np.argsort(ctoo)
+ctoo = ctoo[ind]
+upperlim = int(np.ceil(0.95*len(ctoo)))
+print 10.**ctoo[upperlim]
+
+
 plt.show()
 
 p = pickle.load(open("MCMC_Free.pic", "rb"))
