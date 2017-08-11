@@ -29,6 +29,14 @@
 {Fortney}, J.~J., {Lodders}, K., {Marley}, M.~S., \& {Freedman}, R.~S. 2008,
   \apj, 678, 1419
 
+\bibitem[{{Fortney} {et~al.}(2007){Fortney}, {Marley}, \& {Barnes}}]{fortney07}
+{Fortney}, J.~J., {Marley}, M.~S., \& {Barnes}, J.~W. 2007, \apj, 659, 1661
+
+\bibitem[{{Fortney} {et~al.}(2013){Fortney}, {Mordasini}, {Nettelmann},
+  {Kempton}, {Greene}, \& {Zahnle}}]{fortney13}
+{Fortney}, J.~J., {Mordasini}, C., {Nettelmann}, N., {et~al.} 2013, \apj, 775,
+  80
+
 \bibitem[{{Freedman} {et~al.}(2014){Freedman}, {Lustig-Yaeger}, {Fortney},
   {Lupu}, {Marley}, \& {Lodders}}]{freedman14}
 {Freedman}, R.~S., {Lustig-Yaeger}, J., {Fortney}, J.~J., {et~al.} 2014, \apjs,
@@ -84,25 +92,38 @@
   {Thorngren}, {Marley}, {Teal}, \& {Lupu}}]{morley17}
 {Morley}, C.~V., {Knutson}, H., {Line}, M., {et~al.} 2017, \aj, 153, 86
 
-\bibitem[{{Moses} {et~al.}(2013){Moses}, {Madhusudhan}, {Visscher}, \&
-  {Freedman}}]{moses13}
-{Moses}, J.~I., {Madhusudhan}, N., {Visscher}, C., \& {Freedman}, R.~S. 2013,
-  \apj, 763, 25
-
 \bibitem[{{Mo{\v c}nik} {et~al.}(2017){Mo{\v c}nik}, {Hellier}, {Anderson},
   {Clark}, \& {Southworth}}]{mocnik17}
 {Mo{\v c}nik}, T., {Hellier}, C., {Anderson}, D.~R., {Clark}, B.~J.~M., \&
   {Southworth}, J. 2017, \mnras, 469, 1622
+
+\bibitem[{{Saumon} {et~al.}(1995){Saumon}, {Chabrier}, \& {van
+  Horn}}]{saumon95}
+{Saumon}, D., {Chabrier}, G., \& {van Horn}, H.~M. 1995, \apjs, 99, 713
+
+\bibitem[{{Skemer} {et~al.}(2014){Skemer}, {Marley}, {Hinz}, {Morzinski},
+  {Skrutskie}, {Leisenring}, {Close}, {Saumon}, {Bailey}, {Briguglio},
+  {Defrere}, {Esposito}, {Follette}, {Hill}, {Males}, {Puglisi}, {Rodigas}, \&
+  {Xompero}}]{skemer14}
+{Skemer}, A.~J., {Marley}, M.~S., {Hinz}, P.~M., {et~al.} 2014, \apj, 792, 17
 
 \bibitem[{{Stevenson} {et~al.}(2014){Stevenson}, {Bean}, {Seifahrt},
   {D{\'e}sert}, {Madhusudhan}, {Bergmann}, {Kreidberg}, \&
   {Homeier}}]{stevenson14c}
 {Stevenson}, K.~B., {Bean}, J.~L., {Seifahrt}, A., {et~al.} 2014, \aj, 147, 161
 
+\bibitem[{{Thorngren} {et~al.}(2016){Thorngren}, {Fortney}, {Murray-Clay}, \&
+  {Lopez}}]{thorngren16}
+{Thorngren}, D.~P., {Fortney}, J.~J., {Murray-Clay}, R.~A., \& {Lopez}, E.~D.
+  2016, \apj, 831, 64
+
 \bibitem[{{Tinetti} {et~al.}(2012){Tinetti}, {Tennyson}, {Griffith}, \&
   {Waldmann}}]{tinetti12}
 {Tinetti}, G., {Tennyson}, J., {Griffith}, C.~A., \& {Waldmann}, I. 2012,
   Philosophical Transactions of the Royal Society of London Series A, 370, 2749
+
+\bibitem[{{Zahnle} \& {Marley}(2014)}]{zahnle14}
+{Zahnle}, K.~J., \& {Marley}, M.~S. 2014, \apj, 797, 41
 
 \bibitem[{{Zhou} {et~al.}(2017){Zhou}, {Apai}, {Lew}, \& {Schneider}}]{zhou17}
 {Zhou}, Y., {Apai}, D., {Lew}, B.~W.~P., \& {Schneider}, G. 2017, \aj, 153, 243
