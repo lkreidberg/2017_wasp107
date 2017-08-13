@@ -258,6 +258,9 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
             x0 = np.array(list(zip(b[:-1], b[1:]))).flatten()
             y0 = np.array(list(zip(n, n))).flatten()
             ax.plot(x0, y0, **hist_kwargs)
+	    ax.get_xaxis().set_visible(False)		#LK
+	    ax.get_yaxis().set_visible(False)		#LK
+	    #ax.set_frame_on(False)
 
         if truths is not None and truths[i] is not None:
             ax.axvline(truths[i], color=truth_color)
@@ -335,6 +338,7 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
                 ScalarFormatter(useMathText=use_math_text))
 
         for j, y in enumerate(xs):
+	    if i!=j: ax.set_frame_on(False)	#LK
             if np.shape(xs)[0] == 1:
                 ax = axes
             else:
@@ -623,6 +627,7 @@ def hist2d(x, y, bins=20, range=None, weights=None, levels=None, smooth=None,
         ax.plot(x, y, "o", zorder=-1, rasterized=True, **data_kwargs)
 	ax.get_xaxis().set_visible(False)		#LK
 	ax.get_yaxis().set_visible(False)		#LK
+        ax.set_frame_on(False)
 
     # Plot the base fill to hide the densest data points.
     if (plot_contours or plot_density) and not no_fill_contours:
