@@ -7,7 +7,7 @@ import scipy.stats as st
 
 def get_significance(alpha):
 	z = st.norm.ppf(1.-alpha)
-	print "should I be dividing alpha by 2?"
+#	print "should I be dividing alpha by 2?"		YESS! check with significance test of alpha = 0.003
 	return z
 
 """alpha = np.linspace(0.001, 0.999, 100)
@@ -23,7 +23,7 @@ hist(ctoo)
 plt.axvline(np.log10(0.54), color = 'y')
 plt.title("CC")
 alpha = 1.0*sum(ctoo>solarctoo)/len(ctoo)*1.0
-print "CC sig", get_significance(alpha)
+print "CC sig", get_significance(alpha/2.)
 
 plt.subplot(222)
 p = pickle.load(open("Global_Cloud_noCH4_samples.pic", "rb"))
@@ -32,7 +32,7 @@ hist(ctoo)
 plt.axvline(np.log10(0.54), color = 'y')
 alpha = 1.0*sum(ctoo>solarctoo)/len(ctoo)*1.0
 plt.title("CC no CH4")
-print "CC no CH4 sig", get_significance(alpha)
+print "CC no CH4 sig", get_significance(alpha/2.)
 
 plt.subplot(223)
 p = pickle.load(open("MCMC_CC_QUENCH.pic", "rb"))
@@ -45,7 +45,7 @@ hist(ctoo)
 plt.axvline(np.log10(0.54), color = 'y')
 alpha = 1.0*sum(ctoo>solarctoo)/len(ctoo)*1.0
 plt.title("CC quench")
-print "CC quench", get_significance(alpha)
+print "CC quench", get_significance(alpha/2.)
 
 plt.subplot(224)
 p = pickle.load(open("MCMC_CC_Limit_Metallicity.pic", "rb"))
@@ -55,7 +55,7 @@ hist(ctoo)
 alpha = 1.0*sum(ctoo>solarctoo)/len(ctoo)*1.0
 plt.axvline(np.log10(0.54), color = 'y')
 plt.title("CC Z")
-print "CC Z", get_significance(alpha), alpha
+print "CC Z", get_significance(alpha/2.), alpha
 
 print "3 sigma upper limit on metallicity from CC Z case:"
 ind = np.argsort(ctoo)
@@ -64,11 +64,29 @@ upperlim = int(np.ceil(0.95*len(ctoo)))
 print 10.**ctoo[upperlim]
 
 
-plt.show()
+#plt.show()
+plt.clf()
 
 p = pickle.load(open("MCMC_Free.pic", "rb"))
-p = p[:,:-1]
-x = p[:,4]
+#p = p[:,:-1]
+plt.subplot(131)
+plt.title("H2O")
+x = p[:,3]-6
 hist(x)
-plt.title("FREE")
+
+plt.subplot(132)
+plt.title("CH4")
+x = p[:,4]-6
+hist(x)
+CH4 = np.log10(4.4e-4)
+alpha = 1.0*sum(x>CH4)/len(x)*1.0
+print "CH4 sig", get_significance(alpha/2)
+print "test", get_significance(0.003/2)
+
+
+plt.subplot(133)
+plt.title("NH3")
+x = p[:,5]-6
+hist(x)
+
 plt.show()
