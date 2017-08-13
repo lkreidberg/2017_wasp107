@@ -2,9 +2,22 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\href{#1}{#1}}
 
+\bibitem[{{Ali-Dib}(2016)}]{alidib16}
+{Ali-Dib}, M. 2016, ArXiv e-prints, arXiv:1611.03128
+
 \bibitem[{{Amundsen} {et~al.}(2016){Amundsen}, {Mayne}, {Baraffe}, {Manners},
   {Tremblin}, {Drummond}, {Smith}, {Acreman}, \& {Homeier}}]{amundsen16}
 {Amundsen}, D.~S., {Mayne}, N.~J., {Baraffe}, I., {et~al.} 2016, \aap, 595, A36
+
+\bibitem[{{Anderson} {et~al.}(2017){Anderson}, {Collier Cameron}, {Delrez},
+  {Doyle}, {Gillon}, {Hellier}, {Jehin}, {Lendl}, {Maxted}, {Madhusudhan},
+  {Pepe}, {Pollacco}, {Queloz}, {S{\'e}gransan}, {Smalley}, {Smith}, {Triaud},
+  {Turner}, {Udry}, \& {West}}]{anderson17}
+{Anderson}, D.~R., {Collier Cameron}, A., {Delrez}, L., {et~al.} 2017, ArXiv
+  e-prints, arXiv:1701.03776
+
+\bibitem[{{Benneke}(2015)}]{benneke15}
+{Benneke}, B. 2015, ArXiv e-prints, arXiv:1504.07655
 
 \bibitem[{{Brown}(2001)}]{brown01}
 {Brown}, T.~M. 2001, \apj, 553, 1006
@@ -15,6 +28,14 @@
 
 \bibitem[{{Dai} \& {Winn}(2017)}]{dai17}
 {Dai}, F., \& {Winn}, J.~N. 2017, \aj, 153, 205
+
+\bibitem[{{Dawson} {et~al.}(2016){Dawson}, {Lee}, \& {Chiang}}]{dawson16}
+{Dawson}, R.~I., {Lee}, E.~J., \& {Chiang}, E. 2016, \apj, 822, 54
+
+\bibitem[{{Espinoza} {et~al.}(2017){Espinoza}, {Fortney}, {Miguel},
+  {Thorngren}, \& {Murray-Clay}}]{espinoza17}
+{Espinoza}, N., {Fortney}, J.~J., {Miguel}, Y., {Thorngren}, D., \&
+  {Murray-Clay}, R. 2017, \apjl, 838, L9
 
 \bibitem[{{Espinoza} \& {Jord{\'a}n}(2015)}]{espinoza15}
 {Espinoza}, N., \& {Jord{\'a}n}, A. 2015, \mnras, 450, 1879
@@ -42,6 +63,9 @@
 {Freedman}, R.~S., {Lustig-Yaeger}, J., {Fortney}, J.~J., {et~al.} 2014, \apjs,
   214, 25
 
+\bibitem[{{Frelikh} \& {Murray-Clay}(2017)}]{frelikh17}
+{Frelikh}, R., \& {Murray-Clay}, R.~A. 2017, ArXiv e-prints, arXiv:1708.00862
+
 \bibitem[{{Guillot}(2010)}]{guillot10}
 {Guillot}, T. 2010, \aap, 520, A27
 
@@ -65,6 +89,10 @@
 \bibitem[{{Lacis} \& {Oinas}(1991)}]{lacis91}
 {Lacis}, A.~A., \& {Oinas}, V. 1991, \jgr, 96, 9027
 
+\bibitem[{{Line} {et~al.}(2014){Line}, {Knutson}, {Wolf}, \& {Yung}}]{line14}
+{Line}, M.~R., {Knutson}, H., {Wolf}, A.~S., \& {Yung}, Y.~L. 2014, \apj, 783,
+  70
+
 \bibitem[{{Line} {et~al.}(2011){Line}, {Vasisht}, {Chen}, {Angerhausen}, \&
   {Yung}}]{line11}
 {Line}, M.~R., {Vasisht}, G., {Chen}, P., {Angerhausen}, D., \& {Yung}, Y.~L.
@@ -74,10 +102,26 @@
   {Fortney}, {Kreidberg}, {Madhusudhan}, {Showman}, \& {Diamond-Lowe}}]{line16}
 {Line}, M.~R., {Stevenson}, K.~B., {Bean}, J., {et~al.} 2016, \aj, 152, 203
 
+\bibitem[{{Madhusudhan} {et~al.}(2014){Madhusudhan}, {Amin}, \&
+  {Kennedy}}]{madhusudhan14}
+{Madhusudhan}, N., {Amin}, M.~A., \& {Kennedy}, G.~M. 2014, \apjl, 794, L12
+
+\bibitem[{{Madhusudhan} {et~al.}(2011){Madhusudhan}, {Harrington}, {Stevenson},
+  {Nymeyer}, {Campo}, {Wheatley}, {Deming}, {Blecic}, {Hardy}, {Lust},
+  {Anderson}, {Collier-Cameron}, {Britt}, {Bowman}, {Hebb}, {Hellier},
+  {Maxted}, {Pollacco}, \& {West}}]{madhusudhan11}
+{Madhusudhan}, N., {Harrington}, J., {Stevenson}, K.~B., {et~al.} 2011, \nat,
+  469, 64
+
 \bibitem[{{Molli{\`e}re} {et~al.}(2015){Molli{\`e}re}, {van Boekel},
   {Dullemond}, {Henning}, \& {Mordasini}}]{molliere15}
 {Molli{\`e}re}, P., {van Boekel}, R., {Dullemond}, C., {Henning}, T., \&
   {Mordasini}, C. 2015, \apj, 813, 47
+
+\bibitem[{{Mordasini} {et~al.}(2016){Mordasini}, {van Boekel}, {Molli{\`e}re},
+  {Henning}, \& {Benneke}}]{mordasini16}
+{Mordasini}, C., {van Boekel}, R., {Molli{\`e}re}, P., {Henning}, T., \&
+  {Benneke}, B. 2016, \apj, 832, 41
 
 \bibitem[{{Morley} {et~al.}(2012){Morley}, {Fortney}, {Marley}, {Visscher},
   {Saumon}, \& {Leggett}}]{morley12}
@@ -92,10 +136,24 @@
   {Thorngren}, {Marley}, {Teal}, \& {Lupu}}]{morley17}
 {Morley}, C.~V., {Knutson}, H., {Line}, M., {et~al.} 2017, \aj, 153, 86
 
+\bibitem[{{Moses} {et~al.}(2013){Moses}, {Madhusudhan}, {Visscher}, \&
+  {Freedman}}]{moses13}
+{Moses}, J.~I., {Madhusudhan}, N., {Visscher}, C., \& {Freedman}, R.~S. 2013,
+  \apj, 763, 25
+
 \bibitem[{{Mo{\v c}nik} {et~al.}(2017){Mo{\v c}nik}, {Hellier}, {Anderson},
   {Clark}, \& {Southworth}}]{mocnik17}
 {Mo{\v c}nik}, T., {Hellier}, C., {Anderson}, D.~R., {Clark}, B.~J.~M., \&
   {Southworth}, J. 2017, \mnras, 469, 1622
+
+\bibitem[{{{\"O}berg} {et~al.}(2011){{\"O}berg}, {Murray-Clay}, \&
+  {Bergin}}]{oberg11}
+{{\"O}berg}, K.~I., {Murray-Clay}, R., \& {Bergin}, E.~A. 2011, \apjl, 743, L16
+
+\bibitem[{{Pollack} {et~al.}(1996){Pollack}, {Hubickyj}, {Bodenheimer},
+  {Lissauer}, {Podolak}, \& {Greenzweig}}]{pollack96}
+{Pollack}, J.~B., {Hubickyj}, O., {Bodenheimer}, P., {et~al.} 1996, \icarus,
+  124, 62
 
 \bibitem[{{Saumon} {et~al.}(1995){Saumon}, {Chabrier}, \& {van
   Horn}}]{saumon95}
