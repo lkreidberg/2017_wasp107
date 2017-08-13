@@ -37,6 +37,7 @@ plt.xlim(-2, np.max(d[:,1]))
 plt.gca().text(0.08, 0.95, "a", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
 
 lo, med, hi = quantiles(d[:,1], q)
+print "metal", lo, med, hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
 plt.axvline(med, color = '0.1', linestyle = 'dashed')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')
@@ -53,6 +54,7 @@ plt.xlabel("log(C/O)")
 plt.gca().text(0.08, 0.95, "b", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
 
 lo, med, hi = quantiles(d[:,2], q)
+print "C/O", 10**lo, 10**med, 10**hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
 plt.axvline(med, color = '0.1', linestyle = 'dashed')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')
@@ -74,6 +76,7 @@ plt.gca().set_yticklabels([])
 plt.gca().text(0.08, 0.95, "c", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
 
 lo, med, hi = quantiles(d[:,0], q)
+print "T", lo, med, hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
 plt.axvline(med, color = '0.1', linestyle = 'dashed')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')
@@ -90,6 +93,7 @@ plt.gca().get_yaxis().set_visible(False)		#LK
 plt.gca().text(0.08, 0.95, "c", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
 
 lo, med, hi = quantiles(d[:,3], q)
+print "P", lo, med, hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
 plt.axvline(med, color = '0.1', linestyle = 'dashed')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')

@@ -48,7 +48,9 @@ Cambridge, MA 02138}
 
 
 \begin{abstract}
-%We report a measurement of the near-infrared transmission spectrum of the warm Neptune exoplanet WASP-107b measured with the Hubble Space Telescope Wide Field Camera 3. We detecta water absorption feature (FIXME confidence). The feature is small amplitude, clouds. We combine an interior structure model of the planet with an atmospheric retrieval . We find an upper limit on the atmospheric metallicity of FIXME solar, a cloud deck . 
+We report a Hubble Space Telescope measurement of the near-infrared transmission spectrum of the warm Neptune exoplanet WASP-107b. We analyzed the planet's composition with two techniques: atmospheric retrieval based on the transmission spectrum and interior structure modeling based on the planet's mass and radius. We detect water absorption at $6.5\,\sigma$ confidence and set an upper limit on the atmospheric metallicity of $30\times$ solar. The methane abundance is depleted relative to expectations for a solar abundance pattern, suggesting a low C/O ratio or high internal heat flux.  The amplitude of features in the transmission spectrum is smaller than expected for a cloudless atmosphere, crossing just one scale height, and requires an opaque condensate layer at high altitudes (0.1 - 3 mbar). We calculated physically motivated cloud and haze models and find that it is challenging for these models to reproduce the high enough in the atmosphere.  
+
+Additional observations are planned for this system.
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. 
@@ -167,6 +169,7 @@ We also performed an independent data reduction and fit using K. Stevenson's pip
 In this section we discuss constraints on the composition of WASP-107b's atmosphere based on interior structure modeling and atmospheric retrieval of the measured transmission spectrum.
 
 \subsection{Atmospheric Metallicity from Interior Structure Modeling}
+\label{sec:interior}
 Given WASP-107b's unusually low density, we quantitatively explored the range of atmospheric metallicities that are consistent with the observed mass and radius using the structure evolution modeling of \cite{thorngren16}.  These models assume a thermally inert heavy-element core with a convective envelope of additively mixed H/He \citep{saumon95} and heavy-element impurities.  The heavy elements were a 50-50 rock-ice mix from ANEOS \citep{thompson90}.  We evolved the planets in time using the atmospheric models of \cite{fortney07}.  The results are sensitive to assumptions about the stellar age, which is uncertain \citep[either $0.6\pm0.2$ to $8.3\pm4.3$ Gyr depending on model assumptions;][]{mocnik17}. We therefore ran two models, with uniform age priors of either $0.2-1.0$ or $1.0-13.8$ Gyr.  We used the published mass and radius estimates \citep[$0.12\pm0.01\,M_\mathrm{J}$, $0.94\pm0.02$;][]{anderson17}.  %A more precise mass estimate is in preparation (B. Benneke, priv.\,comm.); however, we find that our results are not significantly affected when we vary the assumed mass by $\pm3\,\sigma$ from the published value because the dominant uncertainties are the stellar age and core mass.
 
 Based on these assumptions, we fit for envelope metallicity and core mass using an MCMC with uniform priors on both parameters.  The MCMC burned in for $10^3$ steps and then collected $4\times10^6$ samples, which we thinned to $10^5$.  The resulting envelope metal mass fractions were converted to metallicities by assuming the mean molecular weight of the metals was 18 (the value for water), using the approach of \cite{fortney13}. Figure\,\ref{fig:metal_prior} shows the results.  We find that the inferred atmospheric metallicity and core mass are inversely proportional, as expected (the more massive the core, the lighter the envelope must be to maintain the observed radius). Larger core masses and envelope metallicities are allowed for the younger stellar age since planets cool and contract as they age.  For the younger (older) stellar age, we find an upper limit on the core mass of FIXME and an upper limit on atmospheric metallicity of FIXME.
@@ -181,10 +184,21 @@ Based on these assumptions, we fit for envelope metallicity and core mass using 
 \label{sec:retrieval}
 We also inferred the composition of the atmosphere directly from the transmission spectrum using the CHIMERA chemically-consistent retrieval tool described in \cite{kreidberg15b}.   Briefly, CHIMERA solves the transmission geometry problem using the equations in \cite{brown01, tinetti12}.  We parameterize atmospheric composition with metallicity and carbon-to-oxygen ratio (C/O) under the assumption of thermochemical equilibrium using the NASA CEA routine \citep{gordon96} to compute the molecular abundances for H$_2$, He, H$_2$O, CH$_4$, CO, CO$_2$, NH$_3$, H$_2$S, Na, K, HCN, C$_2$H$_2$, TiO, VO, and FeH.    We updated the transmission model to use correlated-K opacities \citep{lacis91, molliere15, amundsen16} from the pre-tabulated line-by-line cross section database described in \cite{freedman14}. The transmission forward model is coupled with the PyMultiNest tool \citep{buchner16} to solve the parameter estimation and model selection problems.  
 
-Our nominal model includes a temperature-pressure profile (parameterized via the \citealt{guillot10} relations), the atmospheric metallicity, the carbon-to-oxygen ratio, and a gray cloud-top pressure.  We fix the T-P profile morphology but scale the irradiation temperature to allow for the unknown albedo and heat transport efficiency.  We put a uniform prior on the atmospheric metallicity of
+Our nominal model includes a temperature-pressure profile (parameterized via the \citealt{guillot10} relations), the atmospheric metallicity, the carbon-to-oxygen ratio, and a gray cloud-top pressure.  We fix the T-P profile morphology but scale the irradiation temperature to allow for the unknown albedo and heat transport efficiency.  We put a uniform prior on the atmospheric metallicity of $0.01 - 30\times$ solar based on the upper limit from $\S$\,\ref{sec:interior}.  
+
+The retrieval results are shown in Figure\,\ref{fig:retrieval}.  The metallicity is fairly degenerate with the cloud-top pressure \citep{griffith14}, leading to a large allowed range for both values.  Low metallicities are 
+
+
+Low C/O values are favored, with a $1\,\sigma$ confidence interval of $0.01 - 0.1$. Solar C/O (0.54) is disfavored at FIXME confidence.
+
+cloud at low pressures 
+solar C/O is almost ruled out 
+metal -0.622107202821 0.569340080292 1.19470825739
+C/O 0.013703698053 0.0291553314874 0.101164675722
+T 525.868471118 650.602023714 818.754084294
+P -4.00123780684 -3.33972349689 -2.44574267349
 
 and the quench pressures for nitrogen and carbon species \citep[to account for transport-induced disequilibrium chemistry, e.g.][]{morley17}. 
-
 for cloud patchiness (as described by \citealt{line16}).
 
 
@@ -192,35 +206,36 @@ We experiment with several scenarios within this framework, including models wit
 
 We find strong evidence for water absorption (FIXME sigma) and clouds (FIXME sigma).
 
+\section{Discussion}
+\subsubsection{Methane Abundance}
+
+\subsubsection{Condensate Properties}
+We also considered physically motivated, self-consistent cloud and haze models based on .  To model WASP-107b's spectrum with self-consistent aerosols, we use the methods described in \citep{fortney08, morley15}. We include models from solar to $50\times$ solar metallicity and solar C/O ratio. We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS, see \citealt{morley12}), varying the cloud sedimentation efficiency from 0.1 to 3. None of the cloudy models are sufficiently low amplitude to match the observed muted signal. We also model an ad hoc photochemical 'soot' layer near the top of the atmosphere, scaling results from previous photochemical models for GJ 436b \citep{line11, morley17}. With a sufficiently thick photochemical haze with particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
+
 %We do not consider ``sloped hazes" at this time as they are unlikely to influence the results.
 %We also switch off the quench pressure parameters as they are unlikely to strongly influence the equilibrium abundance profiles of the spectrally prominent, nearly constant-with-altitude abundance, species like CH$_4$, H$_2$O, and NH$_3$ over this temperature range \citep[e.g.][]{line11, moses13}.  
 
 \begin{figure}
 \includegraphics[width = 0.5\textwidth]{Figures/retrieval.pdf}
-\caption{Retrieved distributions for (a) metallicity, (b) carbon-to-oxygen ratio, (c) irradiation temperature, and (d) cloud-top pressure. Dashed vertical lines show the median and $\pm1\,\sigma$ confidence interval. Solar metallicity and C/O values are indicated with solid vertical lines.}  
-\label{fig:retrieval}
+\caption{Retrieved distributions for (a) metallicity, (b) carbon-to-oxygen ratio, (c) irradiation temperature, and (d) cloud-top pressure in bars. Dashed vertical lines show the median and $\pm1\,\sigma$ confidence interval. Solar metallicity and C/O values are indicated with solid vertical lines.}  \label{fig:retrieval}
 \end{figure}
 
 \section{Discussion} \label{sec:discuss}
+Our data suggest a sub-solar methane abundance at FIXME $\sigma$ confidence. This result was surprising because methane is expected to be the dominant carbon-bearing molecule at WASP-107b's temperature \citep{moses13}, but super-solar metal
+
+Some directly imaged planets in this temperature regime are also unexpectedly depleted in methane when compared to similar temperature brown dwarfs \citep{skemer14}.   
+
+The leading hypothesis of this depletion \citep{zahnle14} is due to the CH4-CO quench point occurring in the CO stability field due to the low gravity of self-luminous planets when compared to brown dwarfs.  
+
+In order this mechanism to work for neptune massed planet, the internal temperature would have to be near ~500K to get the deep temperatures high enough to thermochemically deplete methane at the quench point. Given the age of the star, it is unlikely that such high internal temperatures are still due to heat of formation. It is possible that tidal heating could increase the internal temperature (Agundez et al. 2014; Morley et al. 2017) but that would require a negligible eccentricity, of which is currently uncertain for WASP107b.
 
 
-We note that some directly imaged self-luminous planets in this temperature regime are also unexpectedly depleted in methane when compared to similar temperature brown dwarfs \citep{skemer14}.   The leading hypothesis of this depletion \citep{zahnle14} is due to the CH4-CO quench point occurring in the CO stability field due to the low gravity of self-luminous planets when compared to brown dwarfs.  In order this mechanism to work for neptune massed planet, the internal temperature would have to be near ~500K to get the deep temperatures high enough to thermochemically deplete methane at the quench point. Given the age of the star, it is unlikely that such high internal temperatures are still due to heat of formation. It is possible that tidal heating could increase the internal temperature (Agundez et al. 2014; Morley et al. 2017) but that would require a negligible eccentricity, of which is currently uncertain for WASP107b.
-
-
-\subsection{Methane}
 
 \subsection{Comparative planetology with HAT-P-11b, HAT-P-26b}
 
-\subsection{Constraints on Condensate Properties}
-The amplitude of WASP-107b's spectral features is about half that expected for an atmosphere free of condensates. In our retrieval analysis, we explored two simple parameterizations to model condensates: a gray opacity source and a sloped haze.  The retrieved cloud-top pressure is FIXME at $1\,\sigma$ confidence.
-
-We also considered physically motivated, self-consistent cloud and haze models based on .  To model WASP-107b's spectrum with self-consistent aerosols, we use the methods described in \citep{fortney08, morley15}. We include models from solar to $50\times$ solar metallicity and solar C/O ratio. We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS, see \citealt{morley12}), varying the cloud sedimentation efficiency from 0.1 to 3. None of the cloudy models are sufficiently low amplitude to match the observed muted signal. We also model an ad hoc photochemical 'soot' layer near the top of the atmosphere, scaling results from previous photochemical models for GJ 436b \citep{line11, morley17}. With a sufficiently thick photochemical haze with particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
 
 
-
-
-
-\section{Future Plans}
+\section{Conclusions and Future Plans}
 WASP-107b is slated to be observed with numerous facilities. Transits were recently observed with the WFC3/G102 grism and Spitzer 3.6 and 4.5 $\mu$m channels. Spitzer eclipses are planned (Program FIXME; PI L. Kreidberg). In addition, WASP-107b is included in the \emph{JWST} Guaranteed Time Observations.
 
 Combine data from Spitzer/HST
@@ -228,10 +243,7 @@ JWST GTO
 
 
 \acknowledgments
-Fei Dai
-Jessica Spake
-
-L.R.K. acknowledges support from the Harvard Society of Fellows and the Harvard Astronomy Department Institute for Theory and Computation.
+We thank Fei Dai, Jessica Spake, and Ian Crossfield for productive conversations. L.R.K. acknowledges support from the Harvard Society of Fellows and the Harvard Astronomy Department Institute for Theory and Computation.
 
 \vspace{5mm}
 \facilities{HST(WFC3)}

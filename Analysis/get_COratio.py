@@ -78,7 +78,8 @@ plt.subplot(132)
 plt.title("CH4")
 x = p[:,4]-6
 hist(x)
-CH4 = np.log10(4.4e-4)
+CH4 = np.log10(4.4e-3)
+CH4 = np.log10(0.00132)
 alpha = 1.0*sum(x>CH4)/len(x)*1.0
 print "CH4 sig", get_significance(alpha/2)
 print "test", get_significance(0.003/2)
