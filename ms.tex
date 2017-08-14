@@ -48,9 +48,13 @@ Cambridge, MA 02138}
 
 
 \begin{abstract}
-We report a Hubble Space Telescope measurement of the near-infrared transmission spectrum of the warm Neptune exoplanet WASP-107b. We analyzed the planet's composition with two techniques: atmospheric retrieval based on the transmission spectrum and interior structure modeling based on the planet's mass and radius. We detect water absorption at $6.5\,\sigma$ confidence and set an upper limit on the atmospheric metallicity of $30\times$ solar. The methane abundance is depleted relative to expectations for a solar abundance pattern, suggesting a low C/O ratio or high internal heat flux.  The amplitude of features in the transmission spectrum is smaller than expected for a cloudless atmosphere, crossing just one scale height, and requires an opaque condensate layer at high altitudes (0.1 - 3 mbar). We calculated physically motivated cloud and haze models and find that it is challenging for these models to reproduce the high enough in the atmosphere.  
+The transiting planet WASP-107b is an intriguing target for atmosphere characterization, with a large atmospheric scale height and a small, bright host star. 
 
-Additional observations are planned for this system.
+
+
+w107 is a good target for atmospheric characterization, raising the exciting possibility of characterizing its formation history
+
+.  With a mass similar to Neptune's and a radius close to Jupiter's, it occupies the transition region between ice giants and gas giants. The planet is also one of the strongest targets for atmospheric characterization yet discovered, thanks to its small, bright host star and large scale height.  We report the first atmosphere characterization of WASP-107b, a Hubble Space Telescope measurement of its near-infrared transmission spectrum.  We analyzed the planet's composition with two techniques: atmospheric retrieval based on the transmission spectrum and interior structure modeling based on the planet's mass and radius. We detect water absorption at $6.5\,\sigma$ confidence and set an upper limit on the atmospheric metallicity of $30\times$ solar. We find that the methane abundance is depleted relative to expectations for a solar abundance pattern (at $3\,\sigma$ confidence), suggesting a low carbon-to-oxygen ratio or high internal heat flux.  The amplitude of features in the transmission spectrum is smaller than expected for a cloudless atmosphere, crossing just one scale height, and requires an opaque condensate layer at high altitudes (0.1 - 3 mbar). We find that it is challenging for physically motivated cloud and haze models to produce opaque condensates at this height.  Taken together, these findings serve as an illustration of the diversity and complexity of exoplanet atmospheres. We can look forward to more such results with the high precision and wide spectral coverage afforded by future observing facilities. 
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. 
@@ -182,32 +186,21 @@ Based on these assumptions, we fit for envelope metallicity and core mass using 
 
 \subsection{Retrieval}
 \label{sec:retrieval}
-We also inferred the composition of the atmosphere directly from the transmission spectrum using the CHIMERA chemically-consistent retrieval tool described in \cite{kreidberg15b}.   Briefly, CHIMERA solves the transmission geometry problem using the equations in \cite{brown01, tinetti12}.  We parameterize atmospheric composition with metallicity and carbon-to-oxygen ratio (C/O) under the assumption of thermochemical equilibrium using the NASA CEA routine \citep{gordon96} to compute the molecular abundances for H$_2$, He, H$_2$O, CH$_4$, CO, CO$_2$, NH$_3$, H$_2$S, Na, K, HCN, C$_2$H$_2$, TiO, VO, and FeH.    We updated the transmission model to use correlated-K opacities \citep{lacis91, molliere15, amundsen16} from the pre-tabulated line-by-line cross section database described in \cite{freedman14}. The transmission forward model is coupled with the PyMultiNest tool \citep{buchner16} to solve the parameter estimation and model selection problems.  
+We also inferred the composition of the atmosphere directly from the transmission spectrum using the CHIMERA chemically-consistent retrieval tool described in \cite{kreidberg15b}.   Briefly, CHIMERA solves the transmission geometry problem using the equations in \cite{brown01, tinetti12}.  We parameterize atmospheric composition with metallicity and carbon-to-oxygen ratio under the assumption of thermochemical equilibrium using the NASA CEA routine \citep{gordon96} to compute the molecular abundances for H$_2$, He, H$_2$O, CH$_4$, CO, CO$_2$, NH$_3$, H$_2$S, Na, K, HCN, C$_2$H$_2$, TiO, VO, and FeH.    We updated the transmission model to use correlated-K opacities \citep{lacis91, molliere15, amundsen16} from the pre-tabulated line-by-line cross section database described in \cite{freedman14}. The transmission forward model is coupled with the PyMultiNest tool \citep{buchner16} to solve the parameter estimation and model selection problems.  
 
-Our nominal model includes a temperature-pressure profile (parameterized via the \citealt{guillot10} relations), the atmospheric metallicity, the carbon-to-oxygen ratio, and a gray cloud-top pressure.  We fix the T-P profile morphology but scale the irradiation temperature to allow for the unknown albedo and heat transport efficiency.  We put a uniform prior on the atmospheric metallicity of $0.01 - 30\times$ solar based on the upper limit from $\S$\,\ref{sec:interior}.  
+Our nominal model includes a temperature-pressure profile (parameterized via the \citealt{guillot10} relations), the atmospheric metallicity, the C/O, and a gray cloud-top pressure.  We fix the T-P profile morphology but scale the irradiation temperature to allow for the unknown albedo and heat transport efficiency.  We put a uniform prior on the atmospheric metallicity of $0.01 - 30\times$ solar based on the upper limit from $\S$\,\ref{sec:interior}.  
 
-The retrieval results are shown in Figure\,\ref{fig:retrieval}.  The metallicity is fairly degenerate with the cloud-top pressure \citep{griffith14}, leading to a large allowed range for both values.  Low metallicities are 
+The retrieval results are shown in Figure\,\ref{fig:retrieval}.  The metallicity distribution spans the full range allowed by our priors, with some preference for larger values. The cloud top pressure is estimated to be $0.01 - 3$ mbar at $1\,\sigma$ confidence. These are not particularly precise constraints because the metallicity and cloud height are degenerate \citep{griffith14}.  We find that the C/O value is less than solar (0.54) at $2.7\,\sigma$ confidence.  The retrieved irradiation temperature is $525 - 820$ K (1 $\sigma$ confidence).
 
+We explored several alternate retrieval scenarios, including the addition of cloud patchiness (as described by \citealt{line16}) and a quench pressures for nitrogen and carbon species \citep[to account for transport-induced disequilibrium chemistry, e.g.][]{morley17}.  We did not find significant evidence for either additional complexity in the model, and the main retrieval results were unchanged.
 
-Low C/O values are favored, with a $1\,\sigma$ confidence interval of $0.01 - 0.1$. Solar C/O (0.54) is disfavored at FIXME confidence.
+\subsubsection{Methane Abundance}
+We ran two additional retrievals to explore whether methane depletion is the underlying cause of the low C/O measurement. In one test, we assumed chemical equilibrium but excluded methane opacity. In this test, the C/O value  
 
-cloud at low pressures 
-solar C/O is almost ruled out 
-metal -0.622107202821 0.569340080292 1.19470825739
-C/O 0.013703698053 0.0291553314874 0.101164675722
-T 525.868471118 650.602023714 818.754084294
-P -4.00123780684 -3.33972349689 -2.44574267349
+We also performed a ``free" retrieval that allowed the abundances of CH$_4$, H$_2$O and NH$_3$ to vary with no assumption of chemical equilibrium. These results $3\,\sigma$
 
-and the quench pressures for nitrogen and carbon species \citep[to account for transport-induced disequilibrium chemistry, e.g.][]{morley17}. 
-for cloud patchiness (as described by \citealt{line16}).
-
-
-We experiment with several scenarios within this framework, including models with/without clouds, models with/without quenching, including methane opacity, and a uniform prior in atmospheric metallicity from (FIXME to $30\times$ solar based on the interior structure modeling). We also performed a ``free" retrieval that allowed the abundances of CH$_4$, H$_2$O and NH$_3$ to vary freely.
-
-We find strong evidence for water absorption (FIXME sigma) and clouds (FIXME sigma).
 
 \section{Discussion}
-\subsubsection{Methane Abundance}
 
 \subsubsection{Condensate Properties}
 We also considered physically motivated, self-consistent cloud and haze models based on .  To model WASP-107b's spectrum with self-consistent aerosols, we use the methods described in \citep{fortney08, morley15}. We include models from solar to $50\times$ solar metallicity and solar C/O ratio. We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS, see \citealt{morley12}), varying the cloud sedimentation efficiency from 0.1 to 3. None of the cloudy models are sufficiently low amplitude to match the observed muted signal. We also model an ad hoc photochemical 'soot' layer near the top of the atmosphere, scaling results from previous photochemical models for GJ 436b \citep{line11, morley17}. With a sufficiently thick photochemical haze with particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
@@ -229,6 +222,10 @@ The leading hypothesis of this depletion \citep{zahnle14} is due to the CH4-CO q
 
 In order this mechanism to work for neptune massed planet, the internal temperature would have to be near ~500K to get the deep temperatures high enough to thermochemically deplete methane at the quench point. Given the age of the star, it is unlikely that such high internal temperatures are still due to heat of formation. It is possible that tidal heating could increase the internal temperature (Agundez et al. 2014; Morley et al. 2017) but that would require a negligible eccentricity, of which is currently uncertain for WASP107b.
 
+
+low C/O ratio - planetesimal enrichment (cite Nestor)
+metallicity 30x solar - how does this compare to mass/atmospheric metallicity 
+clouds
 
 
 \subsection{Comparative planetology with HAT-P-11b, HAT-P-26b}
