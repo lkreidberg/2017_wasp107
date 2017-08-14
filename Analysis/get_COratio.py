@@ -4,15 +4,19 @@ import pickle
 from pylab import hist
 import scipy.stats as st
 
+def quantiles(d, q):
+        ind = np.argsort(d)
+        d = d[ind]
+        return_quantile = np.zeros_like(q)
+        n = len(d)
+        for i in range(0, len(q)):
+                return_quantile[i] = d[int(q[i]*float(n))]
+        return return_quantile
 
 def get_significance(alpha):
 	z = st.norm.ppf(1.-alpha)
 #	print "should I be dividing alpha by 2?"		YESS! check with significance test of alpha = 0.003
 	return z
-
-"""alpha = np.linspace(0.001, 0.999, 100)
-plt.plot(alpha, st.norm.ppf(alpha))
-plt.show()"""
 
 solarctoo = np.log10(0.54)
 
@@ -33,6 +37,9 @@ plt.axvline(np.log10(0.54), color = 'y')
 alpha = 1.0*sum(ctoo>solarctoo)/len(ctoo)*1.0
 plt.title("CC no CH4")
 print "CC no CH4 sig", get_significance(alpha/2.)
+
+q = [0.16, 0.5, 0.84]
+print 10.**quantiles(ctoo, q)
 
 plt.subplot(223)
 p = pickle.load(open("MCMC_CC_QUENCH.pic", "rb"))
@@ -82,7 +89,12 @@ CH4 = np.log10(4.4e-3)
 CH4 = np.log10(0.00132)
 alpha = 1.0*sum(x>CH4)/len(x)*1.0
 print "CH4 sig", get_significance(alpha/2)
-print "test", get_significance(0.003/2)
+print "alpha", alpha
+q = [0.997]
+print quantiles(x, q)
+
+
+#print "test", get_significance(0.003/2)
 
 
 plt.subplot(133)
