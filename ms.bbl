@@ -26,6 +26,10 @@
 {Buchner}, J. 2016, {PyMultiNest: Python interface for MultiNest}, Astrophysics
   Source Code Library, , , ascl:1606.005
 
+\bibitem[{{Crossfield} \& {Kreidberg}(2017)}]{crossfield17}
+{Crossfield}, I.~J.~M., \& {Kreidberg}, L. 2017, ArXiv e-prints,
+  arXiv:1708.00016
+
 \bibitem[{{Dai} \& {Winn}(2017)}]{dai17}
 {Dai}, F., \& {Winn}, J.~N. 2017, \aj, 153, 205
 
@@ -65,6 +69,15 @@
 
 \bibitem[{{Frelikh} \& {Murray-Clay}(2017)}]{frelikh17}
 {Frelikh}, R., \& {Murray-Clay}, R.~A. 2017, ArXiv e-prints, arXiv:1708.00862
+
+\bibitem[{{Gao} {et~al.}(2017){Gao}, {Marley}, {Zahnle}, {Robinson}, \&
+  {Lewis}}]{gao17}
+{Gao}, P., {Marley}, M.~S., {Zahnle}, K., {Robinson}, T.~D., \& {Lewis}, N.~K.
+  2017, \aj, 153, 139
+
+\bibitem[{{Griffith}(2014)}]{griffith14}
+{Griffith}, C.~A. 2014, Philosophical Transactions of the Royal Society of
+  London Series A, 372, 20130086
 
 \bibitem[{{Guillot}(2010)}]{guillot10}
 {Guillot}, T. 2010, \aap, 520, A27

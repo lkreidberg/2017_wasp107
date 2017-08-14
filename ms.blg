@@ -10,50 +10,47 @@ Repeated entry---line 3225 of file ms.bib.bib
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "thompson90"
 Warning--I didn't find a database entry for "gordon96"
-Warning--I didn't find a database entry for "griffith14"
-Warning--I didn't find a database entry for "gao17"
-Warning--I didn't find a database entry for "crossfield17"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
-You've used 44 entries,
+You've used 47 entries,
             3222 wiz_defined-function locations,
-            972 strings with 15064 characters,
-and the built_in function-call counts, 20665 in all, are:
-= -- 1652
-> -- 1678
-< -- 12
-+ -- 568
-- -- 624
-* -- 1805
-:= -- 3835
-add.period$ -- 44
-call.type$ -- 44
-change.case$ -- 273
-chr.to.int$ -- 43
-cite$ -- 45
-duplicate$ -- 784
-empty$ -- 1224
-format.name$ -- 659
-if$ -- 4109
+            986 strings with 15556 characters,
+and the built_in function-call counts, 21935 in all, are:
+= -- 1761
+> -- 1758
+< -- 14
++ -- 595
+- -- 653
+* -- 1904
+:= -- 4061
+add.period$ -- 47
+call.type$ -- 47
+change.case$ -- 290
+chr.to.int$ -- 46
+cite$ -- 48
+duplicate$ -- 837
+empty$ -- 1312
+format.name$ -- 692
+if$ -- 4371
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 43
-newline$ -- 137
-num.names$ -- 176
-pop$ -- 367
+missing$ -- 46
+newline$ -- 146
+num.names$ -- 188
+pop$ -- 391
 preamble$ -- 1
-purify$ -- 273
+purify$ -- 290
 quote$ -- 0
-skip$ -- 588
+skip$ -- 632
 stack$ -- 0
-substring$ -- 671
+substring$ -- 727
 swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 396
+type$ -- 423
 warning$ -- 1
-while$ -- 163
+while$ -- 174
 width$ -- 0
-write$ -- 446
+write$ -- 476
 (There was 1 error message)
