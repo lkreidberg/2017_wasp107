@@ -69,6 +69,8 @@ ind = np.argsort(ctoo)
 ctoo = ctoo[ind]
 upperlim = int(np.ceil(0.95*len(ctoo)))
 print 10.**ctoo[upperlim]
+q = [0.997]
+print "3 sig Z", 10**quantiles(ctoo, q)
 
 
 #plt.show()
