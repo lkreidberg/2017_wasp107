@@ -21,12 +21,17 @@ plt.errorbar(d[:,0], d[:,1]*100., d[:,2]*100., linestyle = 'none', zorder = 100,
 #plt.plot(d[:,0]*1e6, convolve(d[:,1], g, boundary = 'extend')-0.08)
 
 p = pickle.load(open("WASP107b_Global_Cloud_limit_Metallicity_spectra.pic", "rb"))
-print "outliers", (p[9] - p[7])/p[8]
+#print "outliers", (p[9] - p[7])/p[8]
 w = p[0]
 
 plt.fill_between(w, p[1], p[5], color = "navy", alpha = '0.2')
 plt.fill_between(w, p[2], p[4], color = "navy", alpha = '0.3')
-plt.plot(w, p[3], color = 'navy', label = "Best fit model")
+#plt.plot(w, p[3], color = 'navy', label = "Best fit model")
+
+# best fit
+pb = pickle.load(open("Model_best_fit.pic", "rb"))
+plt.plot(pb[0], pb[1]*100., color = 'navy', label = 'Best fit model')
+print 'outliers', (p[7] - pb[3]*100.)/p[8]
 
 """d = pickle.load(open("Model_Solar.pic", "rb"))
 x, y = d[0], d[1]*100. - 0.7

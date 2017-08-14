@@ -95,13 +95,18 @@ print "alpha", alpha
 q = [0.997]
 print quantiles(x, q)
 
-
 #print "test", get_significance(0.003/2)
-
 
 plt.subplot(133)
 plt.title("NH3")
 x = p[:,5]-6
 hist(x)
 
+#plt.show()
+
+plt.clf()
+ctoo = 10**(p[:,4]-6)/10**(p[:,3]-6)
+hist(np.log10(ctoo))
+plt.axvline(np.log10(0.54), color = 'y')
+print sum(ctoo>0.54), len(ctoo)
 plt.show()
