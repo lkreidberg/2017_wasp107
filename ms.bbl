@@ -75,11 +75,17 @@
 \bibitem[{{Kreidberg}(2015)}]{kreidberg15a}
 {Kreidberg}, L. 2015, \pasp, 127, 1161
 
-\bibitem[{{Kreidberg} {et~al.}(2014){Kreidberg}, {Bean}, {D{\'e}sert},
-  {Benneke}, {Deming}, {Stevenson}, {Seager}, {Berta-Thompson}, {Seifahrt}, \&
-  {Homeier}}]{kreidberg14a}
-{Kreidberg}, L., {Bean}, J.~L., {D{\'e}sert}, J.-M., {et~al.} 2014, \nat, 505,
-  69
+\bibitem[{{Kreidberg} {et~al.}(2014{\natexlab{a}}){Kreidberg}, {Bean},
+  {D{\'e}sert}, {Benneke}, {Deming}, {Stevenson}, {Seager}, {Berta-Thompson},
+  {Seifahrt}, \& {Homeier}}]{kreidberg14a}
+{Kreidberg}, L., {Bean}, J.~L., {D{\'e}sert}, J.-M., {et~al.}
+  2014{\natexlab{a}}, \nat, 505, 69
+
+\bibitem[{{Kreidberg} {et~al.}(2014{\natexlab{b}}){Kreidberg}, {Bean},
+  {D{\'e}sert}, {Line}, {Fortney}, {Madhusudhan}, {Stevenson}, {Showman},
+  {Charbonneau}, {McCullough}, {Seager}, {Burrows}, {Henry}, {Williamson},
+  {Kataria}, \& {Homeier}}]{kreidberg14b}
+---. 2014{\natexlab{b}}, \apjl, 793, L27
 
 \bibitem[{{Kreidberg} {et~al.}(2015){Kreidberg}, {Line}, {Bean}, {Stevenson},
   {D{\'e}sert}, {Madhusudhan}, {Fortney}, {Barstow}, {Henry}, {Williamson}, \&
@@ -159,12 +165,6 @@
   Horn}}]{saumon95}
 {Saumon}, D., {Chabrier}, G., \& {van Horn}, H.~M. 1995, \apjs, 99, 713
 
-\bibitem[{{Skemer} {et~al.}(2014){Skemer}, {Marley}, {Hinz}, {Morzinski},
-  {Skrutskie}, {Leisenring}, {Close}, {Saumon}, {Bailey}, {Briguglio},
-  {Defrere}, {Esposito}, {Follette}, {Hill}, {Males}, {Puglisi}, {Rodigas}, \&
-  {Xompero}}]{skemer14}
-{Skemer}, A.~J., {Marley}, M.~S., {Hinz}, P.~M., {et~al.} 2014, \apj, 792, 17
-
 \bibitem[{{Stevenson} {et~al.}(2014){Stevenson}, {Bean}, {Seifahrt},
   {D{\'e}sert}, {Madhusudhan}, {Bergmann}, {Kreidberg}, \&
   {Homeier}}]{stevenson14c}
@@ -179,9 +179,6 @@
   {Waldmann}}]{tinetti12}
 {Tinetti}, G., {Tennyson}, J., {Griffith}, C.~A., \& {Waldmann}, I. 2012,
   Philosophical Transactions of the Royal Society of London Series A, 370, 2749
-
-\bibitem[{{Zahnle} \& {Marley}(2014)}]{zahnle14}
-{Zahnle}, K.~J., \& {Marley}, M.~S. 2014, \apj, 797, 41
 
 \bibitem[{{Zhou} {et~al.}(2017){Zhou}, {Apai}, {Lew}, \& {Schneider}}]{zhou17}
 {Zhou}, Y., {Apai}, D., {Lew}, B.~W.~P., \& {Schneider}, G. 2017, \aj, 153, 243

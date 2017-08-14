@@ -190,7 +190,7 @@ We also inferred the composition of the atmosphere directly from the transmissio
 
 Our nominal model included a temperature-pressure profile (parameterized via the \citealt{guillot10} relations), the atmospheric metallicity, the C/O, a gray cloud-top pressure, and the planet's 10-bar radius.  We fixed the T-P profile morphology but scaled the irradiation temperature to allow for the unknown albedo and heat transport efficiency.  We put a uniform prior on the atmospheric metallicity of $0.01 - 30\times$ solar based on the upper limit from $\S$\,\ref{sec:interior}.  
 
-The best fit model provides a good fit to the data ($\chi^2_\nu = 1.2$).  There is one $3.4\sigma$ outlier data point (1.34 $\mu$m), so we explored a few retrieval scenarios with additional complexity.  We tested the addition of cloud patchiness (as described by \citealt{line16}) and a quench pressure for nitrogen and carbon species \citep[to account for transport-induced disequilibrium chemistry, e.g.][]{morley17}.  These models did not significantly improve the fit quality, and the main retrieval results were unchanged. We also tested the effect of varying the planet's surface gravity within the published FIXME $\sigma$ range, and found that our results were again minimally changed.
+The best fit model provides a good fit to the data ($\chi^2_\nu = 1.2$).  There is one $3.4\sigma$ outlier data point (at 1.34 $\mu$m), so we explored a few retrieval scenarios with additional complexity.  We tested the addition of cloud patchiness (as described by \citealt{line16}) and a quench pressure for nitrogen and carbon species \citep[to account for transport-induced disequilibrium chemistry, e.g.][]{morley17}.  These models did not significantly improve the fit quality, and the main retrieval results were unchanged. We also tested the effect of varying the planet's surface gravity within the published FIXME $\sigma$ range, and found that our results were again minimally changed.
 
 The nominal retrieval results are shown in Figure\,\ref{fig:retrieval}.  The metallicity distribution spans the full range allowed by our priors, with some preference for larger values. The cloud top pressure is estimated to be $0.01 - 3$ mbar at $1\,\sigma$ confidence. These are not particularly precise constraints because the metallicity and cloud height are somewhat degenerate \citep{griffith14}.  The retrieved irradiation temperature is $525 - 820$ K (1 $\sigma$ confidence).  We find that the C/O value is less than solar (0.54) at $2.7\,\sigma$ confidence. 
 
@@ -201,38 +201,31 @@ The nominal retrieval results are shown in Figure\,\ref{fig:retrieval}.  The met
 \end{figure}
 
 \subsubsection{Methane Abundance}
-We ran two additional retrievals to explore whether methane depletion is the underlying cause of the inferred low C/O.  Even though water is the dominant absorber in the WFC3 bandpass, there is enough methane opacity to change the shape of the spectral features at a level we can detect.  In one test, we assumed chemical equilibrium but excluded methane opacity. This set-up resulted in a much broader distribution of C/O values ($0.02 - 1.6$ at $1\,\sigma$), resolving the tension with the solar value. 
+We ran two additional retrievals to explore whether methane depletion is the underlying cause of the inferred low C/O.  Even though water is the dominant absorber in the WFC3 bandpass, there is enough methane opacity to change the shape of the spectral features at a detectable level for high precision data.  In one test, we assumed chemical equilibrium but excluded methane opacity. This set-up resulted in a much broader distribution of C/O values ($0.02 - 1.6$ at $1\,\sigma$), resolving the tension with the solar value. 
 
 We also performed a ``free" retrieval that allowed the abundances of CH$_4$, H$_2$O and NH$_3$ to vary with no assumption of chemical equilibrium. The $3\,\sigma$ upper limit on the methane abundance is $1.2\times10^{-3}$. We compared this to the expected methane abundance for the temperature and pressure sensed at the terminator.  Assuming  solar C/O and $3\,\times$ solar metallicity (the median value for the chemical equilbrium retrieval), the methane abundance is predicted to be $1.3\times10^{-3}$, inconsistent with our estimated value.  Based on these tests, we conclude that the atmosphere of WASP-107b is depleted in methane relative to expectations for a solar abundance pattern.
 
 \subsection{Condensate Properties}
-In addition to the atmospheric retrieval, we also performed forward modeling of physically motivated, self-consistent clouds and hazes using the methods described in \cite{fortney08, morley15}.  We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS, see \citealt{morley12}), for a range of metallicites from $1-50\times$ solar. We vary the cloud sedimentation efficiency from 0.1 to 3 (highly lofted, small particulate clouds). None of the models produce sufficiently low amplitude spectral features to match the observed spectrum. 
+In addition to the atmospheric retrieval, we also performed forward modeling of physically motivated, self-consistent clouds and hazes using the methods described in \cite{fortney08, morley15}.  We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS; see \citealt{morley12}), for a range of metallicites from $1-50\times$ solar. We vary the cloud sedimentation efficiency from 0.1 to 3 (highly lofted, small particulate clouds). None of the models produce sufficiently low amplitude spectral features to match the observed spectrum. FIXME: what did we assume about surface gravity?
 
 We also model an \emph{ad hoc} photochemical ``soot" layer near the top of the atmosphere, scaling results from previous photochemical models for GJ 436b \citep{line11, morley17}. With the most efficient haze production and particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. However, these photochemical hazes are assumed to form from hydrocarbons generated by methane photolysis, and we found in the previous section that methane is depleted in the atmosphere of WASP-107b.  %Sulfur-based hazes are another possibility \citep{gao17}.
 Further modeling of the condensates is needed for a satisfactory explanation of the data.
 
-
 %We do not consider ``sloped hazes" at this time as they are unlikely to influence the results.
 %We also switch off the quench pressure parameters as they are unlikely to strongly influence the equilibrium abundance profiles of the spectrally prominent, nearly constant-with-altitude abundance, species like CH$_4$, H$_2$O, and NH$_3$ over this temperature range \citep[e.g.][]{line11, moses13}.  
+\section{Conclusions} \label{sec:discuss}
+We presented an analysis of the atmospheric composition of WASP-107b based on its measured near-infrared transmission spectrum and interior structure modeling of the planet's mass and radius.  Key results from this analysis include:
 
-\section{Discussion and Conclusions} \label{sec:discuss}
-We combined our high precision transmission spectrum of WASP-107b with interior structure modeling to assess the planet's atmospheric composition. 
-
-Upper limit on metallicity. The planet's radius is so large that we put an upper limit on the metallicity (additional metals would compress it).  metallicity 30x solar - how does this compare to mass/atmospheric metallicity 
-
-Methane depletion
-low C/O ratio - planetesimal enrichment (cite Nestor)
-internal heat, directly imaged planets
-
-Thick, high-altitude condensate layer
+\begin{itemize}
+\item{The upper limit on atmospheric metallicity is $30\times$ solar (assuming the star is young) or FIXME solar for an older system.  Interior structure modeling shows that higher metallicity envelopes would decrease the radius below the observed value.  Based on the Solar System trend of increasing planet metallicity with decreasing planet mass, WASP-107b is expected to have a metallicity of $30\times$ solar, just at the edge of our allowed range \citep{kreidberg14b}. Further characterization of the stellar age is needed to determine whether WASP-107b is consistent with expectations, or discrepant with the Solar System trend, which would suggest an intriguing difference in its formation history.}
+\item{The methane abundance is depleted relative to expectations for a solar abundance pattern. This could be due to an instrinsically low carbon-to-oxygen ratio, which could arise from accretion of water-rich planetesimals \citep{mordasini16, espinoza17}.   Another possibility is that the planet has a hot interior.}
+\item{Optically thick condensates are present at high altitudes ($0.1 - 3$ mbar).  Existing models of physically-motivated cloud and haze formation do not satisfactorily reproduce the observed . Clouds form too deep in the atmosphere }
+\end{itemize}
 
 
-Some directly imaged planets in this temperature regime are also unexpectedly depleted in methane when compared to similar temperature brown dwarfs \citep{skemer14}.   
+%Some directly imaged planets in this temperature regime are also unexpectedly depleted in methane when compared to similar temperature brown dwarfs \citep{skemer14}.   The leading hypothesis of this depletion \citep{zahnle14} is due to the CH4-CO quench point occurring in the CO stability field due to the low gravity of self-luminous planets when compared to brown dwarfs.  
 
-The leading hypothesis of this depletion \citep{zahnle14} is due to the CH4-CO quench point occurring in the CO stability field due to the low gravity of self-luminous planets when compared to brown dwarfs.  
-
-In order this mechanism to work for neptune massed planet, the internal temperature would have to be near ~500K to get the deep temperatures high enough to thermochemically deplete methane at the quench point. Given the age of the star, it is unlikely that such high internal temperatures are still due to heat of formation. It is possible that tidal heating could increase the internal temperature (Agundez et al. 2014; Morley et al. 2017) but that would require a negligible eccentricity, of which is currently uncertain for WASP107b.
-
+%In order this mechanism to work for neptune massed planet, the internal temperature would have to be near ~500K to get the deep temperatures high enough to thermochemically deplete methane at the quench point. Given the age of the star, it is unlikely that such high internal temperatures are still due to heat of formation. It is possible that tidal heating could increase the internal temperature (Agundez et al. 2014; Morley et al. 2017) but that would require a negligible eccentricity, of which is currently uncertain for WASP107b.
 
 
 
