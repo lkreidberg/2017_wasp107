@@ -13,36 +13,36 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
 You've used 48 entries,
             3222 wiz_defined-function locations,
-            990 strings with 15804 characters,
-and the built_in function-call counts, 22329 in all, are:
-= -- 1792
-> -- 1780
-< -- 16
-+ -- 602
-- -- 660
-* -- 1934
-:= -- 4126
+            990 strings with 15801 characters,
+and the built_in function-call counts, 22481 in all, are:
+= -- 1803
+> -- 1814
+< -- 15
++ -- 614
+- -- 676
+* -- 1957
+:= -- 4157
 add.period$ -- 48
 call.type$ -- 48
-change.case$ -- 295
+change.case$ -- 299
 chr.to.int$ -- 47
 cite$ -- 49
-duplicate$ -- 856
-empty$ -- 1350
-format.name$ -- 703
-if$ -- 4456
+duplicate$ -- 858
+empty$ -- 1345
+format.name$ -- 717
+if$ -- 4478
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 47
 newline$ -- 149
 num.names$ -- 192
-pop$ -- 402
+pop$ -- 408
 preamble$ -- 1
-purify$ -- 295
+purify$ -- 299
 quote$ -- 0
-skip$ -- 648
+skip$ -- 642
 stack$ -- 0
-substring$ -- 734
+substring$ -- 719
 swap$ -- 3
 text.length$ -- 1
 text.prefix$ -- 0

@@ -81,10 +81,6 @@ Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
   Aeronautics and Space Administration, Office of Management, Scientific and
   Technical Information Program)
 
-\bibitem[{{Griffith}(2014)}]{griffith14}
-{Griffith}, C.~A. 2014, Philosophical Transactions of the Royal Society of
-  London Series A, 372, 20130086
-
 \bibitem[{{Guillot}(2010)}]{guillot10}
 {Guillot}, T. 2010, \aap, 520, A27
 
@@ -123,9 +119,9 @@ Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
 {Line}, M.~R., {Vasisht}, G., {Chen}, P., {Angerhausen}, D., \& {Yung}, Y.~L.
   2011, \apj, 738, 32
 
-\bibitem[{{Line} {et~al.}(2016){Line}, {Stevenson}, {Bean}, {Desert},
-  {Fortney}, {Kreidberg}, {Madhusudhan}, {Showman}, \& {Diamond-Lowe}}]{line16}
-{Line}, M.~R., {Stevenson}, K.~B., {Bean}, J., {et~al.} 2016, \aj, 152, 203
+\bibitem[{{Line} {et~al.}(2013){Line}, {Wolf}, {Zhang}, {Knutson}, {Kammer},
+  {Ellison}, {Deroo}, {Crisp}, \& {Yung}}]{line13a}
+{Line}, M.~R., {Wolf}, A.~S., {Zhang}, X., {et~al.} 2013, \apj, 775, 137
 
 \bibitem[{{Madhusudhan} {et~al.}(2014){Madhusudhan}, {Amin}, \&
   {Kennedy}}]{madhusudhan14}
@@ -204,6 +200,11 @@ Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
   {Waldmann}}]{tinetti12}
 {Tinetti}, G., {Tennyson}, J., {Griffith}, C.~A., \& {Waldmann}, I. 2012,
   Philosophical Transactions of the Royal Society of London Series A, 370, 2749
+
+\bibitem[{{Zahnle} {et~al.}(2009){Zahnle}, {Marley}, {Freedman}, {Lodders}, \&
+  {Fortney}}]{zahnle09}
+{Zahnle}, K., {Marley}, M.~S., {Freedman}, R.~S., {Lodders}, K., \& {Fortney},
+  J.~J. 2009, \apjl, 701, L20
 
 \bibitem[{{Zahnle} \& {Marley}(2014)}]{zahnle14}
 {Zahnle}, K.~J., \& {Marley}, M.~S. 2014, \apj, 797, 41
