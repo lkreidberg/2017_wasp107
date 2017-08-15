@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: aasjournal.bst
 Database file #1: msNotes.bib
@@ -9,48 +9,47 @@ Repeated entry---line 3225 of file ms.bib.bib
  :                    ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "thompson90"
-Warning--I didn't find a database entry for "gordon96"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
-You've used 47 entries,
+You've used 48 entries,
             3222 wiz_defined-function locations,
-            986 strings with 15556 characters,
-and the built_in function-call counts, 21935 in all, are:
-= -- 1761
-> -- 1758
-< -- 14
-+ -- 595
-- -- 653
-* -- 1904
-:= -- 4061
-add.period$ -- 47
-call.type$ -- 47
-change.case$ -- 290
-chr.to.int$ -- 46
-cite$ -- 48
-duplicate$ -- 837
-empty$ -- 1312
-format.name$ -- 692
-if$ -- 4371
+            990 strings with 15804 characters,
+and the built_in function-call counts, 22329 in all, are:
+= -- 1792
+> -- 1780
+< -- 16
++ -- 602
+- -- 660
+* -- 1934
+:= -- 4126
+add.period$ -- 48
+call.type$ -- 48
+change.case$ -- 295
+chr.to.int$ -- 47
+cite$ -- 49
+duplicate$ -- 856
+empty$ -- 1350
+format.name$ -- 703
+if$ -- 4456
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 46
-newline$ -- 146
-num.names$ -- 188
-pop$ -- 391
+missing$ -- 47
+newline$ -- 149
+num.names$ -- 192
+pop$ -- 402
 preamble$ -- 1
-purify$ -- 290
+purify$ -- 295
 quote$ -- 0
-skip$ -- 632
+skip$ -- 648
 stack$ -- 0
-substring$ -- 727
-swap$ -- 2
-text.length$ -- 0
+substring$ -- 734
+swap$ -- 3
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 423
+type$ -- 429
 warning$ -- 1
-while$ -- 174
+while$ -- 177
 width$ -- 0
-write$ -- 476
+write$ -- 486
 (There was 1 error message)
