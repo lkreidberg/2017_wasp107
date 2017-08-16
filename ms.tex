@@ -171,8 +171,8 @@ Given WASP-107b's unusually low density, we quantitatively explored the range of
 Based on these assumptions, we fit for envelope metallicity and core mass using an MCMC with uniform priors on both parameters.  The MCMC burned in for $10^3$ steps and then collected $4\times10^6$ samples, which we thinned to $10^5$.  The resulting envelope metal mass fractions were converted to metallicities by assuming the mean molecular weight of the metals was 18 (the value for water), using the approach of \cite{fortney13}. Figure\,\ref{fig:metal_prior} shows the results.  We find an upper limit on the metallicity of $30\times$ solar for the young stellar age range.  Higher metallicity envelopes are not allowed because they decrease the planet's radius below the observed value.  For the older age, the upper limit is even lower (FIXME), because planets cool and contract as they age \citep{fortney08}.  The inferred metallicity and core mass are inversely proportional, as expected (the more massive the core, the lighter the envelope must be to maintain the observed radius). The upper limit on the core mass is FIXME.
 
 \begin{figure}
-\includegraphics[width = 0.5\textwidth]{Figures/metalByMass.png}
-\caption{Estimated envelope metallicity and core mass based on interior structure modeling of the mass and radius of WASP-107b. FIXME get new figure showing two ages.}
+\includegraphics[width = 0.5\textwidth]{Figures/metalByAge.pdf}
+\caption{Estimated envelope metallicity for a given core mass based on interior structure modeling. The red shading corresponds to the $3\sigma$ confidence interval for a young planet ($0.2-1$ Gyr); the blue is for an older age ($1-14$ Gyr).}
 \label{fig:metal_prior}
 \end{figure}
 
