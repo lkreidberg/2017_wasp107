@@ -34,15 +34,16 @@ plt.xlabel("[Fe/H]")
 plt.ylabel("Frequency")
 plt.xlim(-2, np.max(d[:,1]))
 
-plt.gca().text(0.08, 0.95, "a", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
+plt.gca().text(0.07, 0.95, "a", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
+plt.gca().set_xticks([-2, -1, 0, 1])
 
 lo, med, hi = quantiles(d[:,1], q)
 print "metal", lo, med, hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
-plt.axvline(med, color = '0.1', linestyle = 'dashed')
+plt.axvline(med, color = '0.1', linestyle = 'solid')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')
 plt.axvline(0., color = '#c44240', linestyle = 'solid')
-plt.gca().text(0.52, 0.7, "solar", transform=plt.gca().transAxes, fontsize=18, va='top', rotation = 90)
+plt.gca().text(0.49, 0.7, "solar", transform=plt.gca().transAxes, fontsize=18, va='top', rotation = 90)
 
 ##############################
 
@@ -51,15 +52,16 @@ hist(d[:,2], histtype ='stepfilled', color = 'k', facecolor='#b7c9e2', bins = nb
 
 plt.gca().get_yaxis().set_visible(False)		
 plt.xlabel("log(C/O)")
-plt.gca().text(0.08, 0.95, "b", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
+plt.gca().text(0.07, 0.95, "b", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
 
 lo, med, hi = quantiles(d[:,2], q)
 print "C/O", 10**lo, 10**med, 10**hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
-plt.axvline(med, color = '0.1', linestyle = 'dashed')
+plt.axvline(med, color = '0.1', linestyle = 'solid')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')
 plt.axvline(np.log10(0.54), color = '#c44240', linestyle = 'solid')
-plt.gca().text(0.62, 0.7, "solar", transform=plt.gca().transAxes, fontsize=18, va='top', rotation = 90)
+plt.gca().text(0.77, 0.7, "solar", transform=plt.gca().transAxes, fontsize=18, va='top', rotation = 90)
+plt.xlim(-2, 0)
 
 ##############################
 
@@ -67,18 +69,18 @@ plt.subplot(223)
 hist(d[:,0], histtype ='stepfilled', color = 'k', facecolor='#b7c9e2', bins = nbins, alpha = 0.8, normed  = True)
 
 plt.xlim(200, 1400)
-plt.xlabel("$T_\mathrm{irr}$")
+plt.xlabel("$T_\mathrm{irr}$ (K)")
 plt.ylabel("Frequency")
 
-plt.gca().set_xticklabels([200, 400, 600, 800, 1000, 1200])
+#plt.gca().set_xticklabels([200, 400, 600, 800, 1000, 1200])
 plt.gca().set_yticklabels([])
 
-plt.gca().text(0.08, 0.95, "c", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
+plt.gca().text(0.07, 0.95, "c", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
 
 lo, med, hi = quantiles(d[:,0], q)
 print "T", lo, med, hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
-plt.axvline(med, color = '0.1', linestyle = 'dashed')
+plt.axvline(med, color = '0.1', linestyle = 'solid')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')
 
 ##############################
@@ -86,18 +88,19 @@ plt.axvline(hi, color = '0.1', linestyle = 'dashed')
 plt.subplot(224)
 hist(d[:,3], histtype ='stepfilled', color = 'k', facecolor='#b7c9e2', bins = nbins, alpha = 0.8, normed = True)
 
-plt.xlabel("log($P_\mathrm{cloud}$)")
+plt.xlabel("log($P_\mathrm{cloud}$) (bar)")
 plt.xlim(-6, 0)
 plt.gca().get_yaxis().set_visible(False)		#LK
 
-plt.gca().text(0.08, 0.95, "c", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
+plt.gca().text(0.07, 0.95, "d", transform=plt.gca().transAxes, fontsize=18, fontweight='bold', va='top')
 
 lo, med, hi = quantiles(d[:,3], q)
 print "P", lo, med, hi
 plt.axvline(lo, color = '0.1', linestyle = 'dashed')
-plt.axvline(med, color = '0.1', linestyle = 'dashed')
+plt.axvline(med, color = '0.1', linestyle = 'solid')
 plt.axvline(hi, color = '0.1', linestyle = 'dashed')
 
 plt.tight_layout(w_pad = 0.05)
 
 plt.savefig("retrieval.pdf")
+plt.show()

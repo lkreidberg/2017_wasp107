@@ -82,6 +82,8 @@ plt.subplot(131)
 plt.title("H2O")
 x = p[:,3]-6
 hist(x)
+q = [0.16, 0.84]
+print "68percent conf h2o", 10**quantiles(x, q)
 
 plt.subplot(132)
 plt.title("CH4")
@@ -94,6 +96,8 @@ print "CH4 sig", get_significance(alpha/2)
 print "alpha", alpha
 q = [0.997]
 print quantiles(x, q)
+q = [0.16, 0.84]
+print "68percent conf ch4", 10**quantiles(x, q)
 
 #print "test", get_significance(0.003/2)
 

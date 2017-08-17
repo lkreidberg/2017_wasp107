@@ -8,48 +8,47 @@ Repeated entry---line 3225 of file ms.bib.bib
  : @article{espinoza17
  :                    ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "thompson90"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
-You've used 48 entries,
+You've used 50 entries,
             3222 wiz_defined-function locations,
-            990 strings with 15801 characters,
-and the built_in function-call counts, 22481 in all, are:
-= -- 1803
-> -- 1814
+            1003 strings with 16383 characters,
+and the built_in function-call counts, 23558 in all, are:
+= -- 1886
+> -- 1911
 < -- 15
-+ -- 614
-- -- 676
-* -- 1957
-:= -- 4157
-add.period$ -- 48
-call.type$ -- 48
-change.case$ -- 299
-chr.to.int$ -- 47
-cite$ -- 49
-duplicate$ -- 858
-empty$ -- 1345
-format.name$ -- 717
-if$ -- 4478
++ -- 647
+- -- 713
+* -- 2058
+:= -- 4359
+add.period$ -- 50
+call.type$ -- 50
+change.case$ -- 313
+chr.to.int$ -- 49
+cite$ -- 51
+duplicate$ -- 894
+empty$ -- 1402
+format.name$ -- 755
+if$ -- 4690
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 47
-newline$ -- 149
-num.names$ -- 192
-pop$ -- 408
+missing$ -- 49
+newline$ -- 155
+num.names$ -- 200
+pop$ -- 427
 preamble$ -- 1
-purify$ -- 299
+purify$ -- 313
 quote$ -- 0
-skip$ -- 642
+skip$ -- 670
 stack$ -- 0
-substring$ -- 719
+substring$ -- 756
 swap$ -- 3
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 429
+type$ -- 447
 warning$ -- 1
-while$ -- 177
+while$ -- 184
 width$ -- 0
-write$ -- 486
+write$ -- 506
 (There was 1 error message)
