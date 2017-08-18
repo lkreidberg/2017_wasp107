@@ -74,13 +74,6 @@ The Neptune-mass exoplanet WASP-107b is an exciting target for atmosphere charac
 %% tied to the reference list via symbolic KEYs. The KEY corresponds
 %% to the KEY in the \bibitem in the reference list below. 
 
-%Figures and Tables:
-% 1.  transit light curves
-% 2.  best fit spectrum
-% 3.  retrieval results
-% 4.  table of transit depths
-% 5.  JWST predictions for cloud models 
-
 
 \section{Introduction} \label{sec:intro}
 The composition of a planet's atmosphere depends on where and how the planet formed. By measuring the inventory of atmospheric elemental abundances, we can shed light on important aspects of the formation process such as location within the disk and the relative accretion rates of gas versus solids \citep[][]{oberg11, fortney13, madhusudhan14, alidib16, mordasini16, espinoza17}.  
@@ -188,7 +181,7 @@ Our nominal model included a temperature-pressure profile (parameterized via the
 
 The nominal retrieval results are shown in Figure\,\ref{fig:retrieval}.  The best fit model provides a good fit to the data ($\chi^2_\nu = 1.2$).  The metallicity distribution spans the full range allowed by our priors, with preference for larger values. The cloud top pressure is estimated to be $0.01 - 3$ mbar at $1\,\sigma$ confidence. The retrieved irradiation temperature is $525 - 820$ K (1 $\sigma$ confidence).  We find that the C/O value is less than solar (0.54) at $2.7\,\sigma$ confidence.  We tested the detection significance for water by removing water opacity from the nominal model. The Bayesian evidence favors the inclusion of water at $6.5\,\sigma$ confidence. 
 
-We explored a few retrieval scenarios with additional complexity, including the addition of cloud patchiness \citep{line16}, a quench pressure for nitrogen and carbon species \citep[e.g.][]{morley17}, and a power law haze opacity.  These models did not significantly improve the fit quality, and the main retrieval results were unchanged.  We also explored cases without the $30\times$ solar metallicity prior upper limit. Without this prior, metallicities up to $100\times$ were permitted, but other parameters were not significantly changed. 
+We explored a few retrieval scenarios with additional complexity, including the addition of cloud patchiness \citep{line16}, a quench pressure for nitrogen and carbon species \citep[e.g.][]{morley17}, and a power law haze opacity.  We also varied the assumed planet mass by $3\,sigma$. These models did not significantly improve the fit quality, and the main retrieval results were unchanged.  We also explored cases without the $30\times$ solar metallicity prior upper limit. Without this prior, metallicities up to $100\times$ were permitted, but other parameters were not significantly changed. 
 %We also tested the effect of varying the planet's surface gravity within the published FIXME $\sigma$ range, and found that our results were again minimally changed.
 
 \begin{figure}
@@ -199,14 +192,14 @@ We explored a few retrieval scenarios with additional complexity, including the 
 \subsubsection{Methane Abundance}
 We ran two additional retrievals to explore whether methane depletion is the underlying cause of the inferred low C/O.  Even though water is the dominant absorber in the WFC3 bandpass, there is enough methane opacity to change the shape of the spectral features at a detectable level for high precision data.  In one test, we assumed chemical equilibrium but excluded methane opacity. This set-up resulted in a much broader distribution of C/O values ($0.02 - 1.6$ at $1\,\sigma$). 
 
-We also performed a ``free" retrieval that allowed the abundances of CH$_4$, H$_2$O and NH$_3$ to vary with no assumption of chemical equilibrium. The retrieved methane abundance is low ($3\times10^{-11} - 3\times10^{-6}$ at 68\% confidence). We rule out at $3\,\sigma$ confidence the predicted methane abundance for a composition with solar C/O and $3\,\times$ solar metallicity (the median metallicity from the chemical equilibrium retrieval).  Based on these tests, we conclude that the atmosphere of WASP-107b is depleted in methane relative to expectations for a solar abundance pattern. By contrast, the water abundance ($6\times10^{-6} - 2\times10^{-3}$) is consistent with predictions (FIXME).
+We also performed a ``free" retrieval that allowed the abundances of CH$_4$, H$_2$O and NH$_3$ to vary with no assumption of chemical equilibrium. The $3\,\sigma$ upper limit on methane abundance is $1.2\times10^{-3}$, ruling out the the predicted methane content for a composition with solar C/O and $3\,\times$ solar metallicity (the median metallicity from the chemical equilibrium retrieval).  Based on these tests, we conclude that the atmosphere of WASP-107b is depleted in methane relative to expectations for a solar abundance pattern. By contrast, the water abundance ($6\times10^{-6} - 2\times10^{-3}$) is consistent with predictions for solar composition.
 
 \subsection{Condensate Properties}
 In addition to the atmospheric retrieval, we also performed forward modeling of physically motivated, self-consistent clouds and hazes using the methods described in \cite{fortney08, morley15}.  We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS; see \citealt{morley12}), for a range of metallicites from $1-50\times$ solar. We vary the cloud sedimentation efficiency from 3 to 0.1 (normal to highly lofted, small particulate clouds). None of the models produce sufficiently low amplitude spectral features to match the observed spectrum.  This result suggests that if clouds are muting WASP-107b's transmission spectrum, the mechanism for cloud particle formation and vertical lofting is very efficient and not captured by the modeling used here. Futher studies of cloud formation in very low gravity environments are required. 
 
 We also model an \emph{ad hoc} photochemical ``soot" layer near the top of the atmosphere. We predict the abundance of hydrocarbon haze precursors from previously published photochemical models for GJ 436b \citep{line11, morley17}. With the most efficient haze production (100\% of precursors form haze) and particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
 
-These photochemical hazes are assumed to form from hydrocarbons generated by methane photolysis; however, we found in the previous section that methane is depleted.  Furthermore, even if the precursors were present, it is unclear whether the 100\% haze production efficiency is realistic.  However, organic hydrocarbons are not the only possible photolytic haze in cool H2-rich atmospheres. Sulfur chemistry may create additional haze material \citep{zahnle09, gao17}. Further modeling and laboratory work of the hazes that form in these conditions is needed for a satisfactory explanation of the data.  
+These photochemical hazes are assumed to form from hydrocarbons generated by methane photolysis; however, we found in the previous section that methane is depleted.  Furthermore, even if the precursors were present, it is unclear whether the 100\% haze production efficiency is realistic.  However, organic hydrocarbons are not the only possible photolytic haze in cool H2-rich atmospheres, as sulfur chemistry may create additional haze material \citep{zahnle09, gao17}. Further modeling and laboratory work of the hazes that form in these conditions is needed for a satisfactory explanation of the data.  
 
 \section{Discussion and Conclusions} \label{sec:discuss}
 We analyzed the atmospheric composition of WASP-107b based on retrieval of its near-infrared transmission spectrum and interior structure models of the planet's mass and radius.  Key results from this analysis include:
