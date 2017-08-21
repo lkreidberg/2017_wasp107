@@ -17,6 +17,9 @@ plt.figure(figsize=(8,4))
 d= np.genfromtxt("w107_spectrum_06-22-17.txt")
 plt.errorbar(d[:,0], d[:,1]*100., d[:,2]*100., linestyle = 'none', zorder = 100, marker = 'o', color = 'w', markeredgecolor = 'k', ecolor ='k', markeredgewidth = 1.3)
 
+d0 = np.genfromtxt("w107_g102_prelim_081817.txt")
+plt.errorbar(d0[:,0], 100*d0[:,3]**2, 100.*2.*d0[:,3]*d0[:,4], fmt ='.k')
+
 #d = np.genfromtxt("wasp107b_10xsolar_0.1mbarcloud.dat")
 #plt.plot(d[:,0]*1e6, convolve(d[:,1], g, boundary = 'extend')-0.08)
 
@@ -43,14 +46,12 @@ plt.ylim(2.03, 2.1)
 plt.xlabel("Wavelength (microns)")
 
 x2 = plt.gca().twinx()
-scaleheight = 520./1.e6*100.
-plt.plot(w,p[3]/scaleheight - np.min(p[3]/scaleheight)+0.06, linewidth=0.)
+scaleheight = 460./1.e6*100.
+plt.plot(w,p[3]/scaleheight - np.min(p[3]/scaleheight), linewidth=0.)
 
-plt.ylabel("Scale height")
-plt.xlim(1.05, 1.7)
-
+plt.ylabel("Scale heights")
+plt.xlim(0.8, 1.7)
 
 plt.tight_layout()
-plt.savefig("spectrum.pdf")
 plt.show()
 

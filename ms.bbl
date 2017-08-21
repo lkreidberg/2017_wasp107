@@ -2,9 +2,6 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\href{#1}{#1}}
 
-\bibitem[{{Ali-Dib}(2016)}]{alidib16}
-{Ali-Dib}, M. 2016, ArXiv e-prints, arXiv:1611.03128
-
 \bibitem[{{Amundsen} {et~al.}(2016){Amundsen}, {Mayne}, {Baraffe}, {Manners},
   {Tremblin}, {Drummond}, {Smith}, {Acreman}, \& {Homeier}}]{amundsen16}
 {Amundsen}, D.~S., {Mayne}, N.~J., {Baraffe}, I., {et~al.} 2016, \aap, 595, A36
@@ -15,6 +12,12 @@
   {Turner}, {Udry}, \& {West}}]{anderson17}
 {Anderson}, D.~R., {Collier Cameron}, A., {Delrez}, L., {et~al.} 2017, ArXiv
   e-prints, arXiv:1701.03776
+
+\bibitem[{{Batalha} {et~al.}(2017){Batalha}, {Mandell}, {Pontoppidan},
+  {Stevenson}, {Lewis}, {Kalirai}, {Earl}, {Greene}, {Albert}, \&
+  {Nielsen}}]{batalha17}
+{Batalha}, N.~E., {Mandell}, A., {Pontoppidan}, K., {et~al.} 2017, \pasp, 129,
+  064501
 
 \bibitem[{{Benneke}(2015)}]{benneke15}
 {Benneke}, B. 2015, ArXiv e-prints, arXiv:1504.07655

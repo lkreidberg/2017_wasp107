@@ -38,7 +38,7 @@ ax1.set_ylim(0.973, 1.005)
 ax1.yaxis.set_major_locator(FixedLocator(np.array([0.98, 0.99, 1.0])))
 ax1.set_yticklabels(["0.98", "0.99", "1.0"])
 
-ax1.text(2.1, 0.985,'$\lambda$ ($\mu$m):\n1.1 - 1.7', fontsize=10)
+ax1.text(2.1, 0.985,'$\lambda$ ($\mu$m):\n1.12 - 1.65', fontsize=10)
 ax2 = plt.subplot(gs[0,1])
 
 ind = model.phase > 0.5
