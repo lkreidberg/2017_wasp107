@@ -51,28 +51,11 @@ Cambridge, MA 02138}
 
 
 \begin{abstract}
-The Neptune-mass exoplanet WASP-107b is an exciting target for atmosphere characterization. It has an unusually large atmospheric scale height and a small, bright host star, raising the possibility of precise constraints on its current nature and formation history.  We report the first atmospheric study of WASP-107b, a Hubble Space Telescope measurement of its near-infrared transmission spectrum.  We determined the planet's composition with two techniques: atmospheric retrieval based on the transmission spectrum and interior structure modeling based on the observed mass and radius. We detect water at $6.5\,\sigma$ confidence and set an upper limit on the atmospheric metallicity of $30\times$ solar. We find that the methane abundance is depleted relative to expectations for a solar abundance pattern (at $3\,\sigma$ confidence), suggesting a low carbon-to-oxygen ratio or high internal heat flux.  The water features are smaller than expected for a cloudless atmosphere, crossing less than one scale height, and require a thick condensate layer at high altitudes (0.1 - 3 mbar). We find that it is challenging for physically motivated cloud and haze models to produce opaque condensates at these pressures.  Taken together, these findings serve as an illustration of the diversity and complexity of exoplanet atmospheres. The community can look forward to more such results with the high precision and wide spectral coverage afforded by future observing facilities. 
+The Neptune-mass exoplanet WASP-107b is an exciting target for atmosphere characterization. It has an unusually large atmospheric scale height and a small, bright host star, raising the possibility of precise constraints on its current nature and formation history.  We report the first atmospheric study of WASP-107b, a Hubble Space Telescope measurement of its near-infrared transmission spectrum.  We determined the planet's composition with two techniques: atmospheric retrieval based on the transmission spectrum and interior structure modeling based on the observed mass and radius. The interior structure models set a $3\,\sigma$ upper limit on the atmospheric metallicity of $30\times$ solar. The transmission spectrum shows strong evidence for water absorption ($6.5\,\sigma$ confidence), and we infer a water abundance consistent with expectations for a solar abundance pattern. On the other hand, methane is depleted relative to expectations (at $3\,\sigma$ confidence), suggesting a low carbon-to-oxygen ratio or high internal heat flux.  The water features are smaller than predicted for a cloudless atmosphere, crossing less than one scale height. A thick condensate layer at high altitudes (0.1 - 3 mbar) is needed to match the observations; however, we find that it is challenging for physically motivated cloud and haze models to produce opaque condensates at these pressures.  Taken together, these findings serve as an illustration of the diversity and complexity of exoplanet atmospheres. The community can look forward to more such results with the high precision and wide spectral coverage afforded by future observing facilities. 
 \end{abstract}
 
-%% Keywords should appear after the \end{abstract} command. 
-%% See the online documentation for the full list of available subject
-%% keywords and the rules for their use.
 \keywords{planets and satellites: individual (WASP-107b), planets and satellites: atmospheres}
 
-%% From the front matter, we move on to the body of the paper.
-%% Sections are demarcated by \section and \subsection, respectively.
-%% Observe the use of the LaTeX \label
-%% command after the \subsection to give a symbolic KEY to the
-%% subsection for cross-referencing in a \ref command.
-%% You can use LaTeX's \ref and \label commands to keep track of
-%% cross-references to sections, equations, tables, and figures.
-%% That way, if you change the order of any elements, LaTeX will
-%% automatically renumber them.
-
-%% We recommend that authors also use the natbib \citep
-%% and \citet commands to identify citations.  The citations are
-%% tied to the reference list via symbolic KEYs. The KEY corresponds
-%% to the KEY in the \bibitem in the reference list below. 
 
 
 \section{Introduction} \label{sec:intro}
@@ -85,7 +68,7 @@ WASP-107b also has a relatively low equilibrium temperature compared to most oth
 In addition, WASP-107b is one of the best targets discovered to date for atmosphere characterization. Thanks to its large atmospheric scale height and small, bright host star, the expected signal-to-noise for the transmission spectrum is comparable to the best studied benchmarks in the field (e.g. HD\,209458b).  In this paper we report the first atmosphere characterization of WASP-107b: a near-infrared transmission spectrum measured with the \emph{Hubble Space Telescope} (\emph{HST}; Program GO 14915, PI L. Kreidberg).
 
 \section{Observations and Data Reduction}
-We observed a single transit of WASP-107b with \emph{HST}'s Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five \emph{HST} orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period (about 45 minutes), we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool \citep{batalha17}.  As is standard for WFC3 observations of bright targets, we used the spatial scanning observing mode, which slews the telescope in the spatial direction over the course of an exposure. The scan rate was 0.12 arcseconds/sec.
+We observed a single transit of WASP-107b with \emph{HST}'s Wide Field Camera 3 (WFC3) instrument on UT 5-6 June 2017.  The transit observation consisted of five \emph{HST} orbits. At the beginning of each 96-minute orbit, we took an image of the target with the F130N filter (exposure time = 4.2 s). This direct image is used for wavelength calibration. For the remainder of the target visibility period, we obtained time series spectra with the G141 grism, which provides low-resolution spectroscopy over the wavelength range $1.1 - 1.7\,\mu$m.  We used the NSAMP=6, SPARS\_25 readout mode (exposure time = 112 s) to optimize the efficiency of the observations, as determined by the \texttt{PandExo\_HST} planning tool \citep{batalha17}.  As is standard for WFC3 observations of bright targets, we used the spatial scanning observing mode, which slews the telescope in the spatial direction over the course of an exposure. The scan rate was 0.12 arcseconds/sec.
 
 We reduced the data with the custom pipeline described in \cite{kreidberg14a}, which we summarize briefly here. For each exposure, we extracted the spectrum from each up-the-ramp sample (or ``stripe") separately using the optimal extraction algorithm of \cite{horne86}. We estimated the background from the median count level of pixels uncontaminated by the target spectrum (rows $5-250$, columns $5-515$).  The stripe spectra were then summed to create the final spectrum. For each stripe, the extraction box was 80 pixels high and centered on the stripe's midpoint in the spatial direction. We corrected the spectra for the changing dispersion solution over this aperture and small drifts over time ($<0.1$ pixel).  
 %dispersion solution: 46 Angstroms/pixel. max drift: 3 angstroms (from diagnostics.txt)
@@ -111,7 +94,7 @@ In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the preci
 For the best fit white light curve, the root-mean-square (rms) residuals were 93 ppm (excluding the star spot crossing), which is somewhat larger than the expected shot noise of 50 ppm. We attribute the excess noise to loss of flux off the edge of the detector, which can occur if there is variation in the position or length of the spatial scan. There is no evidence for correlated noise in the residuals, so to account for the excess noise we simply increased the per-point uncertainties by a factor of 1.7 to achieve a $\chi^2_\nu$ value of unity.  We then used the Markov chain Monte Carlo (MCMC) algorithm to estimate parameter uncertainties \citep{foremanmackey13}.  The chain had 50 walkers which each ran for $10^4$ steps with the first 10\% discarded as burn-in. We tested for convergence by dividing the chain in two halves and confirming that they gave consistent results. The transit time was $t_0 = 2457910.45407\pm6\mathrm{e}{-5}$ BJD$_\mathrm{TDB}$ and the planet/star radius was $r_p/r_s = 0.14399\pm0.00017$. 
 
 \subsection{Spectroscopic Light Curve Fits}
-We binned the spectrum into 20 spectrophotometric channels from 1.12 to 1.65 $\mu$m, shown in Figure\,\ref{fig:lc}. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics have the same morphology at all wavelengths \citep{stevenson14c, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  One advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. The amplitude of the feature has no detectable wavelength dependence at the level of precision of our data.  As for the white light curve, we fixed some of the transit parameters on the estimates from \cite{dai17} and fixed the limb darkening on the PHOENIX model. The final spectroscopic light curve fits had just three free parameters per channel: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  
+We binned the spectrum into 20 spectrophotometric channels from 1.12 to 1.63 $\mu$m, shown in Figure\,\ref{fig:lc}. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics have the same morphology at all wavelengths \citep{stevenson14c, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  One advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. The amplitude of the feature has no detectable wavelength dependence at the level of precision of our data.  As for the white light curve, we fixed some of the transit parameters on the estimates from \cite{dai17} and fixed the limb darkening on the PHOENIX model (coefficients listed in Table\,\ref{tab:transit_depths}. The final spectroscopic light curve fits had just three free parameters per channel: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  
 
 The best fit light curves have a median $\chi^2_\nu$ value of 1.16.  We conservatively rescaled the photometric uncertainties for all spectroscopic channels such that the $\chi^2_\nu$ values are unity. We performed an MCMC fit to the light curves with \texttt{emcee}.  For each light curve we ran a fit with 50 walkers and 1000 steps per walker, and tested for convergence as we did for the white light curve. The median transit depths and $1\,\sigma$ uncertainties are given in Table\,\ref{tab:transit_depths}. 
 
@@ -129,30 +112,30 @@ We also fit for a linear limb darkening parameter rather than fixing the limb da
 \label{fig:spectrum}
 \end{figure*}
 
-\begin{deluxetable}{c c c}
-\tablecaption{WASP-107b transmission spectrum \label{tab:transit_depths}}
-\tablehead{\colhead{Wavelength ($\mu$m)}  & \colhead{Transit depth} & \colhead{Uncertainty}}
+\begin{deluxetable}{c c c c c}
+\tablecaption{WASP-107b transmission spectrum and limb darkening coefficients\label{tab:transit_depths}}
+\tablehead{\colhead{Wavelength ($\mu$m)}  & \colhead{Transit depth} & \colhead{Uncertainty} & \colhead{$u_1$} & \colhead{$u_2$}}
 \startdata
-1.133 & 0.020641 & 5.9e-05 \\
-1.158 & 0.020733 & 5.5e-05 \\
-1.184 & 0.020505 & 5.6e-05 \\
-1.209 & 0.020498 & 5.4e-05 \\
-1.235 & 0.020455 & 5.9e-05 \\
-1.260 & 0.020492 & 5.0e-05 \\
-1.285 & 0.020620 & 6.2e-05 \\
-1.311 & 0.020739 & 5.0e-05 \\
-1.336 & 0.020660 & 5.7e-05 \\
-1.362 & 0.020858 & 4.8e-05 \\
-1.387 & 0.020794 & 4.8e-05 \\
-1.413 & 0.020888 & 5.2e-05 \\
-1.438 & 0.020821 & 6.2e-05 \\
-1.464 & 0.020691 & 5.1e-05 \\
-1.489 & 0.020682 & 6.9e-05 \\
-1.515 & 0.020679 & 6.7e-05 \\
-1.540 & 0.020509 & 6.0e-05 \\
-1.565 & 0.020480 & 6.4e-05 \\
-1.591 & 0.020500 & 5.6e-05 \\
-1.616 & 0.020514 & 6.5e-05 \\
+1.121 -- 1.145 & 0.020641 & 5.9e-05 & 0.38 & 0.13 \\
+1.145 -- 1.171 & 0.020733 & 5.5e-05 & 0.37 & 0.14 \\
+1.171 -- 1.196 & 0.020505 & 5.6e-05 & 0.36 & 0.14 \\
+1.196 -- 1.222 & 0.020498 & 5.4e-05 & 0.36 & 0.15 \\
+1.222 -- 1.248 & 0.020455 & 5.9e-05 & 0.36 & 0.15 \\
+1.248 -- 1.272 & 0.020492 & 5.0e-05 & 0.35 & 0.16 \\
+1.272 -- 1.298 & 0.020620 & 6.2e-05 & 0.34 & 0.17 \\
+1.298 -- 1.323 & 0.020739 & 5.0e-05 & 0.34 & 0.17 \\
+1.323 -- 1.349 & 0.020660 & 5.7e-05 & 0.33 & 0.18 \\
+1.349 -- 1.374 & 0.020858 & 4.8e-05 & 0.32 & 0.19 \\
+1.374 -- 1.401 & 0.020794 & 4.8e-05 & 0.31 & 0.20 \\
+1.401 -- 1.425 & 0.020888 & 5.2e-05 & 0.30 & 0.21 \\
+1.425 -- 1.452 & 0.020821 & 6.2e-05 & 0.29 & 0.21 \\
+1.452 -- 1.476 & 0.020691 & 5.1e-05 & 0.28 & 0.22 \\
+1.476 -- 1.502 & 0.020682 & 6.9e-05 & 0.26 & 0.23 \\
+1.502 -- 1.528 & 0.020679 & 6.7e-05 & 0.25 & 0.23 \\
+1.528 -- 1.552 & 0.020509 & 6.0e-05 & 0.23 & 0.25 \\
+1.552 -- 1.579 & 0.020480 & 6.4e-05 & 0.22 & 0.24 \\
+1.579 -- 1.603 & 0.020500 & 5.6e-05 & 0.20 & 0.24 \\
+1.603 -- 1.629 & 0.020514 & 6.5e-05 & 0.19 & 0.25 \\
 \enddata
 \end{deluxetable}
 
@@ -192,7 +175,7 @@ We explored a few retrieval scenarios with additional complexity, including the 
 \subsubsection{Methane Abundance}
 We ran two additional retrievals to explore whether methane depletion is the underlying cause of the inferred low C/O.  Even though water is the dominant absorber in the WFC3 bandpass, there is enough methane opacity to change the shape of the spectral features at a detectable level for high precision data.  In one test, we assumed chemical equilibrium but excluded methane opacity. This set-up resulted in a much broader distribution of C/O values ($0.02 - 1.6$ at $1\,\sigma$). 
 
-We also performed a ``free" retrieval that allowed the abundances of CH$_4$, H$_2$O and NH$_3$ to vary with no assumption of chemical equilibrium. The $3\,\sigma$ upper limit on methane abundance is $1.2\times10^{-3}$, ruling out the the predicted methane content for a composition with solar C/O and $3\,\times$ solar metallicity (the median metallicity from the chemical equilibrium retrieval).  Based on these tests, we conclude that the atmosphere of WASP-107b is depleted in methane relative to expectations for a solar abundance pattern. By contrast, the water abundance ($6\times10^{-6} - 2\times10^{-3}$) is consistent with predictions for solar composition.
+We also performed a ``free" retrieval that varied the abundances of CH$_4$, H$_2$O and NH$_3$ with no assumption of chemical equilibrium. The $3\,\sigma$ upper limit on methane abundance is $1.2\times10^{-3}$, ruling out the the predicted methane content for a composition with solar C/O and $3\,\times$ solar metallicity (the median metallicity from the chemical equilibrium retrieval).  Based on these tests, we conclude that the atmosphere of WASP-107b is depleted in methane relative to expectations for a solar abundance pattern. By contrast, the water abundance ($6\times10^{-6} - 2\times10^{-3}$) is consistent with predictions for solar composition.
 
 \subsection{Condensate Properties}
 In addition to the atmospheric retrieval, we also performed forward modeling of physically motivated, self-consistent clouds and hazes using the methods described in \cite{fortney08, morley15}.  We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS; see \citealt{morley12}), for a range of metallicites from $1-50\times$ solar. We vary the cloud sedimentation efficiency from 3 to 0.1 (normal to highly lofted, small particulate clouds). None of the models produce sufficiently low amplitude spectral features to match the observed spectrum.  This result suggests that if clouds are muting WASP-107b's transmission spectrum, the mechanism for cloud particle formation and vertical lofting is very efficient and not captured by the modeling used here. Futher studies of cloud formation in very low gravity environments are required. 
