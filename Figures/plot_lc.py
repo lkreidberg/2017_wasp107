@@ -38,7 +38,8 @@ ax1.set_ylim(0.973, 1.005)
 ax1.yaxis.set_major_locator(FixedLocator(np.array([0.98, 0.99, 1.0])))
 ax1.set_yticklabels(["0.98", "0.99", "1.0"])
 
-ax1.text(2.1, 0.985,'$\lambda$ ($\mu$m):\n1.12 - 1.65', fontsize=10)
+#ax1.text(2.1, 0.985,'$\lambda$ ($\mu$m):\n1.12 - 1.65', fontsize=10)
+ax1.text(2., 0.992,'broadband', fontsize=10)
 ax2 = plt.subplot(gs[0,1])
 
 ind = model.phase > 0.5
@@ -58,8 +59,9 @@ ax2.set_xlabel("Time from central transit (hours)")
 #ax2 = ax1.twinx()
 ax3 = plt.subplot(gs[1,0])
 
-#ax3.text(2.5, 1.002,'$\lambda$ ($\mu$m)', fontsize=10)
+ax3.text(2.5, 1.0028,'$\lambda$ ($\mu$m):', fontsize=10)
 
+#ax1.text(2.1, 0.985,'$\lambda$ ($\mu$m):\n1.12 - 1.65', fontsize=10)
 for i, f in enumerate(files):
 	p = pickle.load(open(f, 'rb'))
 	data, model = p[0], p[1]
