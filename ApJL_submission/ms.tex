@@ -80,7 +80,7 @@ The data analysis had two parts: the band-integrated ``white" light curve fit an
 To create the raw white light curve, we summed each spectrum over the 181 pixels in the spectral trace.  The white light curve has systematic trends that are typical for WFC3 observations \citep{zhou17}: the flux increases asymptotically over each orbit (the ``ramp" effect) and there is a visit-long linear trend. The largest ramp occurs in the initial orbit (orbit zero), so we only fit data from orbits one through four in our analysis, following common practice.  We fit the light curve with the analytic model of the form $F_\mathrm{white}(t) = S_\mathrm{white}(t)\times T_\mathrm{white}(t)$, where $S_\mathrm{white}$ is a systematics model and $T_\mathrm{white}$ is a transit model. We used the same systematics model as \cite{kreidberg15b}.  We modelled the transit with the \texttt{batman} package \citep{kreidberg15a}.  The model parameters are the orbital period $p$, time of inferior conjunction $t_0$, transit depth $r_p/r_s$, ratio of semi-major axis to stellar radius $a/r_s$, orbital inclination $i$, and the quadratic stellar limb darkening parameters $u_1$ and $u_2$.
 
 \begin{figure*}
-\includegraphics[width = \textwidth]{Figures/lc.pdf}
+\includegraphics[width = \textwidth]{fig1_lc.pdf}
 \caption{Left: Broadband and spectrophotometric transit light curves for WASP-107b compared to best fit models. Right: residuals from the best fit. Annotations indicate the central wavelength and root-mean-square (rms) residuals. A star-spot crossing feature is shaded in gray in the upper right; our systematic error correction removes this feature from the spectroscopic light curves.} 
 \label{fig:lc}
 \end{figure*}
@@ -107,7 +107,7 @@ We also fit for a linear limb darkening parameter rather than fixing the limb da
 
 
 \begin{figure*}
-\includegraphics[width = \textwidth]{Figures/spectrum.pdf}
+\includegraphics[width = \textwidth]{fig2_spectrum.pdf}
 \caption{The transmission spectrum of WASP-107b (points with 1\,$\sigma$ error bars) compared to retrieved models (blue line with shaded $1$ and $2\sigma$ confidence intervals). The features at $1.15$ and $1.4$ $\mu$m are due to water absorption. The right-hand axis indicates the normalized atmospheric scale height assuming solar composition. The water feature crosses less than one scale height, indicating that condensates are present at high altitude.} 
 \label{fig:spectrum}
 \end{figure*}
@@ -149,7 +149,7 @@ Given WASP-107b's unusually low density, we quantitatively explored the range of
 Based on these assumptions, we fit for envelope metallicity and core mass using an MCMC with uniform priors on both parameters.  The MCMC burned in for $10^3$ steps and then collected $4\times10^6$ samples.  The envelope metal mass fractions were converted to metallicities assuming the mean molecular weight of the metals was 18 (the value for water), using the approach of \cite{fortney13}. Figure\,\ref{fig:metal_prior} shows the results.  We find a $3\,\sigma$ upper limit on the metallicity of $30\times$ solar for the young stellar age range.  Higher metallicity envelopes are not allowed because they decrease the planet's radius below the observed value.  For the older age, the upper limit is even lower ($20\times$ solar), because planets cool and contract as they age \citep{fortney08}.  These are conservative upper limits, but realistically, the planet probably formed with a core. Assuming a $5\,M_\oplus$ core, the upper limit on metallicity is 20 (10) $M_\oplus$ for the young (old) age.  
 
 \begin{figure}
-\includegraphics[width = 0.5\textwidth]{Figures/metalByAge.pdf}
+\includegraphics[width = 0.5\textwidth]{fig3_metallicity.pdf}
 \caption{Estimated envelope metallicity for a given core mass based on interior structure modeling. The red shading corresponds to the $1\sigma$ confidence interval for a young planet ($0.2-1$ Gyr); the blue is for an older age ($1-14$ Gyr).}
 \label{fig:metal_prior}
 \end{figure}
@@ -168,7 +168,7 @@ We explored a few retrieval scenarios with additional complexity, including the 
 %We also tested the effect of varying the planet's surface gravity within the published FIXME $\sigma$ range, and found that our results were again minimally changed.
 
 \begin{figure}
-\includegraphics[width = 0.5\textwidth]{Figures/retrieval.pdf}
+\includegraphics[width = 0.5\textwidth]{fig4_retrieval.pdf}
 \caption{Retrieved distributions for (a) metallicity, (b) carbon-to-oxygen ratio, (c) irradiation temperature, and (d) cloud-top pressure in bars. Black vertical lines show the median and $\pm1\,\sigma$ confidence interval (solid and dashed, respectively). Solar metallicity and C/O values are indicated with red vertical lines.}  \label{fig:retrieval}
 \end{figure}
 
@@ -199,8 +199,233 @@ These results are a first look at the atmosphere of WASP-107b. The planet is alr
 \acknowledgments
 We thank Fei Dai, Jessica Spake, Ian Crossfield, Hannah Diamond-Lowe, and Jonathan Fortney for productive conversations. L.K. acknowledges support from the Harvard Society of Fellows and the Harvard Astronomy Department Institute for Theory and Computation. C.V.M. acknowledges support from NASA through the Sagan Fellowship Program.
 
-\bibliographystyle{aasjournal}
-\bibliography{ms.bib}
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+
+\bibitem[{{Amundsen} {et~al.}(2016){Amundsen}, {Mayne}, {Baraffe}, {Manners},
+  {Tremblin}, {Drummond}, {Smith}, {Acreman}, \& {Homeier}}]{amundsen16}
+{Amundsen}, D.~S., {Mayne}, N.~J., {Baraffe}, I., {et~al.} 2016, \aap, 595, A36
+
+\bibitem[{{Anderson} {et~al.}(2017){Anderson}, {Collier Cameron}, {Delrez},
+  {Doyle}, {Gillon}, {Hellier}, {Jehin}, {Lendl}, {Maxted}, {Madhusudhan},
+  {Pepe}, {Pollacco}, {Queloz}, {S{\'e}gransan}, {Smalley}, {Smith}, {Triaud},
+  {Turner}, {Udry}, \& {West}}]{anderson17}
+{Anderson}, D.~R., {Collier Cameron}, A., {Delrez}, L., {et~al.} 2017, ArXiv
+  e-prints, arXiv:1701.03776
+
+\bibitem[{{Batalha} {et~al.}(2017){Batalha}, {Mandell}, {Pontoppidan},
+  {Stevenson}, {Lewis}, {Kalirai}, {Earl}, {Greene}, {Albert}, \&
+  {Nielsen}}]{batalha17}
+{Batalha}, N.~E., {Mandell}, A., {Pontoppidan}, K., {et~al.} 2017, \pasp, 129,
+  064501
+
+\bibitem[{{Benneke}(2015)}]{benneke15}
+{Benneke}, B. 2015, ArXiv e-prints, arXiv:1504.07655
+
+\bibitem[{{Brown}(2001)}]{brown01}
+{Brown}, T.~M. 2001, \apj, 553, 1006
+
+\bibitem[{{Buchner}(2016)}]{buchner16}
+{Buchner}, J. 2016, {PyMultiNest: Python interface for MultiNest}, Astrophysics
+  Source Code Library, , , ascl:1606.005
+
+\bibitem[{{Crossfield} \& {Kreidberg}(2017)}]{crossfield17}
+{Crossfield}, I.~J.~M., \& {Kreidberg}, L. 2017, ArXiv e-prints,
+  arXiv:1708.00016
+
+\bibitem[{{Dai} \& {Winn}(2017)}]{dai17}
+{Dai}, F., \& {Winn}, J.~N. 2017, \aj, 153, 205
+
+\bibitem[{{Dawson} {et~al.}(2016){Dawson}, {Lee}, \& {Chiang}}]{dawson16}
+{Dawson}, R.~I., {Lee}, E.~J., \& {Chiang}, E. 2016, \apj, 822, 54
+
+\bibitem[{{Espinoza} {et~al.}(2017){Espinoza}, {Fortney}, {Miguel},
+  {Thorngren}, \& {Murray-Clay}}]{espinoza17}
+{Espinoza}, N., {Fortney}, J.~J., {Miguel}, Y., {Thorngren}, D., \&
+  {Murray-Clay}, R. 2017, \apjl, 838, L9
+
+\bibitem[{{Espinoza} \& {Jord{\'a}n}(2015)}]{espinoza15}
+{Espinoza}, N., \& {Jord{\'a}n}, A. 2015, \mnras, 450, 1879
+
+\bibitem[{{Foreman-Mackey} {et~al.}(2013){Foreman-Mackey}, {Hogg}, {Lang}, \&
+  {Goodman}}]{foremanmackey13}
+{Foreman-Mackey}, D., {Hogg}, D.~W., {Lang}, D., \& {Goodman}, J. 2013, \pasp,
+  125, 306
+
+\bibitem[{{Fortney} {et~al.}(2008){Fortney}, {Lodders}, {Marley}, \&
+  {Freedman}}]{fortney08}
+{Fortney}, J.~J., {Lodders}, K., {Marley}, M.~S., \& {Freedman}, R.~S. 2008,
+  \apj, 678, 1419
+
+\bibitem[{{Fortney} {et~al.}(2007){Fortney}, {Marley}, \& {Barnes}}]{fortney07}
+{Fortney}, J.~J., {Marley}, M.~S., \& {Barnes}, J.~W. 2007, \apj, 659, 1661
+
+\bibitem[{{Fortney} {et~al.}(2013){Fortney}, {Mordasini}, {Nettelmann},
+  {Kempton}, {Greene}, \& {Zahnle}}]{fortney13}
+{Fortney}, J.~J., {Mordasini}, C., {Nettelmann}, N., {et~al.} 2013, \apj, 775,
+  80
+
+\bibitem[{{Freedman} {et~al.}(2014){Freedman}, {Lustig-Yaeger}, {Fortney},
+  {Lupu}, {Marley}, \& {Lodders}}]{freedman14}
+{Freedman}, R.~S., {Lustig-Yaeger}, J., {Fortney}, J.~J., {et~al.} 2014, \apjs,
+  214, 25
+
+\bibitem[{{Frelikh} \& {Murray-Clay}(2017)}]{frelikh17}
+{Frelikh}, R., \& {Murray-Clay}, R.~A. 2017, ArXiv e-prints, arXiv:1708.00862
+
+\bibitem[{{Gao} {et~al.}(2017){Gao}, {Marley}, {Zahnle}, {Robinson}, \&
+  {Lewis}}]{gao17}
+{Gao}, P., {Marley}, M.~S., {Zahnle}, K., {Robinson}, T.~D., \& {Lewis}, N.~K.
+  2017, \aj, 153, 139
+
+\bibitem[{Gordon \& McBride(1994)}]{gordon94}
+Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
+  chemical equilibrium compositions and applications, Vol.~1 (National
+  Aeronautics and Space Administration, Office of Management, Scientific and
+  Technical Information Program)
+
+\bibitem[{{Guillot}(2010)}]{guillot10}
+{Guillot}, T. 2010, \aap, 520, A27
+
+\bibitem[{{Horne}(1986)}]{horne86}
+{Horne}, K. 1986, \pasp, 98, 609
+
+\bibitem[{{Kreidberg}(2015)}]{kreidberg15a}
+{Kreidberg}, L. 2015, \pasp, 127, 1161
+
+\bibitem[{{Kreidberg} {et~al.}(2014{\natexlab{a}}){Kreidberg}, {Bean},
+  {D{\'e}sert}, {Benneke}, {Deming}, {Stevenson}, {Seager}, {Berta-Thompson},
+  {Seifahrt}, \& {Homeier}}]{kreidberg14a}
+{Kreidberg}, L., {Bean}, J.~L., {D{\'e}sert}, J.-M., {et~al.}
+  2014{\natexlab{a}}, \nat, 505, 69
+
+\bibitem[{{Kreidberg} {et~al.}(2014{\natexlab{b}}){Kreidberg}, {Bean},
+  {D{\'e}sert}, {Line}, {Fortney}, {Madhusudhan}, {Stevenson}, {Showman},
+  {Charbonneau}, {McCullough}, {Seager}, {Burrows}, {Henry}, {Williamson},
+  {Kataria}, \& {Homeier}}]{kreidberg14b}
+---. 2014{\natexlab{b}}, \apjl, 793, L27
+
+\bibitem[{{Kreidberg} {et~al.}(2015){Kreidberg}, {Line}, {Bean}, {Stevenson},
+  {D{\'e}sert}, {Madhusudhan}, {Fortney}, {Barstow}, {Henry}, {Williamson}, \&
+  {Showman}}]{kreidberg15b}
+{Kreidberg}, L., {Line}, M.~R., {Bean}, J.~L., {et~al.} 2015, \apj, 814, 66
+
+\bibitem[{{Lacis} \& {Oinas}(1991)}]{lacis91}
+{Lacis}, A.~A., \& {Oinas}, V. 1991, \jgr, 96, 9027
+
+\bibitem[{{Line} {et~al.}(2014){Line}, {Knutson}, {Wolf}, \& {Yung}}]{line14}
+{Line}, M.~R., {Knutson}, H., {Wolf}, A.~S., \& {Yung}, Y.~L. 2014, \apj, 783,
+  70
+
+\bibitem[{{Line} {et~al.}(2011){Line}, {Vasisht}, {Chen}, {Angerhausen}, \&
+  {Yung}}]{line11}
+{Line}, M.~R., {Vasisht}, G., {Chen}, P., {Angerhausen}, D., \& {Yung}, Y.~L.
+  2011, \apj, 738, 32
+
+\bibitem[{{Line} {et~al.}(2013){Line}, {Wolf}, {Zhang}, {Knutson}, {Kammer},
+  {Ellison}, {Deroo}, {Crisp}, \& {Yung}}]{line13a}
+{Line}, M.~R., {Wolf}, A.~S., {Zhang}, X., {et~al.} 2013, \apj, 775, 137
+
+\bibitem[{{Line} {et~al.}(2016){Line}, {Stevenson}, {Bean}, {Desert},
+  {Fortney}, {Kreidberg}, {Madhusudhan}, {Showman}, \& {Diamond-Lowe}}]{line16}
+{Line}, M.~R., {Stevenson}, K.~B., {Bean}, J., {et~al.} 2016, \aj, 152, 203
+
+\bibitem[{{Madhusudhan} {et~al.}(2014){Madhusudhan}, {Amin}, \&
+  {Kennedy}}]{madhusudhan14}
+{Madhusudhan}, N., {Amin}, M.~A., \& {Kennedy}, G.~M. 2014, \apjl, 794, L12
+
+\bibitem[{{Madhusudhan} {et~al.}(2011){Madhusudhan}, {Harrington}, {Stevenson},
+  {Nymeyer}, {Campo}, {Wheatley}, {Deming}, {Blecic}, {Hardy}, {Lust},
+  {Anderson}, {Collier-Cameron}, {Britt}, {Bowman}, {Hebb}, {Hellier},
+  {Maxted}, {Pollacco}, \& {West}}]{madhusudhan11}
+{Madhusudhan}, N., {Harrington}, J., {Stevenson}, K.~B., {et~al.} 2011, \nat,
+  469, 64
+
+\bibitem[{{Molli{\`e}re} {et~al.}(2015){Molli{\`e}re}, {van Boekel},
+  {Dullemond}, {Henning}, \& {Mordasini}}]{molliere15}
+{Molli{\`e}re}, P., {van Boekel}, R., {Dullemond}, C., {Henning}, T., \&
+  {Mordasini}, C. 2015, \apj, 813, 47
+
+\bibitem[{{Mordasini} {et~al.}(2016){Mordasini}, {van Boekel}, {Molli{\`e}re},
+  {Henning}, \& {Benneke}}]{mordasini16}
+{Mordasini}, C., {van Boekel}, R., {Molli{\`e}re}, P., {Henning}, T., \&
+  {Benneke}, B. 2016, \apj, 832, 41
+
+\bibitem[{{Morley} {et~al.}(2012){Morley}, {Fortney}, {Marley}, {Visscher},
+  {Saumon}, \& {Leggett}}]{morley12}
+{Morley}, C.~V., {Fortney}, J.~J., {Marley}, M.~S., {et~al.} 2012, \apj, 756,
+  172
+
+\bibitem[{{Morley} {et~al.}(2015){Morley}, {Fortney}, {Marley}, {Zahnle},
+  {Line}, {Kempton}, {Lewis}, \& {Cahoy}}]{morley15}
+---. 2015, \apj, 815, 110
+
+\bibitem[{{Morley} {et~al.}(2017){Morley}, {Knutson}, {Line}, {Fortney},
+  {Thorngren}, {Marley}, {Teal}, \& {Lupu}}]{morley17}
+{Morley}, C.~V., {Knutson}, H., {Line}, M., {et~al.} 2017, \aj, 153, 86
+
+\bibitem[{{Moses} {et~al.}(2013){Moses}, {Madhusudhan}, {Visscher}, \&
+  {Freedman}}]{moses13}
+{Moses}, J.~I., {Madhusudhan}, N., {Visscher}, C., \& {Freedman}, R.~S. 2013,
+  \apj, 763, 25
+
+\bibitem[{{Mo{\v c}nik} {et~al.}(2017){Mo{\v c}nik}, {Hellier}, {Anderson},
+  {Clark}, \& {Southworth}}]{mocnik17}
+{Mo{\v c}nik}, T., {Hellier}, C., {Anderson}, D.~R., {Clark}, B.~J.~M., \&
+  {Southworth}, J. 2017, \mnras, 469, 1622
+
+\bibitem[{{{\"O}berg} {et~al.}(2011){{\"O}berg}, {Murray-Clay}, \&
+  {Bergin}}]{oberg11}
+{{\"O}berg}, K.~I., {Murray-Clay}, R., \& {Bergin}, E.~A. 2011, \apjl, 743, L16
+
+\bibitem[{{Pollack} {et~al.}(1996){Pollack}, {Hubickyj}, {Bodenheimer},
+  {Lissauer}, {Podolak}, \& {Greenzweig}}]{pollack96}
+{Pollack}, J.~B., {Hubickyj}, O., {Bodenheimer}, P., {et~al.} 1996, \icarus,
+  124, 62
+
+\bibitem[{{Saumon} {et~al.}(1995){Saumon}, {Chabrier}, \& {van
+  Horn}}]{saumon95}
+{Saumon}, D., {Chabrier}, G., \& {van Horn}, H.~M. 1995, \apjs, 99, 713
+
+\bibitem[{{Skemer} {et~al.}(2014){Skemer}, {Marley}, {Hinz}, {Morzinski},
+  {Skrutskie}, {Leisenring}, {Close}, {Saumon}, {Bailey}, {Briguglio},
+  {Defrere}, {Esposito}, {Follette}, {Hill}, {Males}, {Puglisi}, {Rodigas}, \&
+  {Xompero}}]{skemer14}
+{Skemer}, A.~J., {Marley}, M.~S., {Hinz}, P.~M., {et~al.} 2014, \apj, 792, 17
+
+\bibitem[{{Stevenson} {et~al.}(2014){Stevenson}, {Bean}, {Seifahrt},
+  {D{\'e}sert}, {Madhusudhan}, {Bergmann}, {Kreidberg}, \&
+  {Homeier}}]{stevenson14c}
+{Stevenson}, K.~B., {Bean}, J.~L., {Seifahrt}, A., {et~al.} 2014, \aj, 147, 161
+
+\bibitem[{{Thorngren} {et~al.}(2016){Thorngren}, {Fortney}, {Murray-Clay}, \&
+  {Lopez}}]{thorngren16}
+{Thorngren}, D.~P., {Fortney}, J.~J., {Murray-Clay}, R.~A., \& {Lopez}, E.~D.
+  2016, \apj, 831, 64
+
+\bibitem[{{Tinetti} {et~al.}(2012){Tinetti}, {Tennyson}, {Griffith}, \&
+  {Waldmann}}]{tinetti12}
+{Tinetti}, G., {Tennyson}, J., {Griffith}, C.~A., \& {Waldmann}, I. 2012,
+  Philosophical Transactions of the Royal Society of London Series A, 370, 2749
+
+\bibitem[{{Wakeford} {et~al.}(2017){Wakeford}, {Visscher}, {Lewis}, {Kataria},
+  {Marley}, {Fortney}, \& {Mandell}}]{wakeford17}
+{Wakeford}, H.~R., {Visscher}, C., {Lewis}, N.~K., {et~al.} 2017, \mnras, 464,
+  4247
+
+\bibitem[{{Zahnle} {et~al.}(2009){Zahnle}, {Marley}, {Freedman}, {Lodders}, \&
+  {Fortney}}]{zahnle09}
+{Zahnle}, K., {Marley}, M.~S., {Freedman}, R.~S., {Lodders}, K., \& {Fortney},
+  J.~J. 2009, \apjl, 701, L20
+
+\bibitem[{{Zahnle} \& {Marley}(2014)}]{zahnle14}
+{Zahnle}, K.~J., \& {Marley}, M.~S. 2014, \apj, 797, 41
+
+\bibitem[{{Zhou} {et~al.}(2017){Zhou}, {Apai}, {Lew}, \& {Schneider}}]{zhou17}
+{Zhou}, Y., {Apai}, D., {Lew}, B.~W.~P., \& {Schneider}, G. 2017, \aj, 153, 243
+
+\end{thebibliography}
 
 \end{document}
 
