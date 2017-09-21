@@ -17,8 +17,10 @@ plt.figure(figsize=(8,4))
 d= np.genfromtxt("w107_spectrum_06-22-17.txt")
 plt.errorbar(d[:,0], d[:,1]*100., d[:,2]*100., linestyle = 'none', zorder = 100, marker = 'o', color = 'w', markeredgecolor = 'k', ecolor ='k', markeredgewidth = 1.3)
 
-d0 = np.genfromtxt("w107_g102_prelim_081817.txt")
-plt.errorbar(d0[:,0], 100*d0[:,3]**2, 100.*2.*d0[:,3]*d0[:,4], fmt ='.k')
+d0 = np.genfromtxt("/Users/lkreidberg/Desktop/Projects/Data_reduction/HST/WASP107_HST14916/analysis/fit_2017_08_24_13:25.txt")
+#offset = 0.025
+offset = 0.0
+plt.errorbar(d0[:,0], 100*d0[:,1]**2+offset, 100.*2.*d0[:,1]*d0[:,2], fmt ='.k')
 
 #d = np.genfromtxt("wasp107b_10xsolar_0.1mbarcloud.dat")
 #plt.plot(d[:,0]*1e6, convolve(d[:,1], g, boundary = 'extend')-0.08)
@@ -36,13 +38,9 @@ pb = pickle.load(open("Model_best_fit.pic", "rb"))
 plt.plot(pb[0], pb[1]*100., color = 'navy', label = 'Best fit model')
 print 'outliers', (p[7] - pb[3]*100.)/p[8]
 
-"""d = pickle.load(open("Model_Solar.pic", "rb"))
-x, y = d[0], d[1]*100. - 0.7
-plt.plot(x, y, color = '0.5', alpha = 0.5, label = "1X solar, cloud-free", zorder = -20) 
-plt.legend(loc= 'upper right')"""
 
 plt.ylabel("Transit depth (%)")
-plt.ylim(2.03, 2.1)
+plt.ylim(2.01, 2.1)
 plt.xlabel("Wavelength (microns)")
 
 x2 = plt.gca().twinx()
@@ -53,5 +51,6 @@ plt.ylabel("Scale heights")
 plt.xlim(0.8, 1.7)
 
 plt.tight_layout()
+plt.savefig("combined_spectra.png")
 plt.show()
 
