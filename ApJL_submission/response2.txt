@@ -6,7 +6,7 @@ The authors are correct in that WASP-107b is cooler (780K) than many hot exoplan
 
 --
 
-In the WFC3 bandpass, there are strong spectral features from both water and methane. Since WASP-107b is cool enough that we expected methane to be the dominant carbon-bearing species for low metallicity compositions in chemical equilibrium (e.g., Line et al. 2011, Line & Yung 2013, Moses et al. 2013), our data are sensitive to the relative abundance of a carbon-bearing molecule (CH4) and an oxygen-bearing molecule (H2O), hence obtaining a robust C/O constraint. Robust C/O measurements have not been possible for hotter planets because CO is the dominant carbon-bearing molecule above ~800 K, and CO does not have strong spectral features over the wavelength range currently accessible for high precision transmission spectroscopy. 
+In the WFC3 bandpass, there are strong spectral features from both water and methane. Since WASP-107b is cool enough that we expect methane to be the dominant carbon-bearing species for low metallicity compositions in chemical equilibrium (e.g., Line et al. 2011, Line & Yung 2013w Moses et al. 2013), our data are sensitive to the relative abundance of a carbon-bearing molecule (CH4) and an oxygen-bearing molecule (H2O), which enables a bounded estimate of C/O, rather than just an upper limit as has been obtained in the past (Benneke 2015, Line et al. 2014). Bounded C/O measurements have not been possible for hotter planets because CO is the dominant carbon-bearing molecule above ~800 K, and CO does not have strong spectral features over the wavelength range currently accessible for high precision transmission spectroscopy. 
 
 The retrieval analysis, as stated in the text, uses the "chemically-consistent" method. This means that the mixing ratios of water, methane, CO, CO2...etc., are calculated in thermochemical equilibrium at the temperature at that MCMC step in the retrieval. Therefore, the retrieval accounts for the equilibrium partitioning between CO and CH4 at different temperatures. Because of the temperatures required by the retrieval to match the scale height of the atmosphere are cool (<~1000K), methane is the dominant carbon bearing species. In order to reduce the methane abundance, chemically, the retrieval must reduce the C/O ratio.  While it is true that increasing the temperature will deplete the methane abundance for a solar C/O ratio, higher temperatures are not favored by the observed amplitude of the H2O spectral feature (or by the calculated equilibrium temperature of the planet). 
 
@@ -33,6 +33,7 @@ Thanks for raising this point. We agree that the deepest level probed is the clo
 700K        1.4E-3      7.3E-4         2.7E-5
 800K         7E-4        2.4E-5         2.5E-7
 
+We have added these numbers to the text in section 
 For some temperatures and pressures in this range, the CH4 abundance falls below our 3-sigma upper limit of 1.4E-3. However, the chemically-consistent retrieval self-consistently computes the equilibrium chemistry along the P-T profile producing a vertically varying mixing ratio profiles.  This takes into account the pressure-temperature dependence of the methane abundance already.  Given that the chemically consistent retrieval requires a low C/O ratio to deplete the methane, this means that there are regions of atmosphere that given these higher abundances above, would result in methane presenting itself in the spectrum.
 FIXME
 
@@ -41,14 +42,25 @@ FIXME
 4) My previous report stated "it appears unwise to constrain the atmospheric retrieval analysis to metallicities smaller than 30 times solar. This is true in particular because the probability distribution from the retrieval analysis rises sharply towards this upper bound. Considering all metallicities up 1000 times solar would be extremely helpful to understand whether the atmospheric models support the statement of low metallicities or not. Does the transmission spectrum in any way support the statement of low metallicity? Consistent results from interior modeling and the transmission spectrum would be reassuring and strength the letter. Also, what are the constraints on clouds and C/O when higher metallicities are considered?"
 The authors provide a short response, but do not answer the questions and only refer back to the already existing text. What are the constraints at higher metallicities without a prior on metallicity?
 
-We ran a retrieval with no upper bound on metallicity.  The results are consistent with (but less precise) than the retrieval with the 30x solar upper bound. The retrieved metallicity is [M/H] = 1.35^{+0.68}_{-1.48}, log10(C/O) is -1.57+{0.54}_{-0.31}, and cloud top pressure log(Pc) = -3.63^{+0.81}_{-0.48}.
+For the retrieval with no upper bound on metallicity, we find that our results are consistent with (but less precise) than the retrieval with the 30x solar upper bound. The retrieved metallicity is [M/H] = 1.35^{+0.68}_{-1.48}, log10(C/O) is -1.57+{0.54}_{-0.31}, and cloud top pressure log(Pc) = -3.63^{+0.81}_{-0.48}. For the bounded retrieval, we find [M/H] = 0.57+{0.63}_{-1.19}, log10(C/O) = -1.54+{0.54}_{-0.33}, and cloud top pressure log(Pc) = -3.34^{+0.89}_{-0.66}. 
+
+The reason the transmission spectrum does not strongly constrain the atmospheric metallicity is that there is a degeneracy between metallicity and the planet's 10-bar radius (e.g. Griffith 2014, Heng & Kitzmann 2017). 
+
+We added these clarifications to the text in section 4.2. 
 
 FIXME: label:projects-hst14915_wasp-107 mrline 6/10/17
-
+bounded run 7/13/17 baltimore
 
 5) With regard to the first point in my previous report, the authors confirm that the careful treatment of the star spot crossing is necessary. Here, I would like to reemphasize that WASP-107b and particularly this data set appear to be especially prone to such events and potentially also occulted star spots. In this case, it is not sufficient for the authors to state that they have done tests, but it would be crucial that the reader sees the results from these tests. Along the same line, I cannot imagine that fitting each wavelength with a full white light curve model would not change the retrieval results significantly. The uncertainties should go up substantially. Supplementary information should be provided.
 
+Since we are already at the limit for the number of figures and tables allowed by the ApJL format, we have added additional text with more detail describing the results of the comparison between the different star spot corrections.
+
+
+
 6) In addition, showing that three analysis provided same results is good, but not sufficient given that they are extremely similar analysis. Can you please provide an atmospheric retrieval analysis with less restrictive models that explicitly excludes the HST orbit affected by the star spot crossing event? That would be a better test than saying that three very similar analysis result in the same spectrum.
+
+These are not similar analyses - one includes
+If the HST orbit with the star-spot crossing is excluded from the analysis, the 
 
 
 
