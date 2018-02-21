@@ -1,0 +1,106 @@
+We thank the referee for his or her detailed comments, and respond point-by-point below.
+
+***
+
+The authors are correct in that WASP-107b is cooler (780K) than many hot exoplanets studied, but it is simply not true that this will enable "to constrain the C/O ratio robustly" with the wavelength range provided just because the planet is slightly cooler. On the contrary, it is quite likely that significant amount of carbon should be EXPECTED in other forms at the temperature encountered in WASP-107b's atmosphere, notably CO. WASP-107b is right at the transitional temperature between CO and CH4.
+
+The referee is correct that WASP-107b is near the temperature when carbon transitions from CH4 to CO, but we marginalized over the uncertainty in temperature in the retrieval, accounting for the possibility that the planet is 
+
+We believe these are reasonable assumptions to start with in a letter, and until more complete wavelength coverage is available with JWST, we won
+
+
+and that if CO is present in the atmosphere, we wouldn't be sensitive to it because it doesn't have strong spectral features in the WFC3 bandpass.
+
+
+out of equilibrium
+wrong temperature
+we addressed b
+
+
+
+In the WFC3 bandpass, there are strong spectral features from both water and methane, but not CO. Since WASP-107b is cool enough that we expected methane to be the dominant carbon-bearing species for low metallicity compositions in chemical equilibrium (e.g., Line et al. 2011, Line & Yung 2013), our data are sensitive to the relative abundance of a carbon-bearing molecule (CH4) and an oxygen-bearing molecule (H2O), hence obtaining a robust C/O constraint. This is not possible for hotter planets, because CO is the dominant carbon-bearing molecule above ~800 K
+
+presence (or absence) of methane is informative
+
+ At certain pressures there may be significant CO abundance, but integrated over the column CH4 is at least as abundant as CO.  
+
+Methane has detectable features in the WFC3 bandpass (in addition to H2O), so if it is present,  
+
+Furthermore, given the abundance of methane, in chemical equilibrium at solar composition, over the WFC3 band-pass methane should be rather dominant.  Therefore, over the WFC3 pass-band there is the possibility, if methane is present, as expected, to present itself in the spectrum. Therefore, one can measure the relative abundances of a carbon-bearing molecule (CH4) and an oxygen bearing molecule (H2O) over the WFC3 bandpass, hence obtaining a robust C/O constraint.  CO on the other hand, at solar compositon will not show up at these wavelengths as the band is too weak.
+
+Furthermore, the retrieval, as stated in the text, uses the "chemically-consistent" method. This means that the mixing ratios of water, methane, CO, CO2...etc., are calculated in thermochemical equilibrium at the temperature at that MCMC step in the retrieval. Therefore, on-the-fly retrieval chemistry takes into account the equilibrium partitioning between CO and CH4 at different temperatures. Because of the temperatures required by the retrieval to match the scale height of the atmosphere (which has a different influence on the shape than do clouds...e.g., see Line & Parmentier 2016) are cool (<~1000K), methane is the dominant carbon bearing species. In order to reduce the methane abundance, chemically, the retrieval must reduce the C/O ratio.  While yes, increasing the temperature will in fact deplete the methane abundance, at solar C/O ratio, however higher temperatures are not favored by the amplitude of the spectral feature.  
+
+in fact maybe just showing the proposal Figure 3 to the reviewer would help
+
+***
+2) This brings up the main shortcoming of the letter as it is right now. The results in Figure 4 are presented for chemical equilibrium under the assumption of a temperature profile parameterized by the analytical form of Guillot 2010. This is overly restrictive and the resulting posterior distributions of C/O in Figure 4 are likely strongly affected by this restriction. The authors responses do not provide ANY additional analysis beyond the ones provided in the first submission. The authors only added that the methane abundance is in disagreement with equilibrium abundance of methane "at 700 Kelvin and 10 mbar". That is a very special case in a very sensitive region near the CH4/CO transition and we do not know what the exact photospheric temperature is. How does that comparison at 800K and 0.1mbar, for example? No methane and lots of CO should be expected. What happens if there is a thermal inversions? The data also indicates that there are clouds. Under these conditions, the authors should not restrict the models to Guillot 2010 temperature structures, but allow for a much wider range of temperature structures.
+
+#
+
+Transmission spectra are insensitive to the specific shape of the T/P profile, since most of the absorption happens over a fairly narrow range of pressures in the WFC3 bandpass (e.g. Lee et al. 2012; Barstow et al. 2013). Rather, the quantity that is better constrained by the transmission spectrum is an effective scale height temperature, set by the amplitude of features in the spectrum, that corresponds to the temperature where the absorption is taking place. Therefore, regardless of what T/P profile parameterization we choose, the retrieved temperature at the photosphere will adjust itself to match the observed scale height. For example, a strong inversion is ruled out by our data, because it would require spectral features that are larger than what is observed.  We therefore argue that the Guillot 2010 parameterization is sufficient.  
+
+Within this parameterization, molecular mixing ratios are computed self-consistently along a given TP profile. Therefore, we account for the uncertainty in the temperature when we retrieve the chemical composition.
+
+We respond below to the point about choosing 700 K and 10 mbar as our reference temperature and pressure.
+
+***
+
+3) Next, stating that the photosphere is at 10 mbar, while implying from the current retrieval analysis that there is a cloud deck between 0.1 and 1 mbar (at 1-sgima) is inconsistent and misleading. The authors need to compare their methane abundance to the expected methane abundances for a range of plausible Tp profiles at 0.1 mbar and above. That is where the observations are sensitive to methane, not at 10 mbar. This will likely change their conclusion about the depletion or non-depletion of methane. Hence, the wording "methane depletion" is misleading.
+
+#
+
+Yes, we agree that the "deepest" level probed is the cloud-top pressure which ranges between ~0.01 (10 mbar) to 0.1 mbar.   The methane abundances are as follows (assuming 3x solar metallicity, solar C/O ratio)
+
+                0.01 bar    0.001 bar    0.0001 bar   
+600K        1.4E-3     1.4E-3          1.1E-3  
+700K        1.4E-3      7.3E-4         2.7E-5
+800K         7E-4        2.4E-5         2.5E-7
+
+Yes, for some temperatures and pressures, the CH4 abundance falls below our 3-sigma upper limit of 1.4E-3. We again, however, note that the chemically-consistent retrieval self-conssitently computes the equilibrium chemistry along the P-T profile producing a vertically varying mixing ratio profiles.  This takes into account the pressure-temperature dependence of the methane abundance already.  Given that the chemically consistent retrieval requires a low C/O ratio to deplete the methane, this means that there are regions of atmosphere that given these higher abundances above, would result in methane presenting itself in the spectrum.
+
+***
+
+7) The data coverage ends at 1.629µm and does not seem to cover the full WFC3 bandpass up to 1.7. Can you please provide the full spectral coverage when you showing the comparisons between your different approaches for the light curve fitting?
+
+#
+
+We do not report transit depths from the reddest edge of the WFC3 bandpass because, unfortunately, we find that the our reddest spectroscopic light curves (>1.63 micron) are too poor in quality to robustly measure the transit depth. The residuals exhibit correlated noise and the fits have reduced chi-squared values significantly larger than unity. The transit depths are also sensitive to which method we use to fit for instrument systematics. 
+
+This poor quality for the reddest WFC3 light curves is not unusual. The red edge poses a challenge for data reduction because the raw data must be interpolated to a common wavelength solution for every row in the spatial scan, and the reddest columns have much larger shifts than the blue (~1 versus ~.1 pixels). Therefore, a red cut-off between 1.6 and 1.65 microns is common (e.g. FIXME).
+
+We therefore prefer to report transit depths only from the wavelength range where we are confident that our measurements are robust (<1.63 micron).
+
+***
+
+8) The authors should explicit state which of the data points are the ones that constrain the water and methane abundances? How sensitive are these data points to the analysis and the star spot crossing event? 
+
+#
+As we state in the caption to Figure 2, the water features correspond to the increases in transit depth centered at 1.15 and 1.4 microns. If methane were present, its main feature is also centered at 1.4 microns, but with a different (wider) shape than the water feature (as illustrated in FIXME).
+
+FIXME as we state in FIXME, the transmission spectrum is NOT AFFECTED BY THE STAR SPOT GOD.
+
+***
+
+9) The claimed significance of low methane abundance is 2.7sigma. However, the data point at 1.31µm cannot be fit by any model at >3.5 sigma deviation. At the same time, all considered models pass the 8 lowest data points above the data points' face value. That does not appear to be a coincidence because it appears consistently for the points between the H2O absorption bands. That is worrisome and supports the concern that too restrictive models were used in the interpretation or that water alone is insufficient to explain the data.
+
+#
+
+We also took note of the outlier point at 1.31 micron, and used this as motivation to explore a range of more complex models -- as we discuss in the text, we tested the addition of cloud patchiness (Line et al. 2016), a quench pressure for nitrogen and carbon species (e.g. Morley et al. 2017), and a power law haze opacity. However, none of these changes significantly improve the fit quality, or significantly change the retrieved C/O values.
+
+FIXME: what happens if we exclude the outlier data point?
+
+WASP-107b is likely to have many molecules present in its atmosphere, if the complexity of the Solar System atmospheres serves as any guide.  However, based on the data quality, we do not feel it is justified to guess at which additional molecules may be contributing  FIXME
+
+***
+
+10) In the first report, I raised concerns about the limb darkening models. The authors state that they assessed the effect of stellar temperature, but no further analysis was provided? Please assess other effects. Please also present the results for fitted limb darkening coefficients. I would assume that this would be an easy test to do for the authors.
+
+#
+
+***
+
+11) Please also assess the effects of unocculted star spots on the results. WASP-107 appears to be a star strongly affected by star spots.
+
+#
+
+
