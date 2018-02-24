@@ -6,7 +6,7 @@ The authors are correct in that WASP-107b is cooler (780K) than many hot exoplan
 
 --
 
-In the WFC3 bandpass, there are strong spectral features from both water and methane. Since WASP-107b is cool enough that we expect methane to be the dominant carbon-bearing species for low metallicity compositions in chemical equilibrium (e.g., Line et al. 2011, Line & Yung 2013w Moses et al. 2013), our data are sensitive to the relative abundance of a carbon-bearing molecule (CH4) and an oxygen-bearing molecule (H2O), which enables a bounded estimate of C/O, rather than just an upper limit as has been obtained in the past (Benneke 2015, Line et al. 2014). Bounded C/O measurements have not been possible for hotter planets because CO is the dominant carbon-bearing molecule above ~800 K, and CO does not have strong spectral features over the wavelength range currently accessible for high precision transmission spectroscopy. 
+In the WFC3 bandpass, there are strong spectral features from both water and methane. Since WASP-107b is cool enough that we expect methane to be the dominant carbon-bearing species for low metallicity compositions in chemical equilibrium (e.g., Line et al. 2011, Line & Yung 2013w Moses et al. 2013), our data are sensitive to the relative abundance of a carbon-bearing molecule (CH4) and an oxygen-bearing molecule (H2O), which enables a bounded estimate of C/O, rather than just an upper limit as has been obtained in the past (Benneke 2015, Line et al. 2014). Bounded C/O measurements have not been possible for hotter planets because CO is the dominant carbon-bearing molecule above ~800 K, and CO does not have strong spectral features over the wavelength range currently accessible for high precision transmission spectroscopy. We have expanded the introduction to state this explicitly. 
 
 The retrieval analysis, as stated in the text, uses the "chemically-consistent" method. This means that the mixing ratios of water, methane, CO, CO2...etc., are calculated in thermochemical equilibrium at the temperature at that MCMC step in the retrieval. Therefore, the retrieval accounts for the equilibrium partitioning between CO and CH4 at different temperatures. Because of the temperatures required by the retrieval to match the scale height of the atmosphere are cool (<~1000K), methane is the dominant carbon bearing species. In order to reduce the methane abundance, chemically, the retrieval must reduce the C/O ratio.  While it is true that increasing the temperature will deplete the methane abundance for a solar C/O ratio, higher temperatures are not favored by the observed amplitude of the H2O spectral feature (or by the calculated equilibrium temperature of the planet). 
 
@@ -16,7 +16,8 @@ The retrieval analysis, as stated in the text, uses the "chemically-consistent" 
 
 --
 
-Transmission spectra are insensitive to the specific shape of the T/P profile, since most of the absorption happens over a fairly narrow range of pressures in the WFC3 bandpass (e.g. Lee et al. 2012; Barstow et al. 2013). Rather, the quantity that is better constrained by the transmission spectrum is an effective scale height temperature, set by the amplitude of features in the spectrum, that corresponds to the temperature where the absorption is taking place. Therefore, regardless of what T/P profile parameterization we choose, the retrieved temperature *at the photosphere* will adjust itself to match the observed scale height. For example, a strong inversion is ruled out by our data, because it would require spectral features that are larger than what is observed.  Therefore, the Guillot 2010 parameterization does not artificially restrict the range of temperatures at the photosphere, and the uncertainty in the temperature is accounted for in our constraints on chemical composition.
+Transmission spectra are insensitive to the specific shape of the T/P profile, since most of the absorption happens over a fairly narrow range of pressures in the WFC3 bandpass (e.g. Lee et al. 2012; Barstow et al. 2013). Rather, the quantity that is better constrained by the transmission spectrum is an effective scale height temperature, set by the amplitude of features in the spectrum, that corresponds to the temperature where the absorption is taking place. Therefore, regardless of what T/P profile parameterization we choose, the retrieved temperature *at the photosphere* will adjust itself to match the observed scale height. For example, a strong inversion is ruled out by our data, because it would require spectral features that are larger than what is observed.  The Guillot 2010 parameterization does not artificially restrict the range of temperatures at the photosphere, so the full uncertainty in the temperature is accounted for in our constraints on chemical composition.
+
 
 We respond below to the point about choosing 700 K and 10 mbar as our reference temperature and pressure.
 
@@ -33,9 +34,8 @@ Thanks for raising this point. We agree that the deepest level probed is the clo
 700K        1.4E-3      7.3E-4         2.7E-5
 800K         7E-4        2.4E-5         2.5E-7
 
-We have added these numbers to the text in section 
-For some temperatures and pressures in this range, the CH4 abundance falls below our 3-sigma upper limit of 1.4E-3. However, the chemically-consistent retrieval self-consistently computes the equilibrium chemistry along the P-T profile producing a vertically varying mixing ratio profiles.  This takes into account the pressure-temperature dependence of the methane abundance already.  Given that the chemically consistent retrieval requires a low C/O ratio to deplete the methane, this means that there are regions of atmosphere that given these higher abundances above, would result in methane presenting itself in the spectrum.
-FIXME
+For some temperatures and pressures in this range, the CH4 abundance falls below our 3-sigma upper limit of 1.4E-3.  Given the uncertainties in the exact properties of the photosphere, we soften our claim that there is a significant detection of methane depletion. We modified the title, abstract, and section 4.2.1 to say that there is a possibility that methane is depleted, and further observations are necessary to confirm this finding.
+
 
 ***
 
@@ -44,35 +44,20 @@ The authors provide a short response, but do not answer the questions and only r
 
 For the retrieval with no upper bound on metallicity, we find that our results are consistent with (but less precise) than the retrieval with the 30x solar upper bound. The retrieved metallicity is [M/H] = 1.35^{+0.68}_{-1.48}, log10(C/O) is -1.57+{0.54}_{-0.31}, and cloud top pressure log(Pc) = -3.63^{+0.81}_{-0.48}. For the bounded retrieval, we find [M/H] = 0.57+{0.63}_{-1.19}, log10(C/O) = -1.54+{0.54}_{-0.33}, and cloud top pressure log(Pc) = -3.34^{+0.89}_{-0.66}. So to summarize, our conclusions about the C/O ratio and cloud-top pressure are unaffected by the prior on atmospheric metallicity.  The retrieval with no metallicity prior yields an estimate of the metallicity that is consistent with the interior structure modeling (which puts a 3 sigma upper limit on metallicity of [M/H] = 1.5). The reason the transmission spectrum does not constrain the atmospheric metallicity more precisely is that there is a degeneracy between metallicity and the planet's 10-bar radius (e.g. Griffith 2014, Heng & Kitzmann 2017).  
 
-We added these clarifications to the text in section 4.2.  (FIXME)
+We added these clarifications to the text in section 4.2. 
 
 **********
 
 5) With regard to the first point in my previous report, the authors confirm that the careful treatment of the star spot crossing is necessary. Here, I would like to reemphasize that WASP-107b and particularly this data set appear to be especially prone to such events and potentially also occulted star spots. In this case, it is not sufficient for the authors to state that they have done tests, but it would be crucial that the reader sees the results from these tests. Along the same line, I cannot imagine that fitting each wavelength with a full white light curve model would not change the retrieval results significantly. The uncertainties should go up substantially. Supplementary information should be provided.
 
-We agree that it is important to be clear that the measured spectrum is not significantly affected by the star spot crossing. We added additional detail to the text describing the differences between the model results. 
+--
 
-Our nominal fitting approach uses the divide-white model, described in detail in Kreidberg et al. 2014 (Nature, 505, 69) --  see the description of "Sytematics Correction" in the Supplementary Information. This approach begins by fitting the white light curve (denoted F_white(t)) with a transit model, T_white, and a systematics model, S_white, where F_white(t) = T_white(t) x S_white(t). To fit the spectroscopic light curves (F_lambda(t)), the white light curve systematics vector is scaled F_lambda(t) = T_lambda(t) x S_white(t) x (c + v*t), where c and v are constants.  (This is all described in Sections 3.1 and 3.2, but we recap here for clarity.)
-
-Our main approach to fitting the spectroscopic light curves is the the divide-white technique. This technique requires a vector of systematics from the white light curve fit. For our nominal model, we use a systematics vector from a white light curve fit that gave zero weight to data points in the star-spot crossing orbit. We refer to this model as M1. We also fit two other models: one uses a systematics vector from a white light curve fit that does not deweight the star spot orbit (which we refer to as M2). The other fits an analytic model to the spectroscopic light curves that had the same free parameters as we used for the white light curve fit (free parameters of FIXME, add reference).
-
-The difference between the models is the following: in M1, the excess flux during the star spot crossing is present in the systematics vector, whereas M2 and M3 both fit the light curves as if the star spot were not present. To assess the differences between these models, we compared the 
-
-The different methods for handling the star spot yield consistent estimates of the transmission spectra (agreement to better than 0.5 sigma on average over the full wavelength range).
-
+We agree that it is important to be clear that the measured spectrum is not significantly affected by the star spot crossing. We added results for two additional model fits to Table 1 so the reader can confirm that the spectra are in fact consistent.  There are small constant offsets between the transit depths for different models (near 200 ppm), which is expected because the estimated baseline stellar flux depends on whether the star spot is ignored or included in the model. However, the relative transit depths are consistent, so these offsets do not impact our interpretation of the planet's atmosphere (we marginalize over the unknown 10-bar radius in the retrieval). To quantitatively compare the relative transit depths, we subtract the mean transit depth from each transmission spectrum, and find that the spectra agree to within 0.5 sigma on average over the full wavelength range, with a maximum deviation of <1 sigma.
 
 
 6) In addition, showing that three analysis provided same results is good, but not sufficient given that they are extremely similar analysis. Can you please provide an atmospheric retrieval analysis with less restrictive models that explicitly excludes the HST orbit affected by the star spot crossing event? That would be a better test than saying that three very similar analysis result in the same spectrum.
 
-These are not similar analyses - one includes
-If the HST orbit with the star-spot crossing is excluded from the analysis, the 
-
-
-
-
-
-
-
+Removing the star-spot orbit increases the uncertainties for the transit depth measurements by more than 50%, and would diminish our ability to make inferences about the planet's atmosphere. However, in our response to point 5 above, we have shown that the transmission spectrum is consistent for several approaches in fitting the star spot. We disagree with the claim that the analyses are "extremely similar" -- one includes a model for the star spot (the divide-white model, in which the star spot residuals are included in the white light curve systematics vector), and one ignores the star spot completely (the analytic model). The transmission spectra from both approaches are consistent with each other.  We also ran an independent analysis with K. Stevenson's pipeline and obtained consistent results from that analysis as well. We therefore think it would be misleading to readers to unnecessarily degrade the precision of the reported spectrum and resulting interpretation.
 
 
 7) The data coverage ends at 1.629 micron and does not seem to cover the full WFC3 bandpass up to 1.7. Can you please provide the full spectral coverage when you showing the comparisons between your different approaches for the light curve fitting?
@@ -87,33 +72,40 @@ This poor quality for the reddest WFC3 light curves is not unusual. The red edge
 
 8) The authors should explicit state which of the data points are the ones that constrain the water and methane abundances? How sensitive are these data points to the analysis and the star spot crossing event? 
 
-#
-As we state in the caption to Figure 2, the water features correspond to the increases in transit depth centered at 1.15 and 1.4 microns. If methane were present, its main feature is also centered at 1.4 microns, but with a different (wider) shape than the water feature (as illustrated in FIXME).
+--
 
-FIXME as we state in FIXME, the transmission spectrum is NOT AFFECTED BY THE STAR SPOT GOD.
+The water features correspond to the increases in transit depth centered at 1.15 and 1.4 microns. If methane were present, its main feature is also centered at 1.4 microns, but with a different (wider) shape than the water feature.  We have added this clarification to section 4.2.
+
+Please see our response to point (5) above for a discussion of how the starspot impacts the spectrum.
 
 ***
 
 9) The claimed significance of low methane abundance is 2.7sigma. However, the data point at 1.31µm cannot be fit by any model at >3.5 sigma deviation. At the same time, all considered models pass the 8 lowest data points above the data points' face value. That does not appear to be a coincidence because it appears consistently for the points between the H2O absorption bands. That is worrisome and supports the concern that too restrictive models were used in the interpretation or that water alone is insufficient to explain the data.
 
-#
+--
 
-We also took note of the outlier point at 1.31 micron, and used this as motivation to explore a range of more complex models -- as we discuss in the text, we tested the addition of cloud patchiness (Line et al. 2016), a quench pressure for nitrogen and carbon species (e.g. Morley et al. 2017), and a power law haze opacity. However, none of these changes significantly improve the fit quality, or significantly change the retrieved C/O values.
+Our best fit model has a chi-squared value of 26.8 for 15 degrees of freedom, which is consistent at 2.16 sigma with expectations for the chi-squared distribution.   That said, we also noted the outlier point at 1.31 micron, and used this as motivation to explore a range of more complex models in search of a better fit. We tested the addition of cloud patchiness (Line et al. 2016), a quench pressure for nitrogen and carbon species to account for possible disequilibrium chemistry (e.g. Morley et al. 2017), a power law haze opacity, and a free retrieval that does not impose chemical equilibrium. However, none of these changes significantly improve the fit quality, or significantly change the retrieved C/O values. The results of these tests are stated in section 4.2.
 
-FIXME: what happens if we exclude the outlier data point?
-
-WASP-107b is likely to have many molecules present in its atmosphere, if the complexity of the Solar System atmospheres serves as any guide.  However, based on the data quality, we do not feel it is justified to guess at which additional molecules may be contributing  FIXME
 
 ***
 
 10) In the first report, I raised concerns about the limb darkening models. The authors state that they assessed the effect of stellar temperature, but no further analysis was provided? Please assess other effects. Please also present the results for fitted limb darkening coefficients. I would assume that this would be an easy test to do for the authors.
 
-#
+--
+
+We calculated model limb darkening coefficients for WASP-107 over the 1 sigma range of stellar effective temperatures, surface gravities, and metallicities published in the discovery paper (Teff = 4430 +/- 130 K, logg = 4.5 +/- 0.1, and [Fe/H] = 0.02 +/- 0.1). The uncertainty in Teff has the largest effect on the estimated LD coefficients. We recalculated the transmission spectrum with limb darkening models that varied Teff from 4310 to 4550 K. Over this temperature range, the change in limb darkening shifts the average transit depth by <20 ppm, which is below the level of noise in the data.  The relative change in transit depth is much smaller than than (< 1 ppm). We added these notes to the text in 3.2.
+
+We also added results to Table 1 showing the transit depths measured with limb darkening as a free parameter, and included the fitted linear limb darkening coefficients. As discussed in our response to point (5), this model does not significantly effect the transit depths.
 
 ***
 
 11) Please also assess the effects of unocculted star spots on the results. WASP-107 appears to be a star strongly affected by star spots.
 
-#
+--
+
+We calculated the impact of unocculted star spots as follows. We estimated the star spot properties based on the observed photometric variability in the Kepler band pass, which is 0.3% (Dai & Winn, 2017). This variability can be reproduced with a single spot with covering fraction of 1% and temperature 300 K lower than the stellar photosphere (4130 vs 4430 K).  We then calculated the wavelength dependent impact of unocculted spots based on equation (1) from McCullough et al. 2014. For a spot covering fraction of 1% and a temperature contrast of 300 K, the unocculted star spots are expected to introduce a slope in the transmission spectrum of 8 ppm over the WFC3 bandpass, well below our measurement uncertainties. Cool stars may have persistent spot coverage that does not produce any photometric variability (Rackham et al. 2018). Even if there is persistent spot coverage of 5%, the spots produce a slope in the WFC3 bandpass of 50 ppm, which is still below our uncertainties.
+
+We have added this discussion to Section 3.2.1.
+
 
 

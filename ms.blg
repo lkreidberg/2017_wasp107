@@ -4,51 +4,55 @@ The top-level auxiliary file: ms.aux
 The style file: aasjournal.bst
 Database file #1: msNotes.bib
 Database file #2: ms.bib.bib
+Repeated entry---line 1659 of file ms.bib.bib
+ : @article{mccullough14
+ :                      ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 3225 of file ms.bib.bib
  : @article{espinoza17
  :                    ,
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
-You've used 51 entries,
+You've used 56 entries,
             3222 wiz_defined-function locations,
-            1014 strings with 16880 characters,
-and the built_in function-call counts, 24290 in all, are:
-= -- 1935
-> -- 1990
-< -- 14
-+ -- 672
-- -- 743
-* -- 2140
-:= -- 4495
-add.period$ -- 51
-call.type$ -- 51
-change.case$ -- 317
-chr.to.int$ -- 50
-cite$ -- 52
-duplicate$ -- 913
-empty$ -- 1434
-format.name$ -- 786
-if$ -- 4836
+            1050 strings with 18028 characters,
+and the built_in function-call counts, 26485 in all, are:
+= -- 2117
+> -- 2142
+< -- 16
++ -- 722
+- -- 797
+* -- 2322
+:= -- 4892
+add.period$ -- 56
+call.type$ -- 56
+change.case$ -- 343
+chr.to.int$ -- 55
+cite$ -- 57
+duplicate$ -- 1001
+empty$ -- 1578
+format.name$ -- 847
+if$ -- 5286
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 50
-newline$ -- 158
-num.names$ -- 204
-pop$ -- 434
+missing$ -- 55
+newline$ -- 173
+num.names$ -- 224
+pop$ -- 470
 preamble$ -- 1
-purify$ -- 317
+purify$ -- 343
 quote$ -- 0
-skip$ -- 689
+skip$ -- 763
 stack$ -- 0
-substring$ -- 792
+substring$ -- 889
 swap$ -- 3
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 456
+type$ -- 501
 warning$ -- 1
-while$ -- 187
+while$ -- 206
 width$ -- 0
-write$ -- 516
-(There was 1 error message)
+write$ -- 566
+(There were 2 error messages)

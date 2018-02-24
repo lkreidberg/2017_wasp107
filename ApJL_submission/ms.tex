@@ -15,7 +15,7 @@
 
 \begin{document}
 
-\title{Water, Methane Depletion, and High-Altitude Condensates in the Atmosphere of the Warm Super-Neptune WASP-107\lowercase{b}}
+\title{Water, High-Altitude Condensates, and \added{Possible} Methane Depletion in the Atmosphere of the Warm Super-Neptune WASP-107\lowercase{b}}
 
 \correspondingauthor{Laura Kreidberg}
 \email{laura.kreidberg@cfa.harvard.edu}
@@ -51,7 +51,7 @@ Cambridge, MA 02138}
 
 
 \begin{abstract}
-The super-Neptune exoplanet WASP-107b is an exciting target for atmosphere characterization. It has an unusually large atmospheric scale height and a small, bright host star, raising the possibility of precise constraints on its current nature and formation history.  We report the first atmospheric study of WASP-107b, a Hubble Space Telescope measurement of its near-infrared transmission spectrum.  We determined the planet's composition with two techniques: atmospheric retrieval based on the transmission spectrum and interior structure modeling based on the observed mass and radius. The interior structure models set a $3\,\sigma$ upper limit on the atmospheric metallicity of $30\times$ solar. The transmission spectrum shows strong evidence for water absorption ($6.5\,\sigma$ confidence), and we infer a water abundance consistent with expectations for a solar abundance pattern. On the other hand, methane is depleted relative to expectations (at $3\,\sigma$ confidence), suggesting a low carbon-to-oxygen ratio or high internal heat flux.  The water features are smaller than predicted for a cloudless atmosphere, crossing less than one scale height. A thick condensate layer at high altitudes (0.1 - 3 mbar) is needed to match the observations; however, we find that it is challenging for physically motivated cloud and haze models to produce opaque condensates at these pressures.  Taken together, these findings serve as an illustration of the diversity and complexity of exoplanet atmospheres. The community can look forward to more such results with the high precision and wide spectral coverage afforded by future observing facilities. 
+	The super-Neptune exoplanet WASP-107b is an exciting target for atmosphere characterization. It has an unusually large atmospheric scale height and a small, bright host star, raising the possibility of precise constraints on its current nature and formation history.  We report the first atmospheric study of WASP-107b, a Hubble Space Telescope measurement of its near-infrared transmission spectrum.  We determined the planet's composition with two techniques: atmospheric retrieval based on the transmission spectrum and interior structure modeling based on the observed mass and radius. The interior structure models set a $3\,\sigma$ upper limit on the atmospheric metallicity of $30\times$ solar. The transmission spectrum shows strong evidence for water absorption ($6.5\,\sigma$ confidence), and the retrieved water abundance is consistent with expectations for a solar abundance pattern. \added{The inferred carbon-to-oxygen ratio is subsolar at $2.7\,\sigma$ confidence, which we attribute to methane depletion.} \deleted{and we infer a water abundance consistent with expectations for a solar abundance pattern. On the other hand, methane is depleted relative to expectations (at $3\,\sigma$ confidence), suggesting a low carbon-to-oxygen ratio or high internal heat flux.}  The spectral features are smaller than predicted for a cloudless atmosphere, crossing less than one scale height. A thick condensate layer at high altitudes (0.1 - 3 mbar) is needed to match the observations. \added{We find that physically motivated cloud models with moderate sedimentation efficiency ($f_\mathrm{sed} = 0.3$) produce clouds at this pressure level.} \deleted{however, we find that it is challenging for physically motivated cloud and haze models to produce opaque condensates at these pressures.}  Taken together, these findings serve as an illustration of the diversity and complexity of exoplanet atmospheres. The community can look forward to more such results with the high precision and wide spectral coverage afforded by future observing facilities. 
 \end{abstract}
 
 \keywords{planets and satellites: individual (WASP-107b), planets and satellites: atmospheres}
@@ -63,7 +63,7 @@ The composition of a planet's atmosphere depends on where and how the planet for
 
 The warm Neptune WASP-107b is an intriguing target for atmosphere characterization for several reasons.  It has an intermediate size between ice giants and gas giants, with a mass similar to Neptune's and a radius close to Jupiter's \citep[$0.12\,M_\mathrm{Jup}$, $0.94\,R_\mathrm{Jup}$;][]{anderson17}. Studying the atmospheres of planets in this transition region will provide additional clues in the much-debated mystery of what stunts the growth of Neptune-size planets \citep[e.g][]{pollack96, dawson16, frelikh17}.  
 
-WASP-107b also has a relatively low equilibrium temperature compared to most other exoplanets that are amenable to atmosphere characterization (780 K, assuming zero albedo).  This results in a distinct atmospheric chemistry from other well-studied systems: at low temperatures, the dominant molecular reservoir for carbon transitions from carbon monoxide to methane \citep{moses13}.  Spectral features from both water and methane are accessible with current observing facilities, enabling a spectroscopic estimate of the carbon-to-oxygen ratio (C/O). Previous measurements of C/O have been challenging because they rely on broadband photometry or narrow wavelength coverage \citep[e.g.][]{madhusudhan11, line14, benneke15, kreidberg15b}. 
+WASP-107b also has a relatively low equilibrium temperature compared to most other exoplanets that are amenable to atmosphere characterization (780 K, assuming zero albedo).  This results in a distinct atmospheric chemistry compared to other well-studied systems: at low temperatures, the dominant molecular reservoir for carbon transitions from carbon monoxide to methane \citep{moses13}.  Spectral features from both water and methane are accessible with current observing facilities -- \added{both of these molecules have strong absorption bands in the wavelength range covered by \emph{HST}/WFC3.  Measuring the shape and amplitude of these spectral features enables a constraint on the abundance of water, the dominant oxygen-bearing molecule, and methane, the dominant carbon-bearing molecule, providing a bounded estimate of the carbon-to-oxygen ratio (C/O).} Previous measurements of C/O have been challenging because they rely on broadband photometry or narrow wavelength coverage, \added{and have mainly resulted in upper limits} \citep[e.g.][]{madhusudhan11, line14, benneke15, kreidberg15b}. 
 
 In addition, WASP-107b is one of the best targets discovered to date for atmosphere characterization. Thanks to its large atmospheric scale height and small, bright host star, the expected signal-to-noise for the transmission spectrum is comparable to the best studied benchmarks in the field (e.g. HD\,209458b).  In this paper we report the first atmosphere characterization of WASP-107b: a near-infrared transmission spectrum measured with the \emph{Hubble Space Telescope} (\emph{HST}; Program GO 14915, PI L. Kreidberg).
 
@@ -94,15 +94,18 @@ In our final fit, we fixed the transit parameters $a/r_s$, $i$, $p$ on the preci
 For the best fit white light curve, the root-mean-square (rms) residuals were 93 ppm (excluding the star spot crossing), which is somewhat larger than the expected shot noise of 50 ppm. We attribute the excess noise to loss of flux off the edge of the detector, which can occur if there is variation in the position or length of the spatial scan. There is no evidence for correlated noise in the residuals, so to account for the excess noise we simply increased the per-point uncertainties by a factor of 1.7 to achieve a $\chi^2_\nu$ value of unity.  We then used the Markov chain Monte Carlo (MCMC) algorithm to estimate parameter uncertainties \citep{foremanmackey13}.  The chain had 50 walkers which each ran for $10^4$ steps with the first 10\% discarded as burn-in. We tested for convergence by dividing the chain in two halves and confirming that they gave consistent results. The transit time was $t_0 = 2457910.45407\pm6\mathrm{e}{-5}$ BJD$_\mathrm{TDB}$ and the planet/star radius was $r_p/r_s = 0.14399\pm0.00017$. 
 
 \subsection{Spectroscopic Light Curve Fits}
-We binned the spectrum into 20 spectrophotometric channels from 1.12 to 1.63 $\mu$m, shown in Figure\,\ref{fig:lc}. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics have the same morphology at all wavelengths \citep{stevenson14c, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  One advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. The amplitude of the feature has no detectable wavelength dependence at the level of precision of our data.  As for the white light curve, we fixed some of the transit parameters on the best fit values from \cite{dai17}. We did not put put priors on the transit parameters because varying them simply shifts the spectrum up or down by a constant value. Since the planet's 10-bar radius is a free parameter in our analysis of the spectrum, the absolute transit depth does not affect the retrieved atmospheric properties. In addition to fixing the transit parameters, we also fixed the limb darkening on the PHOENIX model predictions (coefficients listed in Table\,\ref{tab:transit_depths}. 
+We binned the spectrum into 20 spectrophotometric channels from 1.12 to 1.63 $\mu$m, shown in Figure\,\ref{fig:lc}. We fit the light curves with the \texttt{divide-white} technique, which assumes that the light curve systematics have the same morphology at all wavelengths \citep{stevenson14c, kreidberg14a}. For this method, the transit model $T_\lambda(t)$ is multiplied by the systematics vector from the white light curve fit ($F_\mathrm{white}/T_\mathrm{white}$), and rescaled by a factor $C_\lambda + V_\lambda t$.  One advantage of this approach is that it removes the star spot crossing feature, enabling us to use orbit three with no additional correction. The amplitude of the feature has no detectable wavelength dependence at the level of precision of our data.  As for the white light curve, we fixed some of the transit parameters on the best fit values from \cite{dai17}. We did not put put priors on the transit parameters because varying them simply shifts the spectrum up or down by a constant value. Since the planet's 10-bar radius is a free parameter in our analysis of the spectrum, the absolute transit depth does not affect the retrieved atmospheric properties. In addition to fixing the transit parameters, we also fixed the limb darkening on the PHOENIX model predictions (coefficients listed in Table\,\ref{tab:tspec}.  The final spectroscopic light curve fits had just three free parameters per channel: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  We refer to this fitting approach as ``Method A".
 
-The final spectroscopic light curve fits had just three free parameters per channel: $C_\lambda$, $V_\lambda$, and $r_p/r_s$.  
+The best fit light curves have a median $\chi^2_\nu$ value of 1.16.  We conservatively rescaled the photometric uncertainties for all spectroscopic channels such that the $\chi^2_\nu$ values are unity. We performed an MCMC fit to the light curves with \texttt{emcee}.  For each light curve we ran a fit with 50 walkers and 1000 steps per walker, and tested for convergence as we did for the white light curve. The median transit depths and $1\,\sigma$ uncertainties are given in Table\,\ref{tab:tspec}. 
 
-The best fit light curves have a median $\chi^2_\nu$ value of 1.16.  We conservatively rescaled the photometric uncertainties for all spectroscopic channels such that the $\chi^2_\nu$ values are unity. We performed an MCMC fit to the light curves with \texttt{emcee}.  For each light curve we ran a fit with 50 walkers and 1000 steps per walker, and tested for convergence as we did for the white light curve. The median transit depths and $1\,\sigma$ uncertainties are given in Table\,\ref{tab:transit_depths}. 
+We explored several alternative choices for the spectroscopic light curve fits, but found that none of them made a significant difference in the transmission spectrum. In one test, we fit the spectroscopic light curves with the same analytic model we used for the white light curve. \added{This fit (which we label ``Method B") has additional free parameters, so the transit depth uncertainties increase by 50\%, but the best fit transit depths are consistent to within $0.5\sigma$ on average over the bandpass.} We also tested a white light curve systematics vector $S_\mathrm{white}$ from a fit that included the star-spot crossing orbit. The results from these tests are nearly identical to our nominal transmission spectrum, except with a small constant offset due to the uncorrected star-spot crossing feature. This offset does not affect our final analysis because it is marginalized in the atmospheric retrieval with the 10-bar radius parameter (see \S\,\ref{sec:retrieval}). 
+	\added{We also repeated the calculations from Method A, but fit} for a linear limb darkening parameter rather than fixing the limb darkening on the PHOENIX model values. \added{This approach, which we dub ``Method C", also yields consistent results with Method A (the relative transit depths agree to better than 0.2 sigma on average). The transit depths and fitted limb darkening coefficients are provide in Table\,\ref{tab:tspec}.} The fitted limb darkening coefficients are consistent with the model predictions, so we opted to fix the coefficients in our final analysis because it improves the precision on the transit depths.  \added{We calculated model limb darkening coefficients for WASP-107 over the $1\,\sigma$ range of stellar effective temperatures, surface gravities, and metallicities published in the discovery paper ($T_\mathrm{eff} = 4430\pm130$ K, $\log g = 4.5 \pm 0.1$, and $[\mathrm{Fe/H}] = 0.02 \pm 0.1i$). The uncertainty in $T_\mathrm{eff}$ has the largest effect on the estimated limb darkening coefficients. We recalculated the transmission spectrum with limb darkening models that varied $T_\mathrm{eff}$ from 4310 to 4550 K. Over this temperature range, the change in limb darkening shifts the average transit depth by less than 20 ppm, which is below the level of noise in the data.  The relative change in transit depth is smaller still ($< 1$ ppm).}
 
-We explored several alternative choices for the spectroscopic light curve fits, but found that none of them made a significant difference in the transmission spectrum. In one test, we fit the spectroscopic light curves with the same analytic model we used for the white light curve. We also tested a white light curve systematics vector $S_\mathrm{white}$ from a fit that included the star-spot crossing orbit. The results from these tests are nearly identical to our nominal transmission spectrum (differing by $<0.5\sigma$ on average), except with a small constant offset due to the uncorrected star-spot crossing feature. This offset does not affect our final analysis because it is marginalized in the atmospheric retrieval with the 10-bar radius parameter (see \S\,\ref{sec:retrieval}).
+In addition to these tests, we also performed an independent data reduction and fit using K. Stevenson's pipeline and found consistent results (well within $1\,\sigma$). 
 
-We also fit for a linear limb darkening parameter rather than fixing the limb darkening on the PHOENIX model values. We found that the fitted limb darkening coefficients are consistent with the model predictions, so we opted to fix the coefficients in our final analysis because it improves the precision on the transit depths by about 10\%.  We also performed an independent data reduction and fit using K. Stevenson's pipeline and found consistent results (well within $1\,\sigma$). 
+\added{\subsubsection{Impact of Unocculted Star Spots}
+	Unocculted star spots may influence the measured transmission spectrum \citep{mccullough14, zellem17}. To estimate the impact of unocculted spots on our data,  we first estimated the star spot properties based on the observed photometric variability in the Kepler band pass, which is 0.3\% \citep{dai17,mocnik17}. This variability can be reproduced with a single spot with covering fraction of 1\% and temperature 300 K lower than the stellar photosphere (4130 vs 4430 K).  We calculated the effect of unocculted spots with these properties using equation (1) from \cite{mccullough14}, and predict that they will introduce a positive slope in the transmission spectrum of 8 ppm over the WFC3 bandpass, well below our measurement uncertainties. We note that cool stars may have persistent spot coverage that does not produce any photometric variability \citep{rackham18}. However, even if there is persistent spot coverage of 5\%, the spots produce a slope in the WFC3 bandpass of 50 ppm, which is still below our uncertainties.}
+
 
 %\subsubsection{Transit Depths Redder than 1.62 $\mu$m}
 %The red edge of the transmission spectrum is of interest for our analysis because methane is expected to be the dominant absorber over water at wavelengths greater than $1.6\,\mu$m. Unfortunately, we find that the our reddest spectroscopic light curves ($>1.62\mu$m) are too poor in quality to robustly measure the transit depth. The residuals exhibit correlated noise and the fits have $\chi^2_\nu>2$. The transit depths are also sensitive to which method we use to fit for instrument systematics.  We therefore opt not to report transit depths redder than the 1.62 $\mu$m channel.
@@ -114,32 +117,38 @@ We also fit for a linear limb darkening parameter rather than fixing the limb da
 \label{fig:spectrum}
 \end{figure*}
 
-\begin{deluxetable}{c c c c c}
-\tablecaption{WASP-107b transmission spectrum and limb darkening coefficients\label{tab:transit_depths}}
-\tablehead{\colhead{Wavelength ($\mu$m)}  & \colhead{Transit depth} & \colhead{Uncertainty} & \colhead{$u_1$} & \colhead{$u_2$}}
-\startdata
-1.121 -- 1.145 & 0.020641 & 5.9e-05 & 0.38 & 0.13 \\
-1.145 -- 1.171 & 0.020733 & 5.5e-05 & 0.37 & 0.14 \\
-1.171 -- 1.196 & 0.020505 & 5.6e-05 & 0.36 & 0.14 \\
-1.196 -- 1.222 & 0.020498 & 5.4e-05 & 0.36 & 0.15 \\
-1.222 -- 1.248 & 0.020455 & 5.9e-05 & 0.36 & 0.15 \\
-1.248 -- 1.272 & 0.020492 & 5.0e-05 & 0.35 & 0.16 \\
-1.272 -- 1.298 & 0.020620 & 6.2e-05 & 0.34 & 0.17 \\
-1.298 -- 1.323 & 0.020739 & 5.0e-05 & 0.34 & 0.17 \\
-1.323 -- 1.349 & 0.020660 & 5.7e-05 & 0.33 & 0.18 \\
-1.349 -- 1.374 & 0.020858 & 4.8e-05 & 0.32 & 0.19 \\
-1.374 -- 1.401 & 0.020794 & 4.8e-05 & 0.31 & 0.20 \\
-1.401 -- 1.425 & 0.020888 & 5.2e-05 & 0.30 & 0.21 \\
-1.425 -- 1.452 & 0.020821 & 6.2e-05 & 0.29 & 0.21 \\
-1.452 -- 1.476 & 0.020691 & 5.1e-05 & 0.28 & 0.22 \\
-1.476 -- 1.502 & 0.020682 & 6.9e-05 & 0.26 & 0.23 \\
-1.502 -- 1.528 & 0.020679 & 6.7e-05 & 0.25 & 0.23 \\
-1.528 -- 1.552 & 0.020509 & 6.0e-05 & 0.23 & 0.25 \\
-1.552 -- 1.579 & 0.020480 & 6.4e-05 & 0.22 & 0.24 \\
-1.579 -- 1.603 & 0.020500 & 5.6e-05 & 0.20 & 0.24 \\
-1.603 -- 1.629 & 0.020514 & 6.5e-05 & 0.19 & 0.25 \\
-\enddata
-\end{deluxetable}
+\begin{deluxetable*}{LLLLLLL}
+	\tablecolumns{7}
+	\tablewidth{0pt}
+	\tablecaption{WASP-107b Transmission Spectrum and Limb Darkening Coefficients\label{tab:tspec}}
+	\tablehead{
+		\colhead{Wavelength} & \colhead{Transit Depth} & \colhead{Transit Depth} & \colhead{Transit Depth} & \colhead{$u_1$} & \colhead{$u_2$} & \colhead{$u$} \\
+	\colhead{(micron)} & \colhead{(Method A)\tablenotemark{*}} & \colhead{(Method B)} & \colhead{(Method C)} & \colhead{(PHOENIX)} & \colhead{(PHOENIX)} & \colhead{(fitted)}}
+		\startdata
+		1.121 - 1.145 & 0.020641 \pm 5.9e-05 & 0.020674 \pm 7.8e-05 & 0.020521 \pm 7.4e-05 & 0.38 & 0.13 & 0.44 \pm 0.011 \\
+		1.145 - 1.171 & 0.020733 \pm 5.5e-05 & 0.020825 \pm 7.5e-05 & 0.020575 \pm 7.7e-05 & 0.37 & 0.14 & 0.41 \pm 0.012 \\
+		1.171 - 1.196 & 0.020505 \pm 5.6e-05 & 0.020655 \pm 7.4e-05 & 0.020388 \pm 8.2e-05 & 0.36 & 0.14 & 0.4 \pm 0.012 \\
+		1.196 - 1.222 & 0.020498 \pm 5.4e-05 & 0.020580 \pm 7.4e-05 & 0.020345 \pm 6.6e-05 & 0.36 & 0.15 & 0.41 \pm 0.012 \\
+		1.222 - 1.248 & 0.020455 \pm 5.9e-05 & 0.020620 \pm 7.8e-05 & 0.020327 \pm 7.7e-05 & 0.36 & 0.15 & 0.39 \pm 0.012 \\
+		1.248 - 1.272 & 0.020492 \pm 5.0e-05 & 0.020649 \pm 6.3e-05 & 0.020360 \pm 7.6e-05 & 0.35 & 0.16 & 0.39 \pm 0.01 \\
+		1.272 - 1.298 & 0.020620 \pm 6.2e-05 & 0.020702 \pm 9.0e-05 & 0.020475 \pm 8.3e-05 & 0.34 & 0.17 & 0.42 \pm 0.014 \\
+		1.298 - 1.323 & 0.020739 \pm 5.0e-05 & 0.020883 \pm 6.7e-05 & 0.020602 \pm 8.6e-05 & 0.34 & 0.17 & 0.39 \pm 0.011 \\
+		1.323 - 1.349 & 0.020660 \pm 5.7e-05 & 0.020789 \pm 8.7e-05 & 0.020489 \pm 8.3e-05 & 0.33 & 0.18 & 0.4 \pm 0.014 \\
+		1.349 - 1.374 & 0.020858 \pm 4.8e-05 & 0.020916 \pm 7.6e-05 & 0.020706 \pm 7.9e-05 & 0.32 & 0.19 & 0.42 \pm 0.012 \\
+		1.374 - 1.401 & 0.020794 \pm 4.8e-05 & 0.020864 \pm 8.1e-05 & 0.020653 \pm 7.9e-05 & 0.31 & 0.20 & 0.41 \pm 0.012 \\
+		1.401 - 1.425 & 0.020888 \pm 5.2e-05 & 0.020961 \pm 6.1e-05 & 0.020776 \pm 7.0e-05 & 0.30 & 0.21 & 0.41 \pm 0.01 \\
+		1.425 - 1.452 & 0.020821 \pm 6.2e-05 & 0.020933 \pm 7.8e-05 & 0.020708 \pm 8.5e-05 & 0.29 & 0.21 & 0.39 \pm 0.011 \\
+		1.452 - 1.476 & 0.020691 \pm 5.1e-05 & 0.020876 \pm 7.8e-05 & 0.020556 \pm 8.7e-05 & 0.28 & 0.22 & 0.36 \pm 0.012 \\
+		1.476 - 1.502 & 0.020682 \pm 6.9e-05 & 0.020890 \pm 8.7e-05 & 0.020549 \pm 1.0e-04 & 0.26 & 0.23 & 0.34 \pm 0.014 \\
+		1.502 - 1.528 & 0.020679 \pm 6.7e-05 & 0.020763 \pm 9.6e-05 & 0.020523 \pm 8.8e-05 & 0.25 & 0.23 & 0.37 \pm 0.015 \\
+		1.528 - 1.552 & 0.020509 \pm 6.0e-05 & 0.020667 \pm 9.3e-05 & 0.020359 \pm 1.0e-04 & 0.23 & 0.25 & 0.33 \pm 0.014 \\
+		1.552 - 1.579 & 0.020480 \pm 6.4e-05 & 0.020551 \pm 1.2e-04 & 0.020376 \pm 1.3e-04 & 0.22 & 0.24 & 0.38 \pm 0.019 \\
+		1.579 - 1.603 & 0.020500 \pm 5.6e-05 & 0.020542 \pm 1.1e-04 & 0.020321 \pm 1.1e-04 & 0.20 & 0.24 & 0.33 \pm 0.019 \\
+		1.603 - 1.629 & 0.020514 \pm 6.5e-05 & 0.020755 \pm 1.1e-04 & 0.020392 \pm 1.1e-04 & 0.19 & 0.25 & 0.29 \pm 0.019 \\
+		\enddata
+		\tablenotetext{*}{Our retrieval analysis uses the transit depths from Method A.}
+		\tablecomments{comments}
+	\end{deluxetable*}
 
 \section{Composition of the Atmosphere}
 In this section we discuss constraints on the composition of WASP-107b's atmosphere based on interior structure modeling and atmospheric retrieval of the measured transmission spectrum.
@@ -166,7 +175,8 @@ Our nominal model included a temperature-pressure profile (parameterized via the
 
 The nominal retrieval results are shown in Figure\,\ref{fig:retrieval}.  The best fit model provides a good fit to the data ($\chi^2_\nu = 1.2$).  The metallicity distribution spans the full range allowed by our priors, with preference for larger values. The cloud top pressure is estimated to be $0.01 - 3$ mbar at $1\,\sigma$ confidence. The retrieved irradiation temperature is $525 - 820$ K (1 $\sigma$ confidence).  We find that the C/O value is less than solar (0.54) at $2.7\,\sigma$ confidence.  We tested the detection significance for water by removing water opacity from the nominal model. The Bayesian evidence favors the inclusion of water at $6.5\,\sigma$ confidence. 
 
-We explored a few retrieval scenarios with additional complexity, including the addition of cloud patchiness \citep{line16}, a quench pressure for nitrogen and carbon species \citep[e.g.][]{morley17}, and a power law haze opacity.  We also varied the assumed planet mass by $3\,\sigma$. These models did not significantly improve the fit quality, and the main retrieval results were unchanged.  We also explored cases without the $30\times$ solar metallicity prior upper limit. Without this prior, metallicities up to $100\times$ were permitted, but other parameters were not significantly changed. 
+We explored a few retrieval scenarios with additional complexity, including the addition of cloud patchiness \citep{line16}, a quench pressure for nitrogen and carbon species \citep[e.g.][]{morley17}, and a power law haze opacity.  We also varied the assumed planet mass by $3\,\sigma$. These models did not significantly improve the fit quality, and the main retrieval results were unchanged.  We also explored cases without the $30\times$ solar metallicity prior upper limit. Without this prior, \added{the retrieved metallicity is $[M/H] = 1.35^{+0.68}_{-1.48}$, log10(C/O) is $-1.57+{0.54}_{-0.31}$, and cloud top pressure $log(Pc) = -3.63^{+0.81}_{-0.48}.$ These results show that the inferred C/O ratio and cloud-top pressure are unaffected by the prior on atmospheric metallicity.  The metallicity is consistent with the interior structure modeling (which puts a $3\,\sigma$ upper limit on metallicity of $[M/H] = 1.5$). The transmission spectrum does not constrain the atmospheric metallicity more precisely because there is a degeneracy between metallicity and the planet's 10-bar radius \citep[e.g]{griffith14,heng17}.}
+
 %We also tested the effect of varying the planet's surface gravity within the published FIXME $\sigma$ range, and found that our results were again minimally changed.
 
 \begin{figure}
@@ -175,13 +185,16 @@ We explored a few retrieval scenarios with additional complexity, including the 
 \end{figure}
 
 \subsubsection{Methane Abundance}
-We ran two additional retrievals to explore whether methane depletion is the underlying cause of the inferred low C/O.  Even though water is the dominant absorber in the WFC3 bandpass, there is enough methane opacity to change the shape of the spectral features at a detectable level for high precision data.  In one test, we assumed chemical equilibrium but excluded methane opacity. This set-up resulted in a much broader distribution of C/O values ($0.02 - 1.6$ at $1\,\sigma$). \added{We infer from this test that the absence of methane is what drives the low retrieved C/O ratio.} 
+\added{If methane is present in the atmosphere, it has a strong spectral feature centered at $1.4\,\mu$m. This feature overlaps the water feature, but has a wider shape. Our data are precise enough to distinguish this subtle difference in feature shape, so } to explore whether methane depletion is the underlying cause of the inferred low C/O, we ran two additional retrievals.  In one test, we assumed chemical equilibrium but excluded methane opacity. This set-up resulted in a much broader distribution of C/O values ($0.02 - 1.6$ at $1\,\sigma$).  We also performed a ``free" retrieval that varied the abundances of CH$_4$, H$_2$O and NH$_3$ with no assumption of chemical equilibrium. The $3\,\sigma$ upper limit on methane abundance is $1.4\times10^{-3}$. \added{This value is in tension with expectations for a solar abundance pattern: for $3.7\times$ solar metallicity, $650$ K, and $5\times10^{-4}$ bar (the median retrieved photosphere properties), the expected methane abundance is $1.2\times10^{-3}\times$ solar (for solar C/O).} Based on these tests, we conclude that the atmosphere of WASP-107b is \added{likely} depleted in methane relative to expectations for a solar abundance pattern. By contrast, the water abundance from the free retrieval ($6\times10^{-6} - 2\times10^{-3}$) is consistent with predictions for solar composition. 
+	
 
-We also performed a ``free" retrieval that varied the abundances of CH$_4$, H$_2$O and NH$_3$ with no assumption of chemical equilibrium. The $3\,\sigma$ upper limit on methane abundance is $1.2\times10^{-3}$, \added{ruling out the predicted equilibrium methane content at the base of the cloud deck ($1.4\time10^{-3}$ at 700 K, 10 mbar, for a solar C/O and $3\,\times$ solar metallicity composition).}  We chose $3\times$ solar as a benchmark for comparison because this is the median metallicity from the chemical equilibrium retrieval; \added{however, we note that the expected equilibrium abundance is sensitive to the true atmosphere metallicity. For a $1\times$ solar composition, the expected methane abundance drops by $1/3$. Similarly, the expected abundances are sensitive to the temperature and pressure in the photosphere. For example, at slightly higher temperatures and higher altitudes (1 mbar, 800 K), the expected methane abundance drops to $2.4\times10^{-5}$.}  Based on these tests, we conclude that the atmosphere of WASP-107b is \added{likely} depleted in methane relative to expectations for a solar abundance pattern. By contrast, the water abundance ($6\times10^{-6} - 2\times10^{-3}$) is consistent with predictions for solar composition. FIXME
+%we calculate the thermochemical equilibrium methane abundance for ($1.2\time10^{-3}$ at 650 K, $5\times10^4$ bar, for a solar C/O and $3.7\,\times$ solar metallicity composition).}  We chose $3\times$ solar as a benchmark for comparison because this is the median metallicity from the chemical equilibrium retrieval; \added{however, we note that the expected equilibrium abundance is sensitive to the true atmosphere metallicity. For a $1\times$ solar composition, the expected methane abundance drops by $1/3$. Similarly, the expected abundances are sensitive to the temperature and pressure in the photosphere. For example, at slightly higher temperatures and higher altitudes (1 mbar, 800 K), the expected methane abundance drops to $2.4\times10^{-5}$.}  
 
 
 \subsection{Condensate Properties}
-In addition to the atmospheric retrieval, we also performed forward modeling of physically motivated, self-consistent clouds and hazes using the methods described in \cite{fortney08, morley15}.  We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS; see \citealt{morley12}), for a range of metallicites from $1-50\times$ solar. We vary the cloud sedimentation efficiency from 3 to 0.1 (normal to highly lofted, small particulate clouds). None of the models produce sufficiently low amplitude spectral features to match the observed spectrum.  This result suggests that if clouds are muting WASP-107b's transmission spectrum, the mechanism for cloud particle formation and vertical lofting is very efficient and not captured by the modeling used here. Futher studies of cloud formation in very low gravity environments are required. 
+In addition to the atmospheric retrieval, we also performed forward modeling of physically motivated, self-consistent clouds and hazes using the methods described in \cite{fortney08, morley15}.  We model clouds that form in cool atmospheres (Na$_2$S, KCl, ZnS; see \citealt{morley12}), for a range of metallicites from $1-50\times$ solar. We vary the cloud sedimentation efficiency from 3 to 0.1 (normal to highly lofted, small particulate clouds). \added{FIXME}. 
+
+None of the models produce sufficiently low amplitude spectral features to match the observed spectrum.  This result suggests that if clouds are muting WASP-107b's transmission spectrum, the mechanism for cloud particle formation and vertical lofting is very efficient and not captured by the modeling used here. Futher studies of cloud formation in very low gravity environments are required. 
 
 We also model an \emph{ad hoc} photochemical ``soot" layer near the top of the atmosphere. We predict the abundance of hydrocarbon haze precursors from previously published photochemical models for GJ 436b \citep{line11, morley17}. With the most efficient haze production (100\% of precursors form haze) and particle sizes around $0.03-0.1$ microns, the amplitude of the model water feature matches that of the observations. 
 
@@ -192,7 +205,7 @@ We analyzed the atmospheric composition of WASP-107b based on retrieval of its n
 
 \begin{itemize}
 \item{\emph{The upper limit on atmospheric metallicity from interior structure modeling is $30\times$ solar.} This limit is at the edge of consistency with the Solar System metal enrichment trend, which predicts a metallicity of $30\times$ solar for WASP-107b \citep{kreidberg14b}.  Compared to results for other exoplanets of similar mass such as GJ 436b, which has a high metallicity ($>100\times$ solar) and HAT-P-26b, which is metal-poor compared to the Solar System trend, WASP-107b adds to the evidence that exoplanets exhibit a greater diversity of compositions than is present in the Solar System \citep{morley17, wakeford17}.}
-\item{\emph{The methane abundance is depleted relative to expectations for a solar abundance pattern, whereas water is consistent with solar composition.} This may be due to an instrinsically low carbon-to-oxygen ratio, which could arise from accretion of water-rich planetesimals \citep{mordasini16, espinoza17}.  Another possibility is that the planet has a hot interior effective temperature ($\sim500$ K), and abundances are quenched at pressure levels where CO is stable \citep[as observed in some directly imaged planets;][]{skemer14, zahnle14}. Such a high internal temperature could be due to latent heat of formation if the planet is very young, and/or tidal heating \citep{fortney08, morley17}. Further observations of the transmission spectrum over a broader wavelength range will refine the C/O estimate and help differentiate between these two scenarios.} 
+\item{\emph{The methane abundance is \added{likely} depleted relative to expectations for a solar abundance pattern, whereas water is consistent with solar composition.} This may be due to an instrinsically low carbon-to-oxygen ratio, which could arise from accretion of water-rich planetesimals \citep{mordasini16, espinoza17}.  Another possibility is that the planet has a hot interior effective temperature ($\sim500$ K), and abundances are quenched at pressure levels where CO is stable \citep[as observed in some directly imaged planets;][]{skemer14, zahnle14}. Such a high internal temperature could be due to latent heat of formation if the planet is very young, and/or tidal heating \citep{fortney08, morley17}. Further observations of the transmission spectrum over a broader wavelength range will refine the C/O estimate and help differentiate between these two scenarios.} 
 \item{\emph{Optically thick condensates are present at high altitudes} ($0.1 - 3$ mbar). The amplitude of the water absorption feature in the transmission spectrum is less than a third that expected for a clear atmosphere. Existing models of physically-motivated cloud and haze formation do not satisfactorily reproduce the data. All the cloud models we consider produce condensation too deep in the atmosphere. Efficient hydrocarbon haze production at high altitudes can match the data, but these require the presence of methane to serve as a haze precursor.  Other precursors such as H$_2$S are a possibility and would be worth exploring in future analyses. Put in context with other systems, the muted water feature for WASP-107b agrees well with the trend in feature amplitude with temperature noted in \cite{crossfield17}, indicating that condensates may be common in the atmospheres of the coolest planets.}
 \end{itemize}
 
@@ -201,6 +214,7 @@ These results are a first look at the atmosphere of WASP-107b. The planet is alr
 
 \acknowledgments
 We thank Fei Dai, Jessica Spake, Ian Crossfield, Hannah Diamond-Lowe, and Jonathan Fortney for productive conversations. L.K. acknowledges support from the Harvard Society of Fellows and the Harvard Astronomy Department Institute for Theory and Computation. C.V.M. acknowledges support from NASA through the Sagan Fellowship Program.
+
 
 \begin{thebibliography}{}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
@@ -269,6 +283,10 @@ We thank Fei Dai, Jessica Spake, Ian Crossfield, Hannah Diamond-Lowe, and Jonath
 {Fortney}, J.~J., {Mordasini}, C., {Nettelmann}, N., {et~al.} 2013, \apj, 775,
   80
 
+\bibitem[{{Fraine} {et~al.}(2014){Fraine}, {Deming}, {Benneke}, {Knutson},
+  {Jord{\'a}n}, {Espinoza}, {Madhusudhan}, {Wilkins}, \& {Todorov}}]{fraine14}
+{Fraine}, J., {Deming}, D., {Benneke}, B., {et~al.} 2014, \nat, 513, 526
+
 \bibitem[{{Freedman} {et~al.}(2014){Freedman}, {Lustig-Yaeger}, {Fortney},
   {Lupu}, {Marley}, \& {Lodders}}]{freedman14}
 {Freedman}, R.~S., {Lustig-Yaeger}, J., {Fortney}, J.~J., {et~al.} 2014, \apjs,
@@ -288,8 +306,15 @@ Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
   Aeronautics and Space Administration, Office of Management, Scientific and
   Technical Information Program)
 
+\bibitem[{{Griffith}(2014)}]{griffith14}
+{Griffith}, C.~A. 2014, Philosophical Transactions of the Royal Society of
+  London Series A, 372, 20130086
+
 \bibitem[{{Guillot}(2010)}]{guillot10}
 {Guillot}, T. 2010, \aap, 520, A27
+
+\bibitem[{{Heng} \& {Kitzmann}(2017)}]{heng17}
+{Heng}, K., \& {Kitzmann}, D. 2017, \mnras, 470, 2972
 
 \bibitem[{{Horne}(1986)}]{horne86}
 {Horne}, K. 1986, \pasp, 98, 609
@@ -345,6 +370,11 @@ Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
 {Madhusudhan}, N., {Harrington}, J., {Stevenson}, K.~B., {et~al.} 2011, \nat,
   469, 64
 
+\bibitem[{{McCullough} {et~al.}(2014){McCullough}, {Crouzet}, {Deming}, \&
+  {Madhusudhan}}]{mccullough14}
+{McCullough}, P.~R., {Crouzet}, N., {Deming}, D., \& {Madhusudhan}, N. 2014,
+  \apj, 791, 55
+
 \bibitem[{{Molli{\`e}re} {et~al.}(2015){Molli{\`e}re}, {van Boekel},
   {Dullemond}, {Henning}, \& {Mordasini}}]{molliere15}
 {Molli{\`e}re}, P., {van Boekel}, R., {Dullemond}, C., {Henning}, T., \&
@@ -387,6 +417,9 @@ Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
 {Pollack}, J.~B., {Hubickyj}, O., {Bodenheimer}, P., {et~al.} 1996, \icarus,
   124, 62
 
+\bibitem[{{Rackham} {et~al.}(2018){Rackham}, {Apai}, \& {Giampapa}}]{rackham18}
+{Rackham}, B.~V., {Apai}, D., \& {Giampapa}, M.~S. 2018, \apj, 853, 122
+
 \bibitem[{{Saumon} {et~al.}(1995){Saumon}, {Chabrier}, \& {van
   Horn}}]{saumon95}
 {Saumon}, D., {Chabrier}, G., \& {van Horn}, H.~M. 1995, \apjs, 99, 713
@@ -424,6 +457,11 @@ Gordon, S., \& McBride, B.~J. 1994, Computer program for calculation of complex
 
 \bibitem[{{Zahnle} \& {Marley}(2014)}]{zahnle14}
 {Zahnle}, K.~J., \& {Marley}, M.~S. 2014, \apj, 797, 41
+
+\bibitem[{{Zellem} {et~al.}(2017){Zellem}, {Swain}, {Roudier}, {Shkolnik},
+  {Creech-Eakman}, {Ciardi}, {Line}, {Iyer}, {Bryden}, {Llama}, \&
+  {Fahy}}]{zellem17}
+{Zellem}, R.~T., {Swain}, M.~R., {Roudier}, G., {et~al.} 2017, \apj, 844, 27
 
 \bibitem[{{Zhou} {et~al.}(2017){Zhou}, {Apai}, {Lew}, \& {Schneider}}]{zhou17}
 {Zhou}, Y., {Apai}, D., {Lew}, B.~W.~P., \& {Schneider}, G. 2017, \aj, 153, 243

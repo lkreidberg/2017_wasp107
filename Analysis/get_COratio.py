@@ -94,10 +94,15 @@ CH4 = np.log10(0.00132)
 alpha = 1.0*sum(x>CH4)/len(x)*1.0
 print "CH4 sig", get_significance(alpha/2)
 print "alpha", alpha
-q = [0.997]
+q = [0.9974]
 print quantiles(x, q)
 q = [0.16, 0.84]
+
 print "68percent conf ch4", 10**quantiles(x, q)
+
+alpha = 1.0*sum(x>np.log10(1.228e-4))/len(x)*1.0
+sig = get_significance(alpha/2)
+print "rule out best expectations, (3.7xsolar, 650K, 0.0005 bar cloud top)", sig
 
 #print "test", get_significance(0.003/2)
 
