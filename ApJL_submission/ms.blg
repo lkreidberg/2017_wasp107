@@ -48,6 +48,7 @@ Warning--I didn't find a database entry for "line16"
 Warning--I didn't find a database entry for "morley17"
 Warning--I didn't find a database entry for "griffith14"
 Warning--I didn't find a database entry for "heng17"
+Warning--I didn't find a database entry for "dewit14"
 Warning--I didn't find a database entry for "morley15"
 Warning--I didn't find a database entry for "morley12"
 Warning--I didn't find a database entry for "line11"
@@ -61,7 +62,7 @@ Warning--I didn't find a database entry for "crossfield17"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 0 entries,
             3183 wiz_defined-function locations,
-            701 strings with 4792 characters,
+            702 strings with 4799 characters,
 and the built_in function-call counts, 20 in all, are:
 = -- 0
 > -- 0

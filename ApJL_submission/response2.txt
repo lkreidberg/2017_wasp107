@@ -1,4 +1,4 @@
-We thank the referee for his or her detailed comments, and respond point-by-point below.
+We thank the referee for his or her comments and attention to detail, and respond point-by-point below.
 
 ***
 
@@ -63,10 +63,9 @@ Removing the star-spot orbit increases the uncertainties for the transit depth m
 7) The data coverage ends at 1.629 micron and does not seem to cover the full WFC3 bandpass up to 1.7. Can you please provide the full spectral coverage when you showing the comparisons between your different approaches for the light curve fitting?
 
 --
-
 We do not report transit depths from the reddest edge of the WFC3 bandpass because, unfortunately, we find that the our reddest spectroscopic light curves (>1.63 micron) are too poor in quality to robustly measure the transit depth. The residuals exhibit correlated noise and the fits have reduced chi-squared values significantly larger than unity. The transit depths are also sensitive to which method we use to fit for instrument systematics. 
 
-This poor quality for the reddest WFC3 light curves is not unusual. The red edge poses a challenge for data reduction because the raw data must be interpolated to a common wavelength solution for every row in the spatial scan, and the reddest columns have much larger shifts than the blue (~1 versus ~.1 pixels). Therefore, a red cut-off between 1.6 and 1.65 microns is common (e.g., Kreidberg et al. 2014a,b, 2015 , Beatty et al. 2017, Bruno et al. 2018, Wakeford et al. 2018). We elect to report transit depths only from the wavelength range where we are confident that our measurements are robust (<1.63 micron).
+This poor quality for the reddest WFC3 light curves is not unusual. The throughput in the WFC3 bandpass drops rapidly at wavelengths redder than 1.65 micron. This red edge poses a challenge for data reduction because the raw data must be interpolated to a common wavelength solution for every row in the spatial scan, and the reddest columns have much larger shifts than the blue (~1 versus ~.1 pixels). Combined with the steep drop in throughput at red wavelengths, these shifts lead to correlated noise in the light curve for the reddest spectrophotometric channels. Therefore, a red cut-off between 1.6 and 1.65 microns is common (e.g., Kreidberg et al. 2014a,b, 2015 , Beatty et al. 2017, Bruno et al. 2018, Wakeford et al. 2018). We elect to report transit depths only from the wavelength range where we are confident that our measurements are robust (<1.63 micron).
 
 ***
 
@@ -108,4 +107,6 @@ We calculated the impact of unocculted star spots as follows. We estimated the s
 We have added this discussion to Section 3.2.1.
 
 
+***
 
+As a final point, we noticed in preparing our response to this report that there was a bug in the calculation of the physically-motivated condensate models discussed in section 4.3. We corrected the error, and found that the updated results have better agreement with the observed spectrum. Specifically, we found that
