@@ -109,4 +109,4 @@ We have added this discussion to Section 3.2.1.
 
 ***
 
-As a final point, we noticed in preparing our response to this report that there was a bug in the calculation of the physically-motivated condensate models discussed in section 4.3. We corrected the error, and found that the updated results have better agreement with the observed spectrum. Specifically, we found that
+As a final point, we noticed in preparing our response to this report that there was a bug in the calculation of the physically-motivated condensate models discussed in section 4.3. We corrected the error, and found that the updated results have better agreement with the observed spectrum. Specifically, we found that FIXME
