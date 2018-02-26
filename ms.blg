@@ -14,45 +14,45 @@ Repeated entry---line 3225 of file ms.bib.bib
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in buchner16
-You've used 56 entries,
+You've used 57 entries,
             3222 wiz_defined-function locations,
-            1050 strings with 18028 characters,
-and the built_in function-call counts, 26485 in all, are:
-= -- 2117
-> -- 2142
-< -- 16
-+ -- 722
-- -- 797
-* -- 2322
-:= -- 4892
-add.period$ -- 56
-call.type$ -- 56
-change.case$ -- 343
-chr.to.int$ -- 55
-cite$ -- 57
-duplicate$ -- 1001
-empty$ -- 1578
-format.name$ -- 847
-if$ -- 5286
+            1058 strings with 18175 characters,
+and the built_in function-call counts, 26891 in all, are:
+= -- 2154
+> -- 2164
+< -- 17
++ -- 729
+- -- 804
+* -- 2352
+:= -- 4962
+add.period$ -- 57
+call.type$ -- 57
+change.case$ -- 348
+chr.to.int$ -- 56
+cite$ -- 58
+duplicate$ -- 1019
+empty$ -- 1607
+format.name$ -- 858
+if$ -- 5372
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 55
-newline$ -- 173
-num.names$ -- 224
-pop$ -- 470
+missing$ -- 56
+newline$ -- 176
+num.names$ -- 228
+pop$ -- 478
 preamble$ -- 1
-purify$ -- 343
+purify$ -- 348
 quote$ -- 0
-skip$ -- 763
+skip$ -- 778
 stack$ -- 0
-substring$ -- 889
+substring$ -- 909
 swap$ -- 3
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 501
+type$ -- 510
 warning$ -- 1
-while$ -- 206
+while$ -- 210
 width$ -- 0
-write$ -- 566
+write$ -- 576
 (There were 2 error messages)
