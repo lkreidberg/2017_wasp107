@@ -1,0 +1,51 @@
+To the editor: 
+
+Thank you for passing along the referee report for our paper on WASP-107b. We have responded to the referee's comments inline below:
+
+
+***
+1) The authors continue to argue in favor of a sub-solar C/O ratio (even in the abstract) while not providing any C/O constraints from an atmospheric retrieval analysis that sufficiently considers the uncertainty in the temperature of the upper atmosphere. The sensitivity to the temperature structure has been my main concern from the beginning, yet the authors have not addressed it in the paper yet.
+
+a) For Figure 4, the authors need to either provide the C/O ratio from a free retrieval, whose results are less affected by the uncertainty in the vertical temperature structure, or from a "chemically-consistent" retrieval that appropriately captures the wide uncertainty in the possible temperatures of the upper atmosphere near the terminator. This is particularly important for THIS article because WASP-107b's equilibrium temperature puts the planet right at the edge between having CO or CH4 as the naturally favored carbon-bearing species.
+
+It is known from previous publications that the team has the capabilities to consider a wide range of tropospheric and stratospheric temperature structures using parameterization. I would request the authors report the results either from a free retrieval or from a "chemically-consistent" retrieval that appropriately parameterizes the temperature structure.
+#
+
+We carried out the requested test of a chemically-consistent retrieval with a parameterized T/P profile. We found that this test (which we label case 2) made very little difference to the retrieved C/O values. Specifically, the median and 68% confidence intervals were: 
+
+Isothermal (case 1)             -1.54^{+0.54}_{-0.32}
+Parameterized (case 2)          -1.49^{+0.51}_{-0.35}
+
+Solar C/O is disfavored at 2.74 sigma for case 1, and 2.88 sigma for case 2. The parameterized T/P profile provides a slightly stronger constraint because it favors lower temperatures at higher pressures. To illustrate these points for the referee, we have also included a figure showing the retrieved C/O values and T/P profiles for each case (case 1 is blue, case 2 is red). The left panel show the histogram of C/O values, and the right panel shows the median T/P profiles with one sigma confidence intervals. 
+
+Given that this different parameterization did not signficantly change our results, we simply state these results in the text but do not change the figures or the abstract. 
+
+#
+
+***
+
+b) Along the same line, you now say: "[The methane abundance] is in tension with expectations for a solar abundance pattern: for 3.7× solar metallicity, 650 K, and 5 × 10−4 bar 
+(the median retrieved photosphere properties)".
+
+You say that those are "median retrieved photosphere properties", but does your retrieval even allow higher temperature like 700, 750, 800, 850K at 5 x 10-4 bar? I don't think so. And that is exactly the problem with your retrieval analysis as well as Section 4.2.1. How does your methane abundance compare to solar C/O if the temperature was slightly higher in the upper atmosphere or some quenching occurred? 
+
+It remains critical to replace the main retrieval analysis (Figure 4) with one of the two listed above. Then quote those results in the abstract. Then please also consider that temperature uncertainty in your discussion of the methane abundance in Section 4.2.1.
+
+#
+
+As we showed in our respone to point 1)a, our nominal retrieval (case 1, isothermal T/P) does allow temperatures ranging from 700 - 850 K at 5e-4 bar (see the attached figure entitled "comparison.pdf"). 
+
+
+
+
+2) The authors continue to not show any models with solar C/O even though they are trying to convince the reader that they can exclude solar C/O scenarios. That is not satisfactory. At the very least, please show the following 3 models in Figure 2:
+
+a) Please show the absolute best fitting model from the retrieval analysis discussed in Point 1 (Tp profile parameterized).
+b) Please show the best fitting model with solar C/O from the retrieval analysis discussed in Point 1 (Tp profile parameterized). The reader needs to see the difference.
+c) If desired, please also show the best fitting model with solar C/O and a fiducial temperature profile and best-fitting clouds. It would be great to actually see the methane absorption.
+
+Having these three models is the most important for Figure 2 and this paper.
+
+
+3) Quenching is also not included in the main retrieval (Figure 4), even though it can play a major role for WASP-107b. If you choose to go with a free retrieval for Figure 4, then this is automatically captured. However, if you choose to go with the chemically-consistent model to address Point 1, please include a quench point as discussed in Morley et al. 2017 in addition to the parameterized Tp profile.
+
