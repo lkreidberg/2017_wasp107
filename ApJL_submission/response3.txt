@@ -11,12 +11,17 @@ a) For Figure 4, the authors need to either provide the C/O ratio from a free re
 It is known from previous publications that the team has the capabilities to consider a wide range of tropospheric and stratospheric temperature structures using parameterization. I would request the authors report the results either from a free retrieval or from a "chemically-consistent" retrieval that appropriately parameterizes the temperature structure.
 #
 
-We carried out the requested test of a chemically-consistent retrieval with a parameterized T/P profile. We found that this test (which we label case 2) made very little difference to the retrieved C/O values. Specifically, the median and 68% confidence intervals were: 
+We carried out the requested test of a chemically-consistent retrieval with a parameterized T/P profile. We found that this test made very little difference to the retrieved C/O values. 
 
-Isothermal (case 1)             -1.54^{+0.54}_{-0.32}
-Parameterized (case 2)          -1.49^{+0.51}_{-0.35}
+For the nominal model in the submitted paper (which we refer to as Case 1), we used a temperature-pressure profile parameterized via the Guillot 2010 relations. We fixed the T/P profile morphology but scaled the irradiation temperature to allow for the
+unknown albedo and heat transport efficiency. For the case requested by the referee (Case 2), we FIXME.  For the two cases, the median and 68% confidence intervals were: 
 
-Solar C/O is disfavored at 2.74 sigma for case 1, and 2.88 sigma for case 2. The parameterized T/P profile provides a slightly stronger constraint because it favors lower temperatures at higher pressures. To illustrate these points for the referee, we have also included a figure showing the retrieved C/O values and T/P profiles for each case (case 1 is blue, case 2 is red). The left panel show the histogram of C/O values, and the right panel shows the median T/P profiles with one sigma confidence intervals. 
+Scaled T/P (Case 1)             -1.54^{+0.54}_{-0.32}
+Parameterized (Case 2)          -1.49^{+0.51}_{-0.35}
+
+Solar C/O is disfavored at 2.74 sigma for case 1, and 2.88 sigma for case 2. The parameterized T/P profile provides a slightly stronger constraint because it favors lower temperatures at higher pressures. To illustrate these points for the referee, we have also included a figure showing the retrieved C/O values and T/P profiles for each case (Case 1 is blue, Case 2 is red). The left panel show the histogram of C/O values, and the right panel shows the median T/P profiles with one sigma confidence intervals. 
+
+As we discussed in our previous response, the shape of the spectrum is most strongly influenced by the effective scale height temperature at the pressure level we are probing (~1e-4 bar). Both T/P profile choices are flexible enough to match this temperature (they agree almost exactly at the 1e-4 bar level), so the constraints on composition are not strongly affected by which parameterization we choose.  
 
 Given that this different parameterization did not signficantly change our results, we simply state these results in the text but do not change the figures or the abstract. 
 
@@ -33,7 +38,7 @@ It remains critical to replace the main retrieval analysis (Figure 4) with one o
 
 #
 
-As we showed in our respone to point 1)a, our nominal retrieval (case 1, isothermal T/P) does allow temperatures ranging from 700 - 850 K at 5e-4 bar (see the attached figure entitled "comparison.pdf"). 
+As we showed in our respone to point 1)a, our nominal retrieval (case 1, scaled T/P) does allow temperatures ranging from 700 - 850 K at 5e-4 bar (see the attached figure entitled "comparison.pdf"). 
 
 
 
@@ -45,6 +50,10 @@ b) Please show the best fitting model with solar C/O from the retrieval analysis
 c) If desired, please also show the best fitting model with solar C/O and a fiducial temperature profile and best-fitting clouds. It would be great to actually see the methane absorption.
 
 Having these three models is the most important for Figure 2 and this paper.
+
+#
+
+We added 
 
 
 3) Quenching is also not included in the main retrieval (Figure 4), even though it can play a major role for WASP-107b. If you choose to go with a free retrieval for Figure 4, then this is automatically captured. However, if you choose to go with the chemically-consistent model to address Point 1, please include a quench point as discussed in Morley et al. 2017 in addition to the parameterized Tp profile.
