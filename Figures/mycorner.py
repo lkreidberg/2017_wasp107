@@ -5,9 +5,10 @@ from __future__ import print_function, absolute_import
 import logging
 import numpy as np
 import matplotlib.pyplot as pl
-from matplotlib.ticker import MaxNLocator, NullLocator
+from matplotlib.ticker import MaxNLocator
 from matplotlib.colors import LinearSegmentedColormap, colorConverter
 from matplotlib.ticker import ScalarFormatter
+import matplotlib
 
 try:
     from scipy.ndimage import gaussian_filter
@@ -23,7 +24,7 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
            show_titles=False, title_fmt=".2f", title_kwargs=None,
            truths=None, truth_color="#4682b4",
            scale_hist=False, quantiles=None, verbose=False, fig=None,
-           max_n_ticks=5, top_ticks=False, use_math_text=False, reverse=False,
+           max_n_ticks=5, top_ticks=False, use_math_text=False,
            hist_kwargs=None, **hist2d_kwargs):
     """
     Make a *sick* corner plot showing the projections of a data set in a
@@ -105,11 +106,7 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
     use_math_text : bool
         If true, then axis tick labels for very large or small exponents will
         be displayed as powers of 10 rather than using `e`.
-        
-    reverse : bool
-        If true, plot the corner plot starting in the upper-right corner instead 
-        of the usual bottom-left corner
-        
+
     max_n_ticks: int
         Maximum number of ticks to try to use
 
@@ -200,12 +197,8 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
     # Some magic numbers for pretty axis layout.
     K = len(xs)
     factor = 2.0           # size of one side of one panel
-    if reverse:
-        lbdim = 0.2 * factor   # size of left/bottom margin
-        trdim = 0.5 * factor   # size of top/right margin
-    else:
-        lbdim = 0.5 * factor   # size of left/bottom margin
-        trdim = 0.2 * factor   # size of top/right margin
+    lbdim = 0.5 * factor   # size of left/bottom margin
+    trdim = 0.2 * factor   # size of top/right margin
     whspace = 0.05         # w/hspace size
     plotdim = factor * K + factor * (K - 1.) * whspace
     dim = lbdim + plotdim + trdim
@@ -241,10 +234,7 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
         if np.shape(xs)[0] == 1:
             ax = axes
         else:
-            if reverse:
-                ax = axes[K-i-1, K-i-1]
-            else:
-                ax = axes[i, i]
+            ax = axes[i, i]
         # Plot the histograms.
         if smooth1d is None:
             n, _, _ = ax.hist(x, bins=bins[i], weights=weights,
@@ -258,9 +248,6 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
             x0 = np.array(list(zip(b[:-1], b[1:]))).flatten()
             y0 = np.array(list(zip(n, n))).flatten()
             ax.plot(x0, y0, **hist_kwargs)
-	    ax.get_xaxis().set_visible(False)		#LK
-	    ax.get_yaxis().set_visible(False)		#LK
-	    #ax.set_frame_on(False)
 
         if truths is not None and truths[i] is not None:
             ax.axvline(truths[i], color=truth_color)
@@ -297,10 +284,7 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
                 title = "{0}".format(labels[i])
 
             if title is not None:
-                if reverse:
-                    ax.set_xlabel(title, **title_kwargs)
-                else:
-                    ax.set_title(title, **title_kwargs)
+                ax.set_title(title, **title_kwargs)
 
         # Set up the axes.
         ax.set_xlim(range[i])
@@ -310,12 +294,7 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
         else:
             ax.set_ylim(0, 1.1 * np.max(n))
         ax.set_yticklabels([])
-        if max_n_ticks == 0:
-            ax.xaxis.set_major_locator(NullLocator())
-            ax.yaxis.set_major_locator(NullLocator())
-        else:
-            ax.xaxis.set_major_locator(MaxNLocator(max_n_ticks, prune="lower"))
-            ax.yaxis.set_major_locator(NullLocator())
+        ax.xaxis.set_major_locator(MaxNLocator(max_n_ticks, prune="lower"))
 
         if i < K - 1:
             if top_ticks:
@@ -324,28 +303,20 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
             else:
                 ax.set_xticklabels([])
         else:
-            if reverse:
-                ax.xaxis.tick_top()
             [l.set_rotation(45) for l in ax.get_xticklabels()]
             if labels is not None:
-                if reverse:
-                    ax.set_title(labels[i], y=1.25, **label_kwargs)
-                else:
-                    ax.set_xlabel(labels[i], **label_kwargs)
+                ax.set_xlabel(labels[i], **label_kwargs)
+                ax.xaxis.set_label_coords(0.5, -0.3)
 
             # use MathText for axes ticks
             ax.xaxis.set_major_formatter(
                 ScalarFormatter(useMathText=use_math_text))
 
         for j, y in enumerate(xs):
-	    if i!=j: ax.set_frame_on(False)	#LK
             if np.shape(xs)[0] == 1:
                 ax = axes
             else:
-                if reverse:
-                    ax = axes[K-i-1, K-j-1]
-                else:
-                    ax = axes[i, j]
+                ax = axes[i, j]
             if j > i:
                 ax.set_frame_on(False)
                 ax.set_xticks([])
@@ -370,27 +341,16 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
                 if truths[i] is not None:
                     ax.axhline(truths[i], color=truth_color)
 
-            if max_n_ticks == 0:
-                ax.xaxis.set_major_locator(NullLocator())
-                ax.yaxis.set_major_locator(NullLocator())
-            else:
-                ax.xaxis.set_major_locator(MaxNLocator(max_n_ticks,
-                                                       prune="lower"))
-                ax.yaxis.set_major_locator(MaxNLocator(max_n_ticks,
-                                                       prune="lower"))
+            ax.xaxis.set_major_locator(MaxNLocator(max_n_ticks, prune="lower"))
+            ax.yaxis.set_major_locator(MaxNLocator(max_n_ticks, prune="lower"))
 
             if i < K - 1:
                 ax.set_xticklabels([])
             else:
-                if reverse:
-                    ax.xaxis.tick_top()
                 [l.set_rotation(45) for l in ax.get_xticklabels()]
                 if labels is not None:
                     ax.set_xlabel(labels[j], **label_kwargs)
-                    if reverse:
-                        ax.xaxis.set_label_coords(0.5, 1.4)
-                    else:
-                        ax.xaxis.set_label_coords(0.5, -0.3)
+                    ax.xaxis.set_label_coords(0.5, -0.3)
 
                 # use MathText for axes ticks
                 ax.xaxis.set_major_formatter(
@@ -399,16 +359,10 @@ def corner(xs, bins=20, range=None, weights=None, color="k",
             if j > 0:
                 ax.set_yticklabels([])
             else:
-                if reverse:
-                    ax.yaxis.tick_right()
                 [l.set_rotation(45) for l in ax.get_yticklabels()]
                 if labels is not None:
-                    if reverse:
-                        ax.set_ylabel(labels[i], rotation=-90, **label_kwargs)
-                        ax.yaxis.set_label_coords(1.3, 0.5)
-                    else:
-                        ax.set_ylabel(labels[i], **label_kwargs)
-                        ax.yaxis.set_label_coords(-0.3, 0.5)
+                    ax.set_ylabel(labels[i], **label_kwargs)
+                    ax.yaxis.set_label_coords(-0.3, 0.5)
 
                 # use MathText for axes ticks
                 ax.yaxis.set_major_formatter(
@@ -457,7 +411,7 @@ def quantile(x, q, weights=None):
         raise ValueError("Quantiles must be between 0 and 1")
 
     if weights is None:
-        return np.percentile(x, list(100.0 * q))
+        return np.percentile(x, 100.0 * q)
     else:
         weights = np.atleast_1d(weights)
         if len(x) != len(weights):
@@ -538,12 +492,25 @@ def hist2d(x, y, bins=20, range=None, weights=None, levels=None, smooth=None,
 
     # Choose the default "sigma" contour levels.
     if levels is None:
-        levels = 1.0 - np.exp(-0.5 * np.arange(1.0, 3.1, 1.0) ** 2)
+        levels = 1.0 - np.exp(-0.5 * np.arange(0.5, 2.1, 0.5) ** 2)
 
     # This is the color map for the density plot, over-plotted to indicate the
     # density of the points near the center.
     density_cmap = LinearSegmentedColormap.from_list(
-        "density_cmap", [color, (1, 1, 1, 0)])
+        "density_cmap", [color, (1, 1, 1, 0)])                  #LK
+
+    """cdict1 = {'red':   ((0.0, 0.0, 0.0),
+                       (0.5, 0.0, 0.1),
+                      (1.0, 1.0, 1.0)),
+
+                       'green': ((0.0, 0.0, 0.0),
+                      (1.0, 0.0, 0.0)),
+
+                        'blue':  ((0.0, 0.0, 1.0),
+                       (0.5, 0.1, 0.0),
+                          (1.0, 0.0, 0.0)) } 
+
+    density_cmap = LinearSegmentedColormap('density_cmap', cdict1)"""
 
     # This color map is used to hide the points at the high density areas.
     white_cmap = LinearSegmentedColormap.from_list(
@@ -552,9 +519,11 @@ def hist2d(x, y, bins=20, range=None, weights=None, levels=None, smooth=None,
     # This "color map" is the list of colors for the contour levels if the
     # contours are filled.
     rgba_color = colorConverter.to_rgba(color)
+    #print rgba_color
     contour_cmap = [list(rgba_color) for l in levels] + [rgba_color]
     for i, l in enumerate(levels):
         contour_cmap[i][-1] *= float(i) / (len(levels)+1)
+
 
     # We'll make the 2D histogram to directly estimate the density.
     try:
@@ -625,9 +594,6 @@ def hist2d(x, y, bins=20, range=None, weights=None, levels=None, smooth=None,
         data_kwargs["mec"] = data_kwargs.get("mec", "none")
         data_kwargs["alpha"] = data_kwargs.get("alpha", 0.1)
         ax.plot(x, y, "o", zorder=-1, rasterized=True, **data_kwargs)
-	ax.get_xaxis().set_visible(False)		#LK
-	ax.get_yaxis().set_visible(False)		#LK
-        ax.set_frame_on(False)
 
     # Plot the base fill to hide the densest data points.
     if (plot_contours or plot_density) and not no_fill_contours:
