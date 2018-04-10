@@ -31,10 +31,14 @@ solarctoo = np.log10(0.54)
 #files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic"]
 #ind = [4,2,2]
 
-files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic"]
-ind = [4,2]
-labels = ['Parameterized T/P', 'Isothermal profile']
-colors = ['red', 'blue']
+#files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic"]
+#ind = [4,2]
+
+files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic", "CC_FULL_TP_Quench_limit_Met_samples.pic"]
+ind = [4,2, 4]
+
+labels = ['Parameterized T/P', 'Scaled T/P', 'Parameterized T/P + Quench']
+colors = ['red', 'blue', 'orange']
 
 for i, f in enumerate(files):
     p = pickle.load(open(f, "rb"))
@@ -53,7 +57,7 @@ plt.ylabel("Probability Density")
 
 
 plt.subplot(122)
-files = ["CC_FULL_TP_TP.pic", "CC_locked_TP_shape_TP.pic"]
+files = ["CC_FULL_TP_TP.pic", "CC_locked_TP_shape_TP.pic", "CC_FULL_TP_Quench_limit_Met_TP.pic"]
 
 for i, f in enumerate(files):
     P, T_array = pickle.load(open(f, "rb"))

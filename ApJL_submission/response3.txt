@@ -58,3 +58,8 @@ We added
 
 3) Quenching is also not included in the main retrieval (Figure 4), even though it can play a major role for WASP-107b. If you choose to go with a free retrieval for Figure 4, then this is automatically captured. However, if you choose to go with the chemically-consistent model to address Point 1, please include a quench point as discussed in Morley et al. 2017 in addition to the parameterized Tp profile.
 
+We carried out a retrieval analysis with the chemically-consistent model (with a parameterized T/P profile) that included a quench point at FIXME. We label this case "Case 3". We found that our estimate of the C/O ratio changed by less than 0.1 sigma from Case 1.  Specifically, we found that for Case 3, the C/O ratio is subsolar at 2.84 sigma confidence. The median and one sigma range for log10(C/O) is -1.51^{+0.50}_{-0.31}
+
+This result confirms our finding for the scaled T/P profile that quenching is not the cause of the retrieved low C/O values. We added the results of this test to FIXME.
+ 
+
