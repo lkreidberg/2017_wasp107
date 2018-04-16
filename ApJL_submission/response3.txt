@@ -13,12 +13,12 @@ It is known from previous publications that the team has the capabilities to con
 
 We carried out the requested test of a chemically-consistent retrieval with a parameterized T/P profile. We found that this test made very little difference to the retrieved C/O values. 
 
-For the nominal model in the submitted paper (which we refer to as Case 1), we used a temperature-pressure profile parameterized via the Guillot 2010 relations. We fixed the T/P profile morphology but scaled the irradiation temperature to allow for the unknown albedo and heat transport efficiency. For the case requested by the referee (Case 2), we added additional free parameters (FIXME: Mike, can you describe these in a little more detail?).  For the two cases, the median and 68% confidence intervals for log10(C/O) were: 
+For the nominal model in the submitted paper (which we refer to as Case 1), we used a temperature-pressure profile parameterized via the Guillot 2010 relations. We fixed the T/P profile morphology but scaled the irradiation temperature to allow for the unknown albedo and heat transport efficiency. For the case requested by the referee (Case 2), we used the full Guillot TP profile parameterization, which added free parameters for the infrared opacity and the visible-to-infrared opacity (which control the TP profile shape).  For the two cases, the median and 68% confidence intervals for log10(C/O) were: 
 
-Scaled T/P (Case 1)             -1.54^{+0.54}_{-0.32}
-Parameterized (Case 2)          -1.49^{+0.51}_{-0.35}
+Case 1 (scaled irradiation temperature):                                                 -1.54^{+0.54}_{-0.32}
+Caes 2 (scaled irradiation temperature, infrared opac, and visible/infrared opac):       -1.49^{+0.51}_{-0.35}
 
-Solar C/O is disfavored at 2.74 sigma for case 1, and 2.88 sigma for Case 2. The parameterized T/P profile provides a slightly stronger constraint because it favors lower temperatures at higher pressures. To illustrate these points, we include a figure as part of response showing the retrieved C/O values and T/P profiles for each case (Case 1 is blue, Case 2 is red). The left panel show the histogram of C/O values, and the right panel shows the median T/P profiles with one sigma confidence intervals. 
+Solar C/O is disfavored at 2.74 sigma for case 1, and 2.88 sigma for Case 2. Case 2 provides a slightly stronger constraint because it favors lower temperatures at higher pressures. To illustrate these points, we include a figure as part of response showing the retrieved C/O values and T/P profiles for each case (Case 1 is blue, Case 2 is red). The left panel show the histogram of C/O values, and the right panel shows the median T/P profiles with one sigma confidence intervals. 
 
 We are not surprised by this result because the shape of the spectrum is most strongly influenced by the effective scale height temperature at the pressure level we are probing (~1e-4 bar). Since both T/P profile choices are flexible enough to match this temperature (they agree almost exactly at the 1e-4 bar level), the constraints on composition are not strongly affected by which parameterization we choose.  
 
@@ -59,7 +59,9 @@ We added the best fit solar C/O model to Figure 2. The differences between (a) a
 
 3) Quenching is also not included in the main retrieval (Figure 4), even though it can play a major role for WASP-107b. If you choose to go with a free retrieval for Figure 4, then this is automatically captured. However, if you choose to go with the chemically-consistent model to address Point 1, please include a quench point as discussed in Morley et al. 2017 in addition to the parameterized Tp profile.
 
-We carried out a retrieval analysis with the chemically-consistent model (with a parameterized T/P profile) that included a quench point at (FIXME: what pressure?). We label this case "Case 3". We found that our estimate of the C/O ratio changed by less than 0.1 sigma from Case 1.  Specifically, we found that for Case 3, the C/O ratio is subsolar at 2.84 sigma confidence. The median and one sigma range for log10(C/O) is -1.51^{+0.50}_{-0.31} 
+We carried out a retrieval analysis with the chemically-consistent model (with the T/P profile from Case 2) that included the quench model from Morley et al. 2017, FIXME to marginalize over the influence of disequilibrium via quenching we include both a carbon-oxygen quench pressure (CO, CH4, and H2O) and a nitrogen (N2 and NH3) quench pressure free parameter.
+
+a quench point at (FIXME: what pressure?). We label this case "Case 3". We found that our estimate of the C/O ratio changed by less than 0.1 sigma from Case 1.  Specifically, we found that for Case 3, the C/O ratio is subsolar at 2.84 sigma confidence. The median and one sigma range for log10(C/O) is -1.51^{+0.50}_{-0.31} 
 
 This result confirms our finding for the scaled T/P profile that quenching is not the cause of the retrieved low C/O values. We added the results of this test to section 4.2.
  
