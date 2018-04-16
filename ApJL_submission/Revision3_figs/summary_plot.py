@@ -31,11 +31,11 @@ solarctoo = np.log10(0.54)
 #files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic"]
 #ind = [4,2,2]
 
-#files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic"]
-#ind = [4,2]
+files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic"]
+ind = [4,2]
 
-files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic", "CC_FULL_TP_Quench_limit_Met_samples.pic"]
-ind = [4,2, 4]
+#files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic", "CC_FULL_TP_Quench_limit_Met_samples.pic"]
+#ind = [4,2, 4]
 
 labels = ['Parameterized T/P', 'Scaled T/P', 'Parameterized T/P + Quench']
 colors = ['red', 'blue', 'orange']
@@ -57,7 +57,8 @@ plt.ylabel("Probability Density")
 
 
 plt.subplot(122)
-files = ["CC_FULL_TP_TP.pic", "CC_locked_TP_shape_TP.pic", "CC_FULL_TP_Quench_limit_Met_TP.pic"]
+files = ["CC_FULL_TP_TP.pic", "CC_locked_TP_shape_TP.pic"]
+#files = ["CC_FULL_TP_TP.pic", "CC_locked_TP_shape_TP.pic", "CC_FULL_TP_Quench_limit_Met_TP.pic"]
 
 for i, f in enumerate(files):
     P, T_array = pickle.load(open(f, "rb"))
@@ -69,6 +70,7 @@ for i, f in enumerate(files):
         Tlo.append(q[0])
         Tmid.append(q[1])
         Thi.append(q[2])
+        if (P[j] >= 0.000099)&(P[j] <= 0.00011): print "0.0001",   q[1], q[2] - q[1], q[1] - q[0]
 
     plt.plot(np.array(Tmid), P, color = colors[i], label = labels[i])
     plt.fill_betweenx(P, np.array(Tlo), np.array(Thi), color = colors[i], linestyle = 'dashed', alpha = 0.2)

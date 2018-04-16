@@ -20,8 +20,8 @@ plt.errorbar(d[:,0], d[:,1]*100., d[:,2]*100., linestyle = 'none', zorder = 100,
 #d = np.genfromtxt("wasp107b_10xsolar_0.1mbarcloud.dat")
 #plt.plot(d[:,0]*1e6, convolve(d[:,1], g, boundary = 'extend')-0.08)
 
-d = np.genfromtxt("EQ_Solar_full_trans.txt", skip_header = 1)
-plt.plot(d[:,0], d[:,1], color = 'r', zorder = 100)
+#d = np.genfromtxt("EQ_Solar_full_trans.txt", skip_header = 1)
+#plt.plot(d[:,0], d[:,1], color = 'r', zorder = 100)
 
 p = pickle.load(open("WASP107b_Global_Cloud_limit_Metallicity_spectra.pic", "rb"))
 print "outliers", (p[9] - p[7])/p[8]
@@ -34,14 +34,21 @@ plt.fill_between(w, p[1], p[5], color = "navy", alpha = '0.2')
 plt.fill_between(w, p[2], p[4], color = "navy", alpha = '0.3')
 #plt.plot(w, p[3], color = 'navy', label = "Best fit model")
 
+
+p2 = pickle.load(open("compare_spectra.pic", "rb"))
+plt.plot(p2[0], 100.*p2[2], label = "best fit, low C/O", zorder = 100, color = '0.2', linestyle = 'dashed')
+plt.plot(p2[0], 100.*p2[1], label = "best fit 2", zorder = 100, color = 'y', linestyle = 'dashed')
+
+
 # best fit
 pb = pickle.load(open("Model_best_fit.pic", "rb"))
-plt.plot(pb[0], pb[1]*100., color = 'navy', label = 'Best fit model')
+plt.plot(pb[0], pb[1]*100., color = 'navy', label = 'best fit model')
 #print 'outliers', (p[7] - pb[3]*100.)/p[8]
 
-d = pickle.load(open("Model_Solar.pic", "rb"))
-x, y = d[0], d[1]*100. - 0.7
-plt.plot(x, y, color = '0.5', alpha = 0.5, label = "1X solar, cloud-free", zorder = -20) 
+#d = pickle.load(open("Model_Solar.pic", "rb"))
+#x, y = d[0], d[1]*100. - 0.7
+#plt.plot(x, y, color = '0.5', alpha = 0.5, label = "1X solar, cloud-free", zorder = -20) 
+
 plt.legend(loc= 'upper right')
 
 plt.ylabel("Transit depth (%)")
