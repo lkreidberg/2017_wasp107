@@ -11,9 +11,9 @@ a) For Figure 4, the authors need to either provide the C/O ratio from a free re
 It is known from previous publications that the team has the capabilities to consider a wide range of tropospheric and stratospheric temperature structures using parameterization. I would request the authors report the results either from a free retrieval or from a "chemically-consistent" retrieval that appropriately parameterizes the temperature structure.
 #
 
-We carried out the requested test of a chemically-consistent retrieval with a parameterized T/P profile. We found that this test made very little difference to the retrieved C/O values. 
+We carried out the requested test of a chemically-consistent retrieval with a more flexible T/P profile. We found that this test made very little difference to the retrieved C/O values. 
 
-For the nominal model in the submitted paper (which we refer to as Case 1), we used a temperature-pressure profile parameterized via the Guillot 2010 relations. We fixed the T/P profile morphology but scaled the irradiation temperature to allow for the unknown albedo and heat transport efficiency. For the case requested by the referee (Case 2), we used the full Guillot TP profile parameterization, which added free parameters for the infrared opacity and the visible-to-infrared opacity (which control the TP profile shape).  For the two cases, the median and 68% confidence intervals for log10(C/O) were: 
+For the nominal model in the submitted paper (which we refer to as Case 1), we used a temperature-pressure profile parameterized via the Guillot 2010 relations, where we fixed the T/P profile morphology but scaled the irradiation temperature to allow for the unknown albedo and heat transport efficiency. For the case requested by the referee (Case 2), we used the full Guillot TP profile parameterization, which added free parameters for the infrared opacity and the visible-to-infrared opacity (which control the TP profile shape).  For the two cases, the median and 68% confidence intervals for log10(C/O) were: 
 
 Case 1 (scaled irradiation temperature):                                                 -1.54^{+0.54}_{-0.32}
 Caes 2 (scaled irradiation temperature, infrared opac, and visible/infrared opac):       -1.49^{+0.51}_{-0.35}
@@ -37,9 +37,9 @@ It remains critical to replace the main retrieval analysis (Figure 4) with one o
 
 #
 
-Our nominal retrieval (case 1, scaled T/P) does allow temperatures ranging from 700 - 850 K at 5e-4 bar (see the attached figure entitled "comparison.pdf"). The 1 sigma temperature range at this pressure level is very comparable for the scaled T/P profile (Case 1), and the parameterized T/P profile (Case 2).
+Our nominal retrieval (case 1) does allow temperatures ranging from 700 - 850 K at 5e-4 bar (see the attached figure entitled "comparison.pdf"). The 1 sigma temperature range at this pressure level is very comparable for both Case 1 and Case 2.  Moreover, the prior range for these cases permits temperatures in the ~0.1 - 1E-5 bar region up to ~2500 K, which shows that the data determine the retrieved temperature. 
 
-We agree that it is important to account for this uncertainty in temperature when assessing whether there is evidence for methane depletion. We tested exactly this in section 4.2.1, when we removed methane opacity from the retrieval. We found that when methane opacity is removed, we obtain a much wider posterior distribution of C/O values (0.02 - 1.6 at 1 sigma confidence).  This suggests that an absence of methane is what is driving the low C/O values. Since this result is from a retrieval that marginalizes over the uncertainty in the temperature, it addresses the referee's concern that our results are dependent on the exact choice of temperature/pressure. 
+We agree that it is important to account for the uncertainty in temperature when assessing whether there is evidence for methane depletion. We tested exactly this in section 4.2.1, when we removed methane opacity from the retrieval. We found that when methane opacity is removed, we obtain a much wider posterior distribution of C/O values (0.02 - 1.6 at 1 sigma confidence).  This suggests that an absence of methane is what is driving the low C/O values. Since this result is from a retrieval that marginalizes over the uncertainty in the temperature, it addresses the referee's concern that our results are dependent on the exact choice of temperature/pressure. 
 
 In this section, we also discussed the methane constraint from the free retrieval as an additional suggestion that methane may be depleted relative to the chemical equilibrium abundance at the expected photosphere, but our main result is from the retrieval that accounts for the uncertainty in temperature. 
 
@@ -54,15 +54,15 @@ Having these three models is the most important for Figure 2 and this paper.
 
 #
 
-We added the best fit solar C/O model to Figure 2. The differences between (a) and (b) are subtle, with the solar C/O model giving a slightly smaller feature at 1.15 micron and slightly larger amplitude in the troughs at 1.25 and 1.58 microns. While these features are subtle, the retrieval still favors the sub-solar C/O model at the 2.7 sigma level, regardless of the many different parameterizations we have tried (including cloud patchiness, quenching, the addition of a power-law haze opacity, removing the prior on atmospheric metallicity, and finally, the change in T/P profile suggested by the referee in this report).
+We added the best fit solar C/O model to Figure 2. The differences between (a) and (b) are subtle, with the solar C/O model giving a slightly smaller feature at 1.15 micron and slightly larger amplitude in the troughs at 1.25 and 1.58 microns due to methane absorption. While these features are subtle, the retrieval still favors the sub-solar C/O model at the 2.7 sigma level, regardless of the many different parameterizations we have tried (including cloud patchiness, quenching, the addition of a power-law haze opacity, removing the prior on atmospheric metallicity, and finally, the change in T/P profile suggested by the referee in this report).
 
 
 3) Quenching is also not included in the main retrieval (Figure 4), even though it can play a major role for WASP-107b. If you choose to go with a free retrieval for Figure 4, then this is automatically captured. However, if you choose to go with the chemically-consistent model to address Point 1, please include a quench point as discussed in Morley et al. 2017 in addition to the parameterized Tp profile.
 
-We carried out a retrieval analysis with the chemically-consistent model (with the T/P profile from Case 2) that included the quench model from Morley et al. 2017, FIXME to marginalize over the influence of disequilibrium via quenching we include both a carbon-oxygen quench pressure (CO, CH4, and H2O) and a nitrogen (N2 and NH3) quench pressure free parameter.
+We carried out a retrieval analysis with the chemically-consistent model (with the T/P profile from Case 2) that included additional free parameters to account for disequilibrium effects due to quenching. Following Morley et al. 2017, we included both a carbon-oxygen quench pressure (CO, CH4, and H2O) and a nitrogen (N2 and NH3) quench pressure as free parameters.
 
-a quench point at (FIXME: what pressure?). We label this case "Case 3". We found that our estimate of the C/O ratio changed by less than 0.1 sigma from Case 1.  Specifically, we found that for Case 3, the C/O ratio is subsolar at 2.84 sigma confidence. The median and one sigma range for log10(C/O) is -1.51^{+0.50}_{-0.31} 
+We label this case "Case 3". We found that our estimate of the C/O ratio changed by less than 0.1 sigma from Case 1.  Specifically, we found that for Case 3, the C/O ratio is subsolar at 2.84 sigma confidence. The median and one sigma range for log10(C/O) is -1.51^{+0.50}_{-0.31} 
 
-This result confirms our finding for the scaled T/P profile that quenching is not the cause of the retrieved low C/O values. We added the results of this test to section 4.2.
+This result confirms our earlier finding, where we included quenching in case 1, that disequilibrium chemistry is not the cause of the retrieved low C/O values. We added the results of this test to section 4.2.
  
 

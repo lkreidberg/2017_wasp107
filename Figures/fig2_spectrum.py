@@ -35,9 +35,6 @@ plt.fill_between(w, p[2], p[4], color = "navy", alpha = '0.3')
 #plt.plot(w, p[3], color = 'navy', label = "Best fit model")
 
 
-p2 = pickle.load(open("compare_spectra.pic", "rb"))
-plt.plot(p2[0], 100.*p2[2], label = "best fit, low C/O", zorder = 100, color = '0.2', linestyle = 'dashed')
-plt.plot(p2[0], 100.*p2[1], label = "best fit 2", zorder = 100, color = 'y', linestyle = 'dashed')
 
 
 # best fit
@@ -48,6 +45,11 @@ plt.plot(pb[0], pb[1]*100., color = 'navy', label = 'best fit model')
 #d = pickle.load(open("Model_Solar.pic", "rb"))
 #x, y = d[0], d[1]*100. - 0.7
 #plt.plot(x, y, color = '0.5', alpha = 0.5, label = "1X solar, cloud-free", zorder = -20) 
+
+#plots best fit with solar C/O
+p2 = pickle.load(open("compare_spectra.pic", "rb"))
+plt.plot(p2[0], 100.*p2[2], label = "best fit, solar C/O", zorder = 100, color = '0.2', linestyle = 'dashed')
+#plt.plot(p2[0], 100.*p2[1], label = "best fit 2", zorder = 100, color = 'y', linestyle = 'dashed')
 
 plt.legend(loc= 'upper right')
 

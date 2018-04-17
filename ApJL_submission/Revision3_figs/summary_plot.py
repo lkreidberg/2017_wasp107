@@ -37,7 +37,7 @@ ind = [4,2]
 #files = ["CC_FULL_TP_samples.pic", "CC_locked_TP_shape_Metallicity_Prior_samples.pic", "CC_FULL_TP_Quench_limit_Met_samples.pic"]
 #ind = [4,2, 4]
 
-labels = ['Parameterized T/P', 'Scaled T/P', 'Parameterized T/P + Quench']
+labels = ['Case 2', 'Case 1', 'Case 3']
 colors = ['red', 'blue', 'orange']
 
 for i, f in enumerate(files):
@@ -50,7 +50,7 @@ for i, f in enumerate(files):
     print "0.16, 0.5, 0.84 quantiles", q[1], "+", q[2] - q[1], "-", q[1] - q[0]
 
 plt.axvline(solarctoo, color = '0.5')
-
+plt.gca().text(np.log10(0.54) - 0.1, 0.7, 'solar C/O', rotation = 90) 
 plt.legend(loc = 'upper right', frameon = True)
 plt.xlabel("log10(C/O)")
 plt.ylabel("Probability Density")
@@ -76,7 +76,7 @@ for i, f in enumerate(files):
     plt.fill_betweenx(P, np.array(Tlo), np.array(Thi), color = colors[i], linestyle = 'dashed', alpha = 0.2)
 plt.gca().set_yscale('log')
 
-#plt.legend(loc = 'upper left')
+plt.legend(loc = 'upper left')
 plt.ylim(1.e-3, 1e-6)
 plt.xlim(300, 1000)
 plt.xlabel("Temperature (K)")
